@@ -2,120 +2,120 @@
 let currentLanguage = 'ar';
 
 const translations = {
-    ar: {
-        // Navigation
-        home: 'الرئيسية',
-        about: 'من نحن',
-        conference: 'المؤتمر',
-        sponsors: 'الشركاء والرعاة',
-        media: 'الإعلام',
-        hospitality: 'الضيافة',
-        contact: 'اتصل بنا',
+    // ar: {
+    //     // Navigation
+    //     home: 'الرئيسية',
+    //     about: 'من نحن',
+    //     conference: 'المؤتمر',
+    //     sponsors: 'الشركاء والرعاة',
+    //     media: 'الإعلام',
+    //     hospitality: 'الضيافة',
+    //     contact: 'اتصل بنا',
         
-        // About submenu
-        aboutAssociation: 'عن الجمعية',
-        aboutTaif: 'عن الطائف',
-        aboutConference: 'عن المؤتمر',
-        committee: 'اللجنة العلمية',
+    //     // About submenu
+    //     aboutAssociation: 'عن الجمعية',
+    //     aboutTaif: 'عن الطائف',
+    //     aboutConference: 'عن المؤتمر',
+    //     committee: 'اللجنة العلمية',
         
-        // Conference submenu
-        program: 'برنامج المؤتمر',
-        speakers: 'المتحدثون',
-        attendees: 'من يجب أن يحضر',
-        registration: 'سجل الآن',
+    //     // Conference submenu
+    //     program: 'برنامج المؤتمر',
+    //     speakers: 'المتحدثون',
+    //     attendees: 'من يجب أن يحضر',
+    //     registration: 'سجل الآن',
         
-        // Sponsors submenu
-        sponsorsList: 'الرعاة',
-        sponsorship: 'احجز رعايتك',
+    //     // Sponsors submenu
+    //     sponsorsList: 'الرعاة',
+    //     sponsorship: 'احجز رعايتك',
         
-        // Media submenu
-        mediaCoverage: 'تغطية إعلامية',
-        exhibition: 'المعرض',
+    //     // Media submenu
+    //     mediaCoverage: 'تغطية إعلامية',
+    //     exhibition: 'المعرض',
         
-        // Hospitality submenu
-        accommodation: 'الإقامة',
-        visa: 'متطلبات التأشيرة',
-        flights: 'الرحلات الجوية',
+    //     // Hospitality submenu
+    //     accommodation: 'الإقامة',
+    //     visa: 'متطلبات التأشيرة',
+    //     flights: 'الرحلات الجوية',
         
-        // Hero section
-        // heroTitle: 'المؤتمر السنوي للسياحة العلاجية',
-        heroSubtitle: 'نحو مستقبل أفضل للسياحة العلاجية في المملكة العربية السعودية',
-        july2025: 'يوليو 2025',
-        taifSaudi: 'الطائف، المملكة العربية السعودية',
-        participants: 'أكثر من 500 مشارك',
-        registerNow: 'سجل الآن',
-        learnMore: 'تعرف على المزيد',
+    //     // Hero section
+    //     // heroTitle: 'المؤتمر السنوي للسياحة العلاجية',
+    //     heroSubtitle: 'نحو مستقبل أفضل للسياحة العلاجية في المملكة العربية السعودية',
+    //     july2025: 'يوليو 2025',
+    //     taifSaudi: 'الطائف، المملكة العربية السعودية',
+    //     participants: 'أكثر من 500 مشارك',
+    //     registerNow: 'سجل الآن',
+    //     learnMore: 'تعرف على المزيد',
         
-        // About section
-        aboutUs: 'من نحن',
-        vision: 'رؤيتنا',
-        mission: 'رسالتنا',
-        values: 'قيمنا',
-        impact: 'تأثيرنا',
+    //     // About section
+    //     aboutUs: 'من نحن',
+    //     vision: 'رؤيتنا',
+    //     mission: 'رسالتنا',
+    //     values: 'قيمنا',
+    //     impact: 'تأثيرنا',
         
-        // Stats
-        days: 'أيام',
-        participant: 'مشارك',
-        speaker: 'متحدث',
-        session: 'جلسة'
-    },
-    en: {
-        // Navigation
-        home: 'Home',
-        about: 'About Us',
-        conference: 'Conference',
-        sponsors: 'Partners & Sponsors',
-        media: 'Media',
-        hospitality: 'Hospitality',
-        contact: 'Contact Us',
+    //     // Stats
+    //     days: 'أيام',
+    //     participant: 'مشارك',
+    //     speaker: 'متحدث',
+    //     session: 'جلسة'
+    // },
+    // en: {
+    //     // Navigation
+    //     home: 'Home',
+    //     about: 'About Us',
+    //     conference: 'Conference',
+    //     sponsors: 'Partners & Sponsors',
+    //     media: 'Media',
+    //     hospitality: 'Hospitality',
+    //     contact: 'Contact Us',
         
-        // About submenu
-        aboutAssociation: 'About Association',
-        aboutTaif: 'About Taif',
-        aboutConference: 'About Conference',
-        committee: 'Scientific Committee',
+    //     // About submenu
+    //     aboutAssociation: 'About Association',
+    //     aboutTaif: 'About Taif',
+    //     aboutConference: 'About Conference',
+    //     committee: 'Scientific Committee',
         
-        // Conference submenu
-        program: 'Conference Program',
-        speakers: 'Speakers',
-        attendees: 'Who Should Attend',
-        registration: 'Register Now',
+    //     // Conference submenu
+    //     program: 'Conference Program',
+    //     speakers: 'Speakers',
+    //     attendees: 'Who Should Attend',
+    //     registration: 'Register Now',
         
-        // Sponsors submenu
-        sponsorsList: 'Sponsors',
-        sponsorship: 'Book Your Sponsorship',
+    //     // Sponsors submenu
+    //     sponsorsList: 'Sponsors',
+    //     sponsorship: 'Book Your Sponsorship',
         
-        // Media submenu
-        mediaCoverage: 'Media Coverage',
-        exhibition: 'Exhibition',
+    //     // Media submenu
+    //     mediaCoverage: 'Media Coverage',
+    //     exhibition: 'Exhibition',
         
-        // Hospitality submenu
-        accommodation: 'Accommodation',
-        visa: 'Visa Requirements',
-        flights: 'Flights',
+    //     // Hospitality submenu
+    //     accommodation: 'Accommodation',
+    //     visa: 'Visa Requirements',
+    //     flights: 'Flights',
         
-        // Hero section
-        heroTitle: 'Annual Medical Tourism Conference',
-        heroSubtitle: 'Towards a Better Future for Medical Tourism in Saudi Arabia',
-        july2025: 'July 2025',
-        taifSaudi: 'Taif, Saudi Arabia',
-        participants: 'More than 500 participants',
-        registerNow: 'Register Now',
-        learnMore: 'Learn More',
+    //     // Hero section
+    //     heroTitle: 'Annual Medical Tourism Conference',
+    //     heroSubtitle: 'Towards a Better Future for Medical Tourism in Saudi Arabia',
+    //     july2025: 'July 2025',
+    //     taifSaudi: 'Taif, Saudi Arabia',
+    //     participants: 'More than 500 participants',
+    //     registerNow: 'Register Now',
+    //     learnMore: 'Learn More',
         
-        // About section
-        aboutUs: 'About Us',
-        vision: 'Our Vision',
-        mission: 'Our Mission',
-        values: 'Our Values',
-        impact: 'Our Impact',
+    //     // About section
+    //     aboutUs: 'About Us',
+    //     vision: 'Our Vision',
+    //     mission: 'Our Mission',
+    //     values: 'Our Values',
+    //     impact: 'Our Impact',
         
-        // Stats
-        days: 'Days',
-        participant: 'Participants',
-        speaker: 'Speakers',
-        session: 'Sessions'
-    }
+    //     // Stats
+    //     days: 'Days',
+    //     participant: 'Participants',
+    //     speaker: 'Speakers',
+    //     session: 'Sessions'
+    // }
 };
 
 // Initialize the website
@@ -226,23 +226,23 @@ function updateActiveNavLink(pageId) {
     
     // Add active class to current page link
     const pageMap = {
-        'home': 'الرئيسية',
-        'about': 'من نحن',
-        'taif': 'من نحن',
-        'conference-about': 'من نحن',
-        'committee': 'من نحن',
-        'program': 'المؤتمر',
-        'speakers': 'المؤتمر',
-        'attendees': 'المؤتمر',
-        'registration': 'المؤتمر',
-        'sponsors': 'الشركاء والرعاة',
-        'sponsorship': 'الشركاء والرعاة',
-        'media': 'الإعلام',
-        'exhibition': 'الإعلام',
-        'accommodation': 'الضيافة',
-        'visa': 'الضيافة',
-        'flights': 'الضيافة',
-        'contact': 'اتصل بنا'
+        // 'home': 'الرئيسية',
+        // 'about': 'من نحن',
+        // 'taif': 'من نحن',
+        // 'conference-about': 'من نحن',
+        // 'committee': 'من نحن',
+        // 'program': 'المؤتمر',
+        // 'speakers': 'المؤتمر',
+        // 'attendees': 'المؤتمر',
+        // 'registration': 'المؤتمر',
+        // 'sponsors': 'الشركاء والرعاة',
+        // 'sponsorship': 'الشركاء والرعاة',
+        // 'media': 'الإعلام',
+        // 'exhibition': 'الإعلام',
+        // 'accommodation': 'الضيافة',
+        // 'visa': 'الضيافة',
+        // 'flights': 'الضيافة',
+        // 'contact': 'اتصل بنا'
     };
     
     const mainSection = pageMap[pageId];

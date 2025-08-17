@@ -1,5 +1,11 @@
+@php
+
+    App::setLocale(session()->get('locale', 'ar'));
+    $lang = App::getLocale();
+@endphp
+
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="{{ $lang == 'ar' ? 'ar' : 'en' }}" dir="{{ $lang == 'ar' ? 'rtl' : 'ltr' }}">
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +18,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
-<body>
+
+
+
+<body style="direction: {{ $lang == 'ar' ? 'rtl' : 'ltr' }} !important">
+    {{-- {{ dd(App::getLocale()) }} --}}
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" style="direction: {{ $lang == 'ar' ? 'rtl' : 'ltr' }} !important">
         <div class="nav-container">
             <div class="logo-section">
                 <div class="logo">
@@ -26,64 +36,98 @@
             </button> -->
             <div class="nav-menu">
                 <div class="nav-item">
-                    <a href="#" onclick="showPage('home')" class="nav-link active">الرئيسية</a>
+                    <a href="#" onclick="showPage('home')" class="nav-link active">{{ __('home.home') }}</a>
                 </div>
 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link"> {{ __('home.about') }} <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="#" onclick="showPage('about')">عن الجمعية</a>
-                        <a href="#" onclick="showPage('taif')">عن الطائف</a>
-                        <a href="#" onclick="showPage('conference-about')">عن المؤتمر</a>
-                        <a href="#" onclick="showPage('committee')">اللجنة العلمية</a>
+                        <a href="#" onclick="showPage('about')">{{ __('home.about_association') }}</a>
+                        <a href="#" onclick="showPage('taif')">{{ __('home.about_taif') }}</a>
+                        <a href="#" onclick="showPage('conference-about')">{{ __('home.about_conference') }}</a>
+                        <a href="#" onclick="showPage('committee')">{{ __('home.committee') }}</a>
                     </div>
                 </div>
 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link">المؤتمر <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link">
+                        {{ __('home.conference') }} <i class="fas fa-chevron-down"></i>
+                    </a>
                     <div class="dropdown-content">
-                        <a href="#" onclick="showPage('program')">المؤتمر</a>
-                        <a href="#" onclick="showPage('program2')">برنامج المنتدي</a>
-                        <a href="#" onclick="showPage('speakers')">المتحدثون</a>
-                        <a href="#" onclick="showPage('attendees')">من يجب أن يحضر</a>
-                        <a href="#" onclick="showPage('registration')">سجل الآن</a>
+                        <a href="#" onclick="showPage('program')">{{ __('home.program') }}</a>
+                        <a href="#" onclick="showPage('program2')">{{ __('home.program2') }}</a>
+                        <a href="#" onclick="showPage('speakers')">{{ __('home.speakers') }}</a>
+                        <a href="#" onclick="showPage('attendees')">{{ __('home.attendees') }}</a>
+                        <a href="#" onclick="showPage('registration')">{{ __('home.registration') }}</a>
+                    </div>
+                </div>
+
+
+                {{-- الشركاء والرعاة --}}
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">
+                        {{ __('home.partners') }} <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showPage('sponsors')">{{ __('home.sponsors') }}</a>
+                        <a href="#" onclick="showPage('sponsorship')">{{ __('home.sponsorship') }}</a>
                     </div>
                 </div>
 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link">الشركاء والرعاة <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link">{{ __('home.media') }} <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="#" onclick="showPage('sponsors')">الرعاة</a>
-                        <a href="#" onclick="showPage('sponsorship')">احجز رعايتك</a>
+                        <a href="#" onclick="showPage('media')">{{ __('home.media_coverage') }}</a>
+                        <a href="#" onclick="showPage('exhibition')">{{ __('home.exhibition') }}</a>
                     </div>
                 </div>
 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link">الإعلام <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link">{{ __('home.hospitality') }} <i
+                            class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="#" onclick="showPage('media')">تغطية إعلامية</a>
-                        <a href="#" onclick="showPage('exhibition')">المعرض</a>
-                    </div>
-                </div>
-
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link">الضيافة <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="#" onclick="showPage('accommodation')">الإقامة</a>
-                        <a href="#" onclick="showPage('visa')">متطلبات التأشيرة</a>
-                        <a href="#" onclick="showPage('flights')">الرحلات الجوية</a>
+                        <a href="#" onclick="showPage('accommodation')">{{ __('home.accommodation') }}</a>
+                        <a href="#" onclick="showPage('visa')">{{ __('home.visa') }}</a>
+                        <a href="#" onclick="showPage('flights')">{{ __('home.flights') }}</a>
                     </div>
                 </div>
 
                 <div class="nav-item">
-                    <a href="#" onclick="showPage('contact')" class="nav-link">اتصل بنا</a>
+                    <a href="#" onclick="showPage('contact')" class="nav-link">{{ __('home.contact') }}</a>
                 </div>
             </div>
 
-            <div class="language-switcher">
-                <button class="lang-btn active" onclick="switchLanguage('ar')">العربية</button>
-                <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
+            <div style="display: flex; gap: 10px;">
+                @if (session()->has('locale'))
+                    @if (session('locale') == 'ar')
+                        <a href="{{ route('lang', ['locale' => 'en']) }}"
+                            style="display:inline-block; padding:8px 16px; border-radius:8px;
+                      background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
+                      text-decoration:none; transition:all 0.3s ease;
+                      backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                            EN
+                        </a>
+                    @else
+                        <a href="{{ route('lang', ['locale' => 'ar']) }}"
+                            style="display:inline-block; padding:8px 16px; border-radius:8px;
+                      background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
+                      text-decoration:none; transition:all 0.3s ease;
+                      backdrop-filter:blur(4px); box-shadow:0 4px 12px rgba(0,255,157,0.4);">
+                            العربية
+                        </a>
+                    @endif
+                @else
+                    <a href="{{ route('lang', ['locale' => 'en']) }}"
+                        style="display:inline-block; padding:8px 16px; border-radius:8px;
+                  background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
+                  text-decoration:none; transition:all 0.3s ease;
+                  backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                        EN
+                    </a>
+                @endif
             </div>
+
+
         </div>
     </nav>
 
@@ -169,114 +213,124 @@
                 <div class="hero-background"></div>
                 <div class="hero-content">
                     <div class="logo-hero">
-                        <img src="assets/logo.png" style="width: 200px; height: 100px; border-radius: 10px;" alt="">
-                        <img src="assets/logo2.jpeg" style="width: 200px; height: 100px; border-radius: 10px;" alt="">
+                        <img src="assets/logo.png" style="width: 200px; height: 100px; border-radius: 10px;"
+                            alt="">
+                        <img src="assets/logo2.jpeg" style="width: 200px; height: 100px; border-radius: 10px;"
+                            alt="">
                     </div>
 
                     <h1 class="hero-title">
-                        المنتدى العالمي لسياحة العالجية 2025 </h1>
-                    <p class="hero-subtitle">نحو مستقبل أفضل للسياحة العلاجية في المملكة العربية السعودية</p>
+                            {{ __('home.headline') }} </h1>
+                    <p class="hero-subtitle">{{ __('home.tagline') }}</p>
 
                     <div class="hero-info">
                         <div class="info-item">
                             <i class="fas fa-calendar-alt"></i>
-                            <span>6 - 8 سبتمبر 2025 .</span>
+                            <span>{{ __('home.date') }} </span>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span> فندق إنتركونتيننتال – الطائف – المملكة العربية السعودية </span>
+                            <span> {{ __('home.venue') }}</span>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-users"></i>
-                            <span>أكثر من 500 مشارك</span>
+                            <span>  {{ __('home.participants') }} </span>
                         </div>
                     </div>
 
                     <div class="hero-buttons">
-                        <button class="btn btn-primary" onclick="showPage('registration')">سجل الآن</button>
-                        <button class="btn btn-secondary" onclick="showPage('about')">تعرف على المزيد</button>
+                        <button class="btn btn-primary" onclick="showPage('registration')">{{ __('home.register_now') }}</button>
+                        <button class="btn btn-secondary" onclick="showPage('about')"> {{ __('home.learn_more') }} </button>
                     </div>
                 </div>
             </section>
 
-            <section class="about-preview"
-                style="padding: 4rem 0; background: linear-gradient(to bottom, #f8f9fa, #fff);">
-                <div class="container" style="width: 90%; max-width: 1400px; margin: 0 auto;">
-                    <h2 data-aos="fade-down"
-                        style="text-align: center; margin-bottom: 3rem; color: #2c3e50; font-size: 2.2rem; position: relative;">
-                        من نحن
-                        <!-- <span
-                            style="display: block; width: 60px; height: 4px; background: #3498db; margin: 15px auto 0;"></span> -->
-                    </h2>
+        <section class="about-preview"
+    style="padding: 4rem 0; background: linear-gradient(to bottom, #f8f9fa, #fff);">
+    <div class="container" style="width: 90%; max-width: 1400px; margin: 0 auto;">
+        
+        <!-- headline -->
+        <h2 data-aos="fade-down"
+            style="text-align: center; margin-bottom: 3rem; color: #2c3e50; font-size: 2.2rem; position: relative;">
+            {{ __('home.about') }}
+        </h2>
 
+        <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 10px 5px;">
 
-                    <div
-                        style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;  padding: 10px 5px;">
-                        <!-- رؤيتنا -->
-                        <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
-   background: white; border-radius: 15px; 
-   padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-     position: relative; overflow: hidden; height: 300px;" data-aos="fade-left" data-aos-duration="3000">
+            <!-- Vision -->
+            <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
+                background: white; border-radius: 15px; 
+                padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative; overflow: hidden; height: 300px;"
+                data-aos="fade-left" data-aos-duration="3000">
 
-                            <div
-                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #3498db, #2980b9);">
-                            </div>
-                            <i class="fas fa-eye" style="font-size: 24px; color: #3498db; margin-bottom: 10px;"></i>
-                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">رؤيتنا</h3>
-                            <p style="color: #666; line-height: 1.6; margin: 0;">أن نكون الرائدة في تطوير قطاع السياحة
-                                العلاجية وتعزيز التنمية المستدامة</p>
-                        </div>
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #3498db, #2980b9);"></div>
+                <i class="fas fa-eye" style="font-size: 24px; color: #3498db; margin-bottom: 10px;"></i>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
+                    {{ __('home.our_vision') }}
+                </h3>
+                <p style="color: #666; line-height: 1.6; margin: 0;">
+                    {{ __('home.our_vision_text') }}
+                </p>
+            </div>
 
-                        <!-- رسالتنا -->
-                        <div style="flex: 1 1 calc(25% - 20px); 
-                            min-width: 250px; background: white;
-                             border-radius: 15px; padding: 2rem; 
-                             text-align: right;
-                              box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-                              transition: transform 0.3s ease, box-shadow 0.3s ease;
-                               position: relative; overflow: hidden;" data-aos="fade-left" data-aos-duration="3000">
+            <!-- Mission -->
+            <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
+                background: white; border-radius: 15px; 
+                padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative; overflow: hidden; height: 300px;"
+                data-aos="fade-left" data-aos-duration="3000">
 
-                            <div
-                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #e74c3c, #c0392b);">
-                            </div>
-                            <i class="fas fa-envelope"
-                                style="font-size: 24px; color: #e74c3c; margin-bottom: 10px;"></i>
-                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">رسالتنا</h3>
-                            <p style="color: #666; line-height: 1.6; margin: 0;">تمكين المجتمعات المحلية من خلال الخدمات
-                                الطبية المتميزة والسياحة العلاجية</p>
-                        </div>
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #2ecc71, #27ae60);"></div>
+                <i class="fas fa-bullseye" style="font-size: 24px; color: #2ecc71; margin-bottom: 10px;"></i>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
+                    {{ __('home.our_mission') }}
+                </h3>
+                <p style="color: #666; line-height: 1.6; margin: 0;">
+                    {{ __('home.our_mission_text') }}
+                </p>
+            </div>
 
+            <!-- Values -->
+            <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
+                background: white; border-radius: 15px; 
+                padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative; overflow: hidden; height: 300px;"
+                data-aos="fade-left" data-aos-duration="3000">
 
-                        <!-- قيمنا -->
-                        <div data-aos="fade-right" data-aos-duration="3000"
-                            style="flex: 1 1 calc(25% - 20px); min-width: 250px; background: white; border-radius: 15px; padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #f39c12, #e67e22);"></div>
+                <i class="fas fa-handshake" style="font-size: 24px; color: #f39c12; margin-bottom: 10px;"></i>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
+                    {{ __('home.our_values') }}
+                </h3>
+                <p style="color: #666; line-height: 1.6; margin: 0;">
+                    {{ __('home.our_values_text') }}
+                </p>
+            </div>
 
-                            <div
-                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #2ecc71, #27ae60);">
-                            </div>
-                            <i class="fas fa-shield-alt"
-                                style="font-size: 24px; color: #2ecc71; margin-bottom: 10px;"></i>
-                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">قيمنا</h3>
-                            <p style="color: #666; line-height: 1.6; margin: 0;">الشفافية والمسؤولية والتميز في جميع
-                                أعمالنا الطبية والسياحية</p>
-                        </div>
+            <!-- Impact -->
+            <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
+                background: white; border-radius: 15px; 
+                padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative; overflow: hidden; height: 300px;"
+                data-aos="fade-left" data-aos-duration="3000">
 
-                        <!-- تأثيرنا -->
-                        <div data-aos="fade-right" data-aos-duration="3000"
-                            style="flex: 1 1 calc(25% - 20px); min-width: 250px; background: white; border-radius: 15px; padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #9b59b6, #8e44ad);"></div>
+                <i class="fas fa-globe" style="font-size: 24px; color: #9b59b6; margin-bottom: 10px;"></i>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
+                    {{ __('home.our_impact') }}
+                </h3>
+                <p style="color: #666; line-height: 1.6; margin: 0;">
+                    {{ __('home.our_impact_text') }}
+                </p>
+            </div>
+        </div>
+    </div>
 
-                            <div
-                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #9b59b6, #8e44ad);">
-                            </div>
-                            <i class="fas fa-chart-line"
-                                style="font-size: 24px; color: #9b59b6; margin-bottom: 10px;"></i>
-                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">تأثيرنا</h3>
-                            <p style="color: #666; line-height: 1.6; margin: 0;">خدمة أكثر من 10,000 مستفيد في جميع
-                                أنحاء المملكة والعالم</p>
-                        </div>
-                    </div>
-                </div>
 
                 <style>
                     /* للتأكد من التجاوب على الشاشات الصغيرة */
@@ -298,17 +352,19 @@
                 <div class="container" style="width: 90%; max-width: 1400px; margin: 0 auto;">
                     <h2 data-aos="fade-dawn"
                         style="text-align: center; margin-bottom: 3rem; color: #2c3e50; font-size: 2.2rem; position: relative;">
-                        نحو مستقبل مشرق للسياحة العلاجية في المملكة
-                    </h2>
-                    <p data-aos="fade-up" style="text-align: center; color: #666; line-height: 1.6; margin: 0;">
-                        رؤية 2030 تهدف إلى جعل المملكة وجهة عالمية رائدة في السياحة العلاجية
+                   {{ __('home.future') }}
+                </h2>
+                <p data-aos="fade-up" style="text-align: center; color: #666; line-height: 1.6; margin: 0;">
+                        {{ __('home.vision') }}
+               
                     </p>
                 </div>
             </section>
             <section class="conference-preview" style="background-color: #f9f9f9; padding: 50px 0;">
                 <div class="container">
                     <h2 data-aos="fade-dawn">المؤتمر</h2>
-                    <p data-aos="fade-dawn" data-aos-duration="3000" class="section-subtitle" style="color: #666;">انضم
+                    <p data-aos="fade-dawn" data-aos-duration="3000" class="section-subtitle" style="color: #666;">
+                        انضم
                         إلينا في هذا الحدث الاستثنائي لتبادل الخبرات
                         والمعرفة في مجال السياحة العلاجية</p>
 
@@ -316,7 +372,8 @@
                         <div data-aos="fade-left" data-aos-duration="3000" class="stat-card"
                             style="background-color: #ccfbf1 ; color: #333; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 40px; text-align: center;">
                             <i class="fas fa-calendar-alt" style="font-size: 24px; margin-bottom: 10px;"></i>
-                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">3
+                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
+                                3
                             </div>
                             <div class="stat-label" style="font-size: 18px;">أيام</div>
                         </div>
@@ -330,16 +387,20 @@
                         <div class="stat-card" data-aos="fade-right" data-aos-duration="3000"
                             style="background-color: #ffffcc; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
                             <i class="fas fa-microphone" style="font-size: 24px; margin-bottom: 10px;"></i>
-                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">25
+                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
+                                25
                             </div>
                             <div class="stat-label" style="font-size: 18px;">متحدث</div>
                         </div>
-                        <div class="stat-card" style="background-color: 
+                        <div class="stat-card"
+                            style="background-color: 
                             #add8e6; color: #333; border-radius: 10px;
                              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-                             padding: 20px; text-align: center;" data-aos="fade-right" data-aos-duration="3000">
+                             padding: 20px; text-align: center;"
+                            data-aos="fade-right" data-aos-duration="3000">
                             <i class="fas fa-clock" style="font-size: 24px; margin-bottom: 10px;"></i>
-                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">15
+                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
+                                15
                             </div>
                             <div class="stat-label" style="font-size: 18px;">جلسة</div>
                         </div>
@@ -676,7 +737,8 @@
                         <h2
                             style="font-size: 2.5rem; font-weight: 600; color: #34495e; text-align: center; margin: 0 0 40px 0;">
                             مؤتمر السياحة العلاجية بالطائف 2024</h2>
-                        <p style="font-size: 1.3rem; line-height: 2.2; color: #5a6c7d; text-align: justify; margin: 0;">
+                        <p
+                            style="font-size: 1.3rem; line-height: 2.2; color: #5a6c7d; text-align: justify; margin: 0;">
                             يُعد مؤتمر السياحة العلاجية بالطائف 2024 منصة رائدة تجمع نخبة من مقدمي الرعاية الصحية،
                             وخبراء السياحة، وصناع القرار، والمستثمرين، والمبتكرين، لمناقشة الفرص المتنامية في مجال
                             السياحة العلاجية وسياحة العافية في المملكة العربية السعودية. يُقام المؤتمر في مدينة الطائف،
@@ -835,7 +897,8 @@
                 style="background: linear-gradient(135deg, #4fd1c7 0%, #63b3ed 100%); padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
                 <!-- Medical Tourism Logo -->
                 <div style="position: absolute; top: 20px; right: 20px; opacity: 0.1;">
-                    <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="120" height="80" viewBox="0 0 120 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M60 10 L50 30 L70 30 Z M60 70 L50 50 L70 50 Z M20 40 L40 30 L40 50 Z M100 40 L80 30 L80 50 Z"
                             fill="white" />
@@ -919,14 +982,15 @@
                             style="background: white; border-radius: 15px; padding: 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
                             <div
                                 style="width: 50px; height: 50px; background: linear-gradient(135deg, #fef5e7, #fed7aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f6ad55"
-                                    stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="#f6ad55" stroke-width="2">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                     <circle cx="9" cy="7" r="4" />
                                     <path d="m22 21-3-3m0 0a5 5 0 1 0-7.07-7.07 5 5 0 0 0 7.07 7.07Z" />
                                 </svg>
                             </div>
-                            <h3 style="color: #2d3748; font-size: 1.3rem; font-weight: 600; margin: 0 0 15px 0;">الخبراء
+                            <h3 style="color: #2d3748; font-size: 1.3rem; font-weight: 600; margin: 0 0 15px 0;">
+                                الخبراء
                                 المتخصصون</h3>
                             <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0;">مجموعة من أبرز
                                 الخبراء في مجال السياحة العلاجية</p>
@@ -936,8 +1000,8 @@
                             style="background: white; border-radius: 15px; padding: 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
                             <div
                                 style="width: 50px; height: 50px; background: linear-gradient(135deg, #e6fffa, #b2f5ea); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4fd1c7"
-                                    stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="#4fd1c7" stroke-width="2">
                                     <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                                 </svg>
                             </div>
@@ -951,8 +1015,8 @@
                             style="background: white; border-radius: 15px; padding: 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
                             <div
                                 style="width: 50px; height: 50px; background: linear-gradient(135deg, #f0f4ff, #c7d2fe); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1"
-                                    stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="#6366f1" stroke-width="2">
                                     <circle cx="12" cy="12" r="10" />
                                     <polyline points="12,6 12,12 16,14" />
                                 </svg>
@@ -1004,7 +1068,8 @@
                     <h1
                         style="font-size: 3.5em; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
                         المؤتمر السنوي للسياحة العلاجية</h1>
-                    <p style="font-size: 1.2em; font-weight: 300; margin: 0 0 40px 0; opacity: 0.95; line-height: 1.6;">
+                    <p
+                        style="font-size: 1.2em; font-weight: 300; margin: 0 0 40px 0; opacity: 0.95; line-height: 1.6;">
                         انضم إلينا في هذا الحدث الاستثنائي لتبادل الخبرات والمعرفة في مجال السياحة العلاجية</p>
 
                     <!-- Event Details -->
@@ -1056,7 +1121,8 @@
             <!-- Statistics Section -->
             <section style="padding: 60px 0; background: white;">
                 <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
 
                         <!-- Stat 1 -->
                         <div
@@ -1088,7 +1154,8 @@
                                 style="width: 60px; height: 60px; background: #10b981; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);">
                                 <div style="width: 24px; height: 24px; background: white; border-radius: 2px;"></div>
                             </div>
-                            <div style="font-size: 3em; font-weight: 700; color: #059669; margin-bottom: 10px;">16</div>
+                            <div style="font-size: 3em; font-weight: 700; color: #059669; margin-bottom: 10px;">16
+                            </div>
                             <div style="color: #065f46; font-size: 1.1em; font-weight: 500;">متحدث مميز</div>
                         </div>
                     </div>
@@ -1103,7 +1170,8 @@
                         المتحدثون المميزون
                     </h2>
 
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
 
                         <!-- Abdelghani Rozy -->
                         <div
@@ -1697,7 +1765,8 @@
 
 
             <div class="program-container fade-in">
-                <div class="header-section" style="margin-top: 90px; transform: translateY(10%);
+                <div class="header-section"
+                    style="margin-top: 90px; transform: translateY(10%);
                     display: flex; flex-direction: column; align-items: center;">
                     <div class="logo" style="transform: translateY(10%);">
                         <img src="assets/logo.png" alt="logo"
@@ -1854,7 +1923,8 @@
                     <h1
                         style="font-size: 3.5em; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
                         المتحدثون</h1>
-                    <p style="font-size: 1.2em; font-weight: 300; margin: 0 0 40px 0; opacity: 0.95; line-height: 1.6;">
+                    <p
+                        style="font-size: 1.2em; font-weight: 300; margin: 0 0 40px 0; opacity: 0.95; line-height: 1.6;">
                         نخبة من الخبراء والمتخصصين في مجال السياحة العلاجية من جميع أنحاء العالم</p>
 
                     <!-- Event Details -->
@@ -1906,7 +1976,8 @@
             <!-- Statistics Section -->
             <section style="padding: 60px 0; background: white;">
                 <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
 
                         <!-- Stat 1 -->
                         <div
@@ -1938,7 +2009,8 @@
                                 style="width: 60px; height: 60px; background: #10b981; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);">
                                 <div style="width: 24px; height: 24px; background: white; border-radius: 2px;"></div>
                             </div>
-                            <div style="font-size: 3em; font-weight: 700; color: #059669; margin-bottom: 10px;">16</div>
+                            <div style="font-size: 3em; font-weight: 700; color: #059669; margin-bottom: 10px;">16
+                            </div>
                             <div style="color: #065f46; font-size: 1.1em; font-weight: 500;">متحدث مميز</div>
                         </div>
                     </div>
@@ -1953,7 +2025,8 @@
                         المتحدثون المميزون
                     </h2>
 
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
 
                         <!-- Abdelghani Rozy -->
                         <div
@@ -2558,7 +2631,8 @@
         <div id="attendees" class="page">
             <div class="test">
                 <div class="logo" style="width: 100%; text-align: center; padding-top: 60px;">
-                    <img src="assets/logo.png" alt="logo" style="width:250px; 
+                    <img src="assets/logo.png" alt="logo"
+                        style="width:250px; 
                      height:100px; border-radius:12px;
                       box-shadow:0 4px 10px rgba(0,0,0,.15); object-fit:cover;">
                 </div>
@@ -2942,9 +3016,10 @@
                 <div class="form-section">
                     <h2 class="section-title">نموذج التسجيل</h2>
 
-                    <form id="registrationForm" method="post" action=
+                    <form id="registrationForm" method="post"
+                        action=
                     "{{ route('participations') }}">
-                    @csrf
+                        @csrf
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="firstName">الاسم الأول <span class="required">*</span></label>
@@ -2979,11 +3054,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="organization">اسم المؤسسة <span class="required">*</span></label>
-                                <input name="organization" type="text" id="organization" name="organization" required>
+                                <input name="organization" type="text" id="organization" name="organization"
+                                    required>
                             </div>
                             <div class="form-group">
                                 <label for="organization"> رقم جواز السفر <span class="required">*</span></label>
-                                <input name="passport" type="text" id="organization" name="organization" required>
+                                <input name="passport" type="text" id="organization" name="organization"
+                                    required>
                             </div>
                         </div>
 
@@ -3000,7 +3077,8 @@
 
                         <div class="form-group full-width">
                             <label for="specialization">التخصص <span class="required">*</span></label>
-                            <input name="specialization" type="text" id="specialization" name="specialization" required>
+                            <input name="specialization" type="text" id="specialization"
+                                name="specialization" required>
                         </div>
 
                         <div class="form-group full-width">
@@ -3019,7 +3097,7 @@
 
                         <div class="checkbox-group">
                             <input name="terms" type="checkbox" id="terms" name="terms" required>
-                            <label  for="terms">أوافق على الشروط والأحكام <span class="required">*</span></label>
+                            <label for="terms">أوافق على الشروط والأحكام <span class="required">*</span></label>
                         </div>
 
                         <button type="submit" class="submit-btn">
@@ -3122,15 +3200,18 @@
                                 <circle cx="20" cy="20" r="3" fill="#4fd1c7" />
                             </svg> -->
 
-                            <img src="assets/logo.png" style="width: 200px; height: 100px;
-                            box-shadow:0 4px 10px rgba(0,0,0,.15); " alt="">
+                            <img src="assets/logo.png"
+                                style="width: 200px; height: 100px;
+                            box-shadow:0 4px 10px rgba(0,0,0,.15); "
+                                alt="">
                         </div>
                     </div>
 
                     <h1
                         style="color: white; font-size: 3.5rem; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                         الرعاة</h1>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
+                    <p
+                        style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
                         400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
                         الشركات والمؤسسات الراعية للمؤتمر
                     </p>
@@ -3156,8 +3237,9 @@
                         <!-- Icon -->
                         <div
                             style="width: 80px; height: 80px; background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px auto; border: 3px solid #4fd1c7;">
-                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#4fd1c7"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
+                                stroke="#4fd1c7" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9 5.16-1 9-3.45 9-9V7l-10-5z" />
                                 <path d="M8 11l2 2 4-4" />
                             </svg>
@@ -3448,8 +3530,10 @@
         <div id="sponsorship" class="page">
             <div class="header">
                 <div class="logo">
-                    <img src="assets/logo.png" style="width: 200px; height:
-                     100px; border-radius: 10px; box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);" alt="">
+                    <img src="assets/logo.png"
+                        style="width: 200px; height:
+                     100px; border-radius: 10px; box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);"
+                        alt="">
                 </div>
                 <h1>احجز رعايتك</h1>
                 <p>كن جزءاً من هذا الحدث المهم وادعم مستقبل السياحة العلاجية في المملكة</p>
@@ -3572,15 +3656,18 @@
                                 <circle cx="20" cy="20" r="3" fill="#4fd1c7" />
                             </svg> -->
 
-                            <img src="assets/logo.png" style="width: 200px; height: 100px;
-                            box-shadow:0 4px 10px rgba(0,0,0,.15); " alt="">
+                            <img src="assets/logo.png"
+                                style="width: 200px; height: 100px;
+                            box-shadow:0 4px 10px rgba(0,0,0,.15); "
+                                alt="">
                         </div>
                     </div>
 
                     <h1
                         style="color: white; font-size: 3.5rem; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                         تغطية إعلامية</h1>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
+                    <p
+                        style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
                         400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
                         التغطية الإعلامية للمؤتمر والفعاليات
 
@@ -3608,8 +3695,9 @@
                         <!-- Icon -->
                         <div
                             style="width: 80px; height: 80px; background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px auto; border: 3px solid #4fd1c7;">
-                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#4fd1c7"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
+                                stroke="#4fd1c7" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9 5.16-1 9-3.45 9-9V7l-10-5z" />
                                 <path d="M8 11l2 2 4-4" />
                             </svg>
@@ -3665,8 +3753,10 @@
                                 <circle cx="20" cy="20" r="3" fill="#4fd1c7" />
                             </svg> -->
 
-                            <img src="assets/logo.png" style="width: 200px; height: 100px;
-                            box-shadow:0 4px 10px rgba(0,0,0,.15); " alt="">
+                            <img src="assets/logo.png"
+                                style="width: 200px; height: 100px;
+                            box-shadow:0 4px 10px rgba(0,0,0,.15); "
+                                alt="">
                         </div>
                     </div>
 
@@ -3674,7 +3764,8 @@
                         style="color: white; font-size: 3.5rem; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                         المعرض
                     </h1>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
+                    <p
+                        style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
                         400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
                         معرض السياحة العلاجية المصاحب للمؤتمر
 
@@ -3704,8 +3795,9 @@
                         <!-- Icon -->
                         <div
                             style="width: 80px; height: 80px; background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px auto; border: 3px solid #4fd1c7;">
-                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#4fd1c7"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
+                                stroke="#4fd1c7" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9 5.16-1 9-3.45 9-9V7l-10-5z" />
                                 <path d="M8 11l2 2 4-4" />
                             </svg>
@@ -3762,8 +3854,10 @@
                                 <circle cx="20" cy="20" r="3" fill="#4fd1c7" />
                             </svg> -->
 
-                            <img src="assets/logo.png" style="width: 200px; height: 100px;
-                            box-shadow:0 4px 10px rgba(0,0,0,.15); " alt="">
+                            <img src="assets/logo.png"
+                                style="width: 200px; height: 100px;
+                            box-shadow:0 4px 10px rgba(0,0,0,.15); "
+                                alt="">
                         </div>
                     </div>
 
@@ -3772,7 +3866,8 @@
                         الإقامة
 
                     </h1>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
+                    <p
+                        style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
                         400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
                         خيارات الإقامة المتاحة للمشاركين
 
@@ -3816,8 +3911,8 @@
                     <!-- Hotel Icon -->
                     <div
                         style="width: 60px; height: 60px; background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 2px solid #4fd1c7;">
-                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4fd1c7" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4fd1c7"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                             <polyline points="9,22 9,12 15,12 15,22" />
                         </svg>
@@ -3825,7 +3920,8 @@
 
                     <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">فندق
                         إنتركونتيننتال الطائف</h3>
-                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">حي الخالدية، طريق
+                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">حي الخالدية،
+                        طريق
                         المطار، الطائف</p>
 
                     <!-- Location Button -->
@@ -3847,16 +3943,18 @@
 
                     <div
                         style="width: 60px; height: 60px; background: linear-gradient(135deg, #f0e6ff 0%, #e9d8fd 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 2px solid #63b3ed;">
-                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#63b3ed" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#63b3ed"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 21h18" />
                             <path d="M5 21V7l8-4v18" />
                             <path d="M19 21V11l-6-4" />
                         </svg>
                     </div>
 
-                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">فندق فندر</h3>
-                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">شارع الخمسين، قرب
+                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">فندق فندر
+                    </h3>
+                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">شارع الخمسين،
+                        قرب
                         جوري مول، الطائف</p>
 
                     <a href="#"
@@ -3877,8 +3975,8 @@
 
                     <div
                         style="width: 60px; height: 60px; background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 2px solid #48bb78;">
-                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#48bb78" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#48bb78"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path
                                 d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" />
                             <path d="m7 16.5-4.74-2.85" />
@@ -3920,8 +4018,8 @@
 
                     <div
                         style="width: 60px; height: 60px; background: linear-gradient(135deg, #fffaf0 0%, #fbd38d 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 2px solid #ed8936;">
-                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ed8936" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ed8936"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path
                                 d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                             <path d="M7.5 4.21l4.5 2.6 4.5-2.6" />
@@ -3932,9 +4030,11 @@
                         </svg>
                     </div>
 
-                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">فندق مينا بلازا
+                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">فندق مينا
+                        بلازا
                         الطائف</h3>
-                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">شارع وادي وج، وسط
+                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">شارع وادي وج،
+                        وسط
                         المدينة، الطائف</p>
 
                     <a href="#"
@@ -3955,8 +4055,8 @@
 
                     <div
                         style="width: 60px; height: 60px; background: linear-gradient(135deg, #fed7d7 0%, #fc8181 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 2px solid #e53e3e;">
-                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#e53e3e" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#e53e3e"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
                             <path d="M3 6h18" />
                             <path d="M16 10a4 4 0 0 1-8 0" />
@@ -3965,7 +4065,8 @@
 
                     <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">فندق سويس
                         سبيريت الطائف</h3>
-                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">حي شهار، شارع أبو
+                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">حي شهار، شارع
+                        أبو
                         بكر الصديق، الطائف</p>
 
                     <a href="#"
@@ -4191,7 +4292,8 @@
                 <div class="header">
                     <div class="logo-placeholder">
                         <div class="icon">
-                            <img src="assets/logo.png" alt="logo" style="width:250px; height:100px;
+                            <img src="assets/logo.png" alt="logo"
+                                style="width:250px; height:100px;
                                  border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.15); object-fit:cover;">
                         </div>
                     </div>
@@ -4203,7 +4305,8 @@
                         <h2 class="visa-info-title">Visa Information – Taif Medical Tourism Conference</h2>
                         <h3 class="visa-info-subtitle">معلومات التأشيرة - مؤتمر السياحة العلاجية بالطائف</h3>
 
-                        <p class="section-content" style="text-align: center; margin-bottom: 25px; font-weight: 600;">
+                        <p class="section-content"
+                            style="text-align: center; margin-bottom: 25px; font-weight: 600;">
                             معلومات التأشيرة – مؤتمر السياحة العلاجية بالطائف
                         </p>
 
@@ -4481,9 +4584,11 @@
                     <div class="flights-header">
                         <div class="flights-icon-container">
                             <div class="flights-icon">
-                                <img src="assets/logo.png" style="width: 200px;
+                                <img src="assets/logo.png"
+                                    style="width: 200px;
                                  height: 100px; border-radius: 10px;
-                                  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);" alt="">
+                                  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);"
+                                    alt="">
                             </div>
                         </div>
                         <h1 class="flights-title">الرحلات الجوية</h1>
@@ -4878,7 +4983,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="assets/logo.png" style="width: 150px; height: 70px; border-radius: 10px;" alt="">
+                        <img src="assets/logo.png" style="width: 150px; height: 70px; border-radius: 10px;"
+                            alt="">
 
                     </div>
                     <h3>جمعية السياحة العلاجية</h3>
@@ -4974,7 +5080,6 @@
                 });
             });
         });
-
     </script>
 </body>
 
