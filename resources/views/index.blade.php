@@ -373,275 +373,276 @@
                     </p>
                 </div>
             </section>
-<section class="conference-preview" style="background-color: #f9f9f9; padding: 50px 0;">
-    <div class="container">
-        
-        <!-- Conference Title -->
-        <h2 data-aos="fade-dawn">{{ __('home.conference_title') }}</h2>
-        
-        <!-- Subtitle -->
-        <p data-aos="fade-dawn" data-aos-duration="3000" class="section-subtitle" style="color: #666;">
-            {{ __('home.conference_subtitle') }}
-        </p>
+            <section class="conference-preview" style="background-color: #f9f9f9; padding: 50px 0;">
+                <div class="container">
 
-        <div class="stats-grid">
+                    <!-- Conference Title -->
+                    <h2 data-aos="fade-dawn">{{ __('home.conference_title') }}</h2>
 
-            <!-- Days -->
-            <div data-aos="fade-left" data-aos-duration="3000" class="stat-card"
-                style="background-color: #ccfbf1 ; color: #333; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 40px; text-align: center;">
-                <i class="fas fa-calendar-alt" style="font-size: 24px; margin-bottom: 10px;"></i>
-                <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
-                    {{ __('home.days_number') }}
+                    <!-- Subtitle -->
+                    <p data-aos="fade-dawn" data-aos-duration="3000" class="section-subtitle" style="color: #666;">
+                        {{ __('home.conference_subtitle') }}
+                    </p>
+
+                    <div class="stats-grid">
+
+                        <!-- Days -->
+                        <div data-aos="fade-left" data-aos-duration="3000" class="stat-card"
+                            style="background-color: #ccfbf1 ; color: #333; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 40px; text-align: center;">
+                            <i class="fas fa-calendar-alt" style="font-size: 24px; margin-bottom: 10px;"></i>
+                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
+                                {{ __('home.days_number') }}
+                            </div>
+                            <div class="stat-label" style="font-size: 18px;">{{ __('home.days_label') }}</div>
+                        </div>
+
+                        <!-- Participants -->
+                        <div class="stat-card" data-aos="fade-dawn" data-aos-duration="3000"
+                            style="background-color: #c7b8ea !important; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
+                            <i class="fas fa-users" style="font-size: 24px; margin-bottom: 10px;"></i>
+                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
+                                {{ __('home.participants_number') }}
+                            </div>
+                            <div class="stat-label" style="font-size: 18px;">{{ __('home.participants_label') }}
+                            </div>
+                        </div>
+
+                        <!-- Speakers -->
+                        <div class="stat-card" data-aos="fade-right" data-aos-duration="3000"
+                            style="background-color: #ffffcc; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
+                            <i class="fas fa-microphone" style="font-size: 24px; margin-bottom: 10px;"></i>
+                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
+                                {{ __('home.speakers_number') }}
+                            </div>
+                            <div class="stat-label" style="font-size: 18px;">{{ __('home.speakers_label') }}</div>
+                        </div>
+
+                        <!-- Sessions -->
+                        <div class="stat-card" data-aos="fade-right" data-aos-duration="3000"
+                            style="background-color: #add8e6; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
+                            <i class="fas fa-clock" style="font-size: 24px; margin-bottom: 10px;"></i>
+                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
+                                {{ __('home.sessions_number') }}
+                            </div>
+                            <div class="stat-label" style="font-size: 18px;">{{ __('home.sessions_label') }}</div>
+                        </div>
+
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="cta-section" style="margin-top: 30px; text-align: center;">
+                        <button class="btn btn-primary"
+                            style="background-color: #3498db; color: #fff; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer;"
+                            onclick="showPage('program')">
+                            {{ __('home.conference_cta') }}
+                        </button>
+                    </div>
+
                 </div>
-                <div class="stat-label" style="font-size: 18px;">{{ __('home.days_label') }}</div>
-            </div>
-
-            <!-- Participants -->
-            <div class="stat-card" data-aos="fade-dawn" data-aos-duration="3000"
-                style="background-color: #c7b8ea !important; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
-                <i class="fas fa-users" style="font-size: 24px; margin-bottom: 10px;"></i>
-                <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
-                    {{ __('home.participants_number') }}
-                </div>
-                <div class="stat-label" style="font-size: 18px;">{{ __('home.participants_label') }}</div>
-            </div>
-
-            <!-- Speakers -->
-            <div class="stat-card" data-aos="fade-right" data-aos-duration="3000"
-                style="background-color: #ffffcc; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
-                <i class="fas fa-microphone" style="font-size: 24px; margin-bottom: 10px;"></i>
-                <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
-                    {{ __('home.speakers_number') }}
-                </div>
-                <div class="stat-label" style="font-size: 18px;">{{ __('home.speakers_label') }}</div>
-            </div>
-
-            <!-- Sessions -->
-            <div class="stat-card" data-aos="fade-right" data-aos-duration="3000"
-                style="background-color: #add8e6; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
-                <i class="fas fa-clock" style="font-size: 24px; margin-bottom: 10px;"></i>
-                <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
-                    {{ __('home.sessions_number') }}
-                </div>
-                <div class="stat-label" style="font-size: 18px;">{{ __('home.sessions_label') }}</div>
-            </div>
-
-        </div>
-
-        <!-- CTA Button -->
-        <div class="cta-section" style="margin-top: 30px; text-align: center;">
-            <button class="btn btn-primary"
-                style="background-color: #3498db; color: #fff; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer;"
-                onclick="showPage('program')">
-                {{ __('home.conference_cta') }}
-            </button>
-        </div>
-
-    </div>
-</section>
+            </section>
 
         </div>
 
         <!-- About Pages -->
-    <div id="about" class="page">
-    <section class="page-hero"
-        style="background: linear-gradient(135deg, #1abc9c 0%, #16a085 50%, #27ae60 100%); padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+        <div id="about" class="page">
+            <section class="page-hero"
+                style="background: linear-gradient(135deg, #1abc9c 0%, #16a085 50%, #27ae60 100%); padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
 
-        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
-            <div
-                style="display: inline-block; background: rgba(255, 255, 255, 0.15); padding: 1.5rem; border-radius: 50%; margin-bottom: 2rem; backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2);">
-                <i class="fas fa-hospital-alt" style="font-size: 3rem; color: white;"></i>
-            </div>
+                <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
+                    <div
+                        style="display: inline-block; background: rgba(255, 255, 255, 0.15); padding: 1.5rem; border-radius: 50%; margin-bottom: 2rem; backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2);">
+                        <i class="fas fa-hospital-alt" style="font-size: 3rem; color: white;"></i>
+                    </div>
 
-            <h1
-                style="font-size: 3.5rem; font-weight: 700; color: white; margin-bottom: 1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
-                {{ __('home.about_title') }}</h1>
+                    <h1
+                        style="font-size: 3.5rem; font-weight: 700; color: white; margin-bottom: 1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
+                        {{ __('home.about_title') }}</h1>
 
-            <p
-                style="font-size: 1.3rem; color: rgba(255, 255, 255, 0.95); max-width: 800px; margin: 0 auto 2rem; text-shadow: 1px 1px 5px rgba(0,0,0,0.2);">
-                {{ __('home.about_description_1') }}
-            </p>
+                    <p
+                        style="font-size: 1.3rem; color: rgba(255, 255, 255, 0.95); max-width: 800px; margin: 0 auto 2rem; text-shadow: 1px 1px 5px rgba(0,0,0,0.2);">
+                        {{ __('home.about_description_1') }}
+                    </p>
 
-            <div
-                style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 20px; backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.2); max-width: 900px; margin: 0 auto;">
-                <p style="font-size: 1.2rem; color: white; margin: 0; font-weight: 500; line-height: 1.8;">
-                    {{ __('home.about_description_2') }}
-                </p>
-            </div>
+                    <div
+                        style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 20px; backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.2); max-width: 900px; margin: 0 auto;">
+                        <p style="font-size: 1.2rem; color: white; margin: 0; font-weight: 500; line-height: 1.8;">
+                            {{ __('home.about_description_2') }}
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What We Offer Section -->
+            <section style="padding: 5rem 2rem; max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2
+                        style="font-size: 2.5rem; font-weight: 700; color: #2c3e50; margin-bottom: 1rem; position: relative;">
+                        {{ __('home.offer_title') }}
+                        <span
+                            style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(135deg, #1abc9c, #27ae60); border-radius: 2px;"></span>
+                    </h2>
+                    <p style="font-size: 1.2rem; color: #7f8c8d; max-width: 600px; margin: 0 auto;">
+                        {{ __('home.offer_subtitle') }}
+                    </p>
+                </div>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+
+                    <!-- Card 1 -->
+                    <div
+                        style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                        <div
+                            style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #1abc9c, #27ae60); border-radius: 0 20px 0 100px; opacity: 0.1;">
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
+                            <div
+                                style="background: linear-gradient(135deg, #1abc9c, #27ae60); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
+                                <i class="fas fa-stethoscope" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
+                                {{ __('home.offer_card_1_title') }}
+                            </h3>
+                        </div>
+
+                        <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                            {{ __('home.offer_card_1_desc') }}
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                        <div
+                            style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #3498db, #2980b9); border-radius: 0 20px 0 100px; opacity: 0.1;">
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
+                            <div
+                                style="background: linear-gradient(135deg, #3498db, #2980b9); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
+                                <i class="fas fa-plane" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
+                                {{ __('home.offer_card_2_title') }}
+                            </h3>
+                        </div>
+
+                        <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                            {{ __('home.offer_card_2_desc') }}
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                        <div
+                            style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #e74c3c, #c0392b); border-radius: 0 20px 0 100px; opacity: 0.1;">
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
+                            <div
+                                style="background: linear-gradient(135deg, #e74c3c, #c0392b); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
+                                <i class="fas fa-heartbeat" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
+                                {{ __('home.offer_card_3_title') }}
+                            </h3>
+                        </div>
+
+                        <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                            {{ __('home.offer_card_3_desc') }}
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                        <div
+                            style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #f39c12, #e67e22); border-radius: 0 20px 0 100px; opacity: 0.1;">
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
+                            <div
+                                style="background: linear-gradient(135deg, #f39c12, #e67e22); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
+                                <i class="fas fa-camera" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
+                                {{ __('home.offer_card_4_title') }}
+                            </h3>
+                        </div>
+
+                        <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                            {{ __('home.offer_card_4_desc') }}
+                        </p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                        <div
+                            style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #9b59b6, #8e44ad); border-radius: 0 20px 0 100px; opacity: 0.1;">
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
+                            <div
+                                style="background: linear-gradient(135deg, #9b59b6, #8e44ad); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
+                                <i class="fas fa-user-friends" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
+                                {{ __('home.offer_card_5_title') }}
+                            </h3>
+                        </div>
+
+                        <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                            {{ __('home.offer_card_5_desc') }}
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section
+                style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+
+                <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 2;">
+                    <div
+                        style="display: inline-block; background: rgba(255, 255, 255, 0.1); padding: 1.2rem; border-radius: 50%; margin-bottom: 2rem; backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2);">
+                        <i class="fas fa-hands-helping" style="font-size: 2.5rem; color: white;"></i>
+                    </div>
+
+                    <h2
+                        style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
+                        {{ __('home.contact_title') }}</h2>
+
+                    <p
+                        style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; line-height: 1.8; text-shadow: 1px 1px 5px rgba(0,0,0,0.2);">
+                        {{ __('home.contact_desc') }}
+                    </p>
+
+                    <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                        <a href="#"
+                            style="background: rgba(255, 255, 255, 0.2); color: white; text-decoration: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; border: 2px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-phone"></i>
+                            {{ __('home.contact_call') }}
+                        </a>
+
+                        <a href="#"
+                            style="background: white; color: #2c3e50; text-decoration: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                            <i class="fas fa-envelope"></i>
+                            {{ __('home.contact_email') }}
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
-
-    <!-- What We Offer Section -->
-    <section style="padding: 5rem 2rem; max-width: 1200px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-            <h2
-                style="font-size: 2.5rem; font-weight: 700; color: #2c3e50; margin-bottom: 1rem; position: relative;">
-                {{ __('home.offer_title') }}
-                <span
-                    style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(135deg, #1abc9c, #27ae60); border-radius: 2px;"></span>
-            </h2>
-            <p style="font-size: 1.2rem; color: #7f8c8d; max-width: 600px; margin: 0 auto;">
-                {{ __('home.offer_subtitle') }}
-            </p>
-        </div>
-
-        <div
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-
-            <!-- Card 1 -->
-            <div
-                style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
-                <div
-                    style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #1abc9c, #27ae60); border-radius: 0 20px 0 100px; opacity: 0.1;">
-                </div>
-
-                <div
-                    style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
-                    <div
-                        style="background: linear-gradient(135deg, #1abc9c, #27ae60); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
-                        <i class="fas fa-stethoscope" style="color: white; font-size: 1.5rem;"></i>
-                    </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
-                        {{ __('home.offer_card_1_title') }}
-                    </h3>
-                </div>
-
-                <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
-                    {{ __('home.offer_card_1_desc') }}
-                </p>
-            </div>
-
-            <!-- Card 2 -->
-            <div
-                style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
-                <div
-                    style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #3498db, #2980b9); border-radius: 0 20px 0 100px; opacity: 0.1;">
-                </div>
-
-                <div
-                    style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
-                    <div
-                        style="background: linear-gradient(135deg, #3498db, #2980b9); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
-                        <i class="fas fa-plane" style="color: white; font-size: 1.5rem;"></i>
-                    </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
-                        {{ __('home.offer_card_2_title') }}
-                    </h3>
-                </div>
-
-                <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
-                    {{ __('home.offer_card_2_desc') }}
-                </p>
-            </div>
-
-            <!-- Card 3 -->
-            <div
-                style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
-                <div
-                    style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #e74c3c, #c0392b); border-radius: 0 20px 0 100px; opacity: 0.1;">
-                </div>
-
-                <div
-                    style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
-                    <div
-                        style="background: linear-gradient(135deg, #e74c3c, #c0392b); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
-                        <i class="fas fa-heartbeat" style="color: white; font-size: 1.5rem;"></i>
-                    </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
-                        {{ __('home.offer_card_3_title') }}
-                    </h3>
-                </div>
-
-                <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
-                    {{ __('home.offer_card_3_desc') }}
-                </p>
-            </div>
-
-            <!-- Card 4 -->
-            <div
-                style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
-                <div
-                    style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #f39c12, #e67e22); border-radius: 0 20px 0 100px; opacity: 0.1;">
-                </div>
-
-                <div
-                    style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
-                    <div
-                        style="background: linear-gradient(135deg, #f39c12, #e67e22); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
-                        <i class="fas fa-camera" style="color: white; font-size: 1.5rem;"></i>
-                    </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
-                        {{ __('home.offer_card_4_title') }}
-                    </h3>
-                </div>
-
-                <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
-                    {{ __('home.offer_card_4_desc') }}
-                </p>
-            </div>
-
-            <!-- Card 5 -->
-            <div
-                style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
-                <div
-                    style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #9b59b6, #8e44ad); border-radius: 0 20px 0 100px; opacity: 0.1;">
-                </div>
-
-                <div
-                    style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
-                    <div
-                        style="background: linear-gradient(135deg, #9b59b6, #8e44ad); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
-                        <i class="fas fa-user-friends" style="color: white; font-size: 1.5rem;"></i>
-                    </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
-                        {{ __('home.offer_card_5_title') }}
-                    </h3>
-                </div>
-
-                <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
-                    {{ __('home.offer_card_5_desc') }}
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section
-        style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
-
-        <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 2;">
-            <div
-                style="display: inline-block; background: rgba(255, 255, 255, 0.1); padding: 1.2rem; border-radius: 50%; margin-bottom: 2rem; backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2);">
-                <i class="fas fa-hands-helping" style="font-size: 2.5rem; color: white;"></i>
-            </div>
-
-            <h2
-                style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
-                {{ __('home.contact_title') }}</h2>
-
-            <p
-                style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; line-height: 1.8; text-shadow: 1px 1px 5px rgba(0,0,0,0.2);">
-                {{ __('home.contact_desc') }}
-            </p>
-
-            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-                <a href="#"
-                    style="background: rgba(255, 255, 255, 0.2); color: white; text-decoration: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; border: 2px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-phone"></i>
-                    {{ __('home.contact_call') }}
-                </a>
-
-                <a href="#"
-                    style="background: white; color: #2c3e50; text-decoration: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <i class="fas fa-envelope"></i>
-                    {{ __('home.contact_email') }}
-                </a>
-            </div>
-        </div>
-    </section>
-</div>
 
         <div id="taif" class="page" style="font-family: system-ui, -apple-system, sans-serif;">
             <section class="page-hero"
@@ -1191,26 +1192,25 @@
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
 
                         @foreach ($speakers as $speaker)
-                            
-                    
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="{{ asset( $speaker->image) }}"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                  
+                            <div
+                                style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
+                                <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
+                                    <img src="{{ asset($speaker->image) }}"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
+                                    <div style="position: relative; z-index: 2;">
+
+                                    </div>
+                                </div>
+                                <div style="padding: 20px; background: white;">
+                                    <h4
+                                        style="color: #2d3748; font-size: 1.2em; font-weight: 600; margin: 0 0 8px 0; font-family: 'Cairo', sans-serif;">
+                                        {{ $speaker->name_en }}</h4>
+                                    <p style="color: #4fd1c7; margin: 0; font-size: 1em; font-weight: 500;">
+                                        {{ $speaker->name_ar }}
+                                    </p>
                                 </div>
                             </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4
-                                    style="color: #2d3748; font-size: 1.2em; font-weight: 600; margin: 0 0 8px 0; font-family: 'Cairo', sans-serif;">
-                                    {{ $speaker->name_en }}</h4>
-                                <p style="color: #4fd1c7; margin: 0; font-size: 1em; font-weight: 500;">{{ $speaker->name_en }} 
-                                </p>
-                            </div>
-                        </div>
-@endforeach
+                        @endforeach
             </section>
         </div>
 
@@ -1682,26 +1682,25 @@
                         <!-- Abdelghani Rozy -->
 
                         @foreach ($speakers as $speaker)
-                            
-                    
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="{{ asset( $speaker->image) }}"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                  
+                            <div
+                                style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
+                                <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
+                                    <img src="{{ asset($speaker->image) }}"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
+                                    <div style="position: relative; z-index: 2;">
+
+                                    </div>
+                                </div>
+                                <div style="padding: 20px; background: white;">
+                                    <h4
+                                        style="color: #2d3748; font-size: 1.2em; font-weight: 600; margin: 0 0 8px 0; font-family: 'Cairo', sans-serif;">
+                                        {{ $speaker->name_en }}</h4>
+                                    <p style="color: #4fd1c7; margin: 0; font-size: 1em; font-weight: 500;">
+                                        {{ $speaker->name_ar }}
+                                    </p>
                                 </div>
                             </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4
-                                    style="color: #2d3748; font-size: 1.2em; font-weight: 600; margin: 0 0 8px 0; font-family: 'Cairo', sans-serif;">
-                                    {{ $speaker->name_en }}</h4>
-                                <p style="color: #4fd1c7; margin: 0; font-size: 1em; font-weight: 500;">{{ $speaker->name_en }} 
-                                </p>
-                            </div>
-                        </div>
-@endforeach
+                        @endforeach
                         <!-- Mohammed Aldar -->
                         {{-- <div
                             style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
@@ -2725,8 +2724,8 @@
 
                         <div class="form-group full-width">
                             <label for="specialization">التخصص <span class="required">*</span></label>
-                            <input name="specialization" type="text" id="specialization"
-                                name="specialization" required>
+                            <input name="specialization" type="text" id="specialization" name="specialization"
+                                required>
                         </div>
 
                         <div class="form-group full-width">
@@ -2885,9 +2884,8 @@
                         <!-- Icon -->
                         <div
                             style="width: 80px; height: 80px; background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px auto; border: 3px solid #4fd1c7;">
-                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
-                                stroke="#4fd1c7" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#4fd1c7"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9 5.16-1 9-3.45 9-9V7l-10-5z" />
                                 <path d="M8 11l2 2 4-4" />
                             </svg>
@@ -3325,53 +3323,61 @@
             </section>
 
             <!-- Content Section -->
-            <section class="content-section" style="padding: 100px 0; background-color: #f8f9fa;">
-                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-
-                    <!-- Coming Soon Card -->
-                    <div
-                        style="background: white; border-radius: 20px; padding: 60px 40px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 50px; position: relative; overflow: hidden;">
-
-                        <!-- Background Pattern -->
-                        <div
-                            style="position: absolute; top: -50px; left: -50px; width: 100px; height: 100px; background: linear-gradient(45deg, #4fd1c7, #63b3ed); border-radius: 50%; opacity: 0.1;">
-                        </div>
-                        <div
-                            style="position: absolute; bottom: -30px; right: -30px; width: 60px; height: 60px; background: linear-gradient(45deg, #63b3ed, #4fd1c7); border-radius: 50%; opacity: 0.1;">
-                        </div>
-
-                        <!-- Icon -->
-                        <div
-                            style="width: 80px; height: 80px; background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px auto; border: 3px solid #4fd1c7;">
-                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
-                                stroke="#4fd1c7" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9 5.16-1 9-3.45 9-9V7l-10-5z" />
-                                <path d="M8 11l2 2 4-4" />
-                            </svg>
-                        </div>
-
-                        <h2
-                            style="color: #2d3748; font-size: 2.5rem; font-weight: 700; margin: 0 0 20px 0; background: linear-gradient(135deg, #4fd1c7, #63b3ed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                            قريباً</h2>
-
-                        <p
-                            style="color: #718096; font-size: 1.2rem; line-height: 1.8; margin: 0; max-width: 500px; margin: 0 auto 20px auto;">
-                            نعمل حالياً على تطوير هذه الصفحة لتقديم أفضل تجربة للمستخدمين. يرجى زيارة الصفحة مرة أخرى
-                            قريباً للاطلاع على المحتوى الجديد.</p>
-
-                        <!-- Progress Indicator -->
-                        <!-- <div style="width: 200px; height: 4px; background: #e2e8f0; border-radius: 2px; margin: 30px auto; overflow: hidden;">
-                        <div style="width: 65%; height: 100%; background: linear-gradient(90deg, #4fd1c7, #63b3ed); border-radius: 2px; animation: pulse 2s infinite;"></div>
-                    </div> -->
-
-                        <!-- <p style="color: #a0aec0; font-size: 0.9rem; margin: 0;">جاري التطوير... 65%</p> -->
+     <section class="content-section" style="padding: 100px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); position: relative; overflow: hidden;">
+    
+    <!-- Background decoration -->
+    <div style="position: absolute; top: -100px; left: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(102,126,234,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(118,75,162,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+    
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;">
+        
+        <!-- Section Title -->
+        <div style="text-align: center; margin-bottom: 70px;">
+            <h2 style="color: #2d3748; font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">التغطية الإعلامية</h2>
+            <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #667eea, #764ba2); margin: 0 auto; border-radius: 2px;"></div>
+        </div>
+        
+        <div class="news-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; margin-top: 50px;">
+            
+            @foreach ($medias as $media)
+                <div style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; border: 1px solid rgba(102,126,234,0.1);"
+                    
+                     >
+                    
+                    <!-- News Image -->
+                    <div style="width: 100%; height: 280px; position: relative; overflow: hidden;">
+                        <img src="{{ asset($media->image) }}" alt="{{ $media->title ?? 'صورة الخبر' }}"
+                             style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s ease-out;"
+                             onmouseover="this.style.transform='scale(1.08)'"
+                             onmouseout="this.style.transform='scale(1)'">
+                        
+                        <!-- Modern overlay -->
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
                     </div>
-
-                    <!-- Additional Info Cards -->
-
+                    
+                    <!-- News Content -->
+                    <div style="padding: 35px;">
+                        <div style="color: #667eea; font-size: 0.95rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                            {{ $media->created_at ? $media->created_at->format('d M Y') : 'تاريخ غير محدد' }}
+                        </div>
+                        
+                        <h3 style="color: #1a202c; font-size: 1.5rem; font-weight: 800; margin-bottom: 18px; line-height: 1.3; transition: color 0.3s ease;" onmouseover="this.style.color='#667eea'" onmouseout="this.style.color='#1a202c'">
+                            {{ $media->title ?? 'عنوان الخبر' }}
+                        </h3>
+                        
+                        <p style="color: #4a5568; font-size: 1.05rem; line-height: 1.7; margin-bottom: 0; font-weight: 400;">
+                            {{ $media->desc ?? 'وصف الخبر' }}
+                        </p>
+                        
+                        <!-- Decorative element -->
+                        <div style="width: 50px; height: 3px; background: linear-gradient(90deg, #667eea, #764ba2); margin-top: 25px; border-radius: 2px; transition: width 0.3s ease;" onmouseover="this.style.width='80px'" onmouseout="this.style.width='50px'"></div>
+                    </div>
                 </div>
-            </section>
+            @endforeach
+            
+        </div>
+    </div>
+</section>
         </div>
 
         <div id="exhibition" class="page">

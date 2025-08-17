@@ -23,9 +23,9 @@
                 </a>
             </li>
             <li class="" data-page="transfers">
-                <a href="" class="menu-link">
+                <a href="{{ route('admin.media') }}" class="menu-link">
                     <i class="fas fa-exchange-alt"></i>
-                    <span>التحويلات</span>
+                    <span>التغطية الإعلامية</span>
                 </a>
             </li>
             <li class="" data-page="offices">

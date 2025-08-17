@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لوحة التحكم الإدارية</title>
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/style.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,7 +13,7 @@
 
 <body>
     <!-- الشريط الجانبي -->
-    @include('sidebar')
+    @include('admin.sidebar')
 
 
     <style>
@@ -65,14 +65,14 @@
     <!-- المحتوى الرئيسي -->
     <main class="main-content">
         <!-- الهيدر العلوي -->
-        @include('header')
+        @include('admin.header')
 
         <div class="page-content" id="users">
             <div class="page-header">
-                <h2>إدارة البانرات</h2>
+                <h2>إدارة التغطية الإعلامية </h2>
                 <button class="btn btn-primary" onclick="showAddbannerModal()">
                     <i class="fas fa-plus"></i>
-                    إضافة بانر
+                    إضافة خبر إعلامي
                 </button>
             </div>
 
@@ -85,21 +85,20 @@
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>صورة البانر</th>
-                            {{-- <th>صورة الهوية الخلفية</th> --}}
+                            <th>صورة الخبر</th>
                             <th>العنوان </th>
-                            {{-- <th>البريد الإلكتروني</th> --}}
-                            <th>اللينك</th>
+
+                            <th>المحتوي</th>
                             <th>تاريخ الإنشاء</th>
-                            {{-- <th>الحالة</th> --}}
+
                             <th>الإجراءات</th>
                         </tr>
                     </thead>
                     <tbody id="usersTableBody">
-                        @foreach ($banners as $banner)
+                        @foreach ($medias as $media)
                             <tr>
                                 <td>
-                                    <img src="{{ asset($banner->image) }}" alt="صورة الهوية الأمامية"
+                                    <img src="{{ asset($media->image) }}" alt="صورة الهوية الأمامية"
                                         style="width: 120px; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);">
                                 </td>
                                 {{-- <td>
@@ -107,30 +106,15 @@
                                         style="width: 120px; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);">
                                 </td> --}}
 
-                                <td>{{ $banner->title }}</td>
-                                <td>{{ $banner->link }}</td>
+                                <td>{{ $media->title }}</td>
+                                <td>{{ $media->desc }}</td>
                                 {{-- <td>{{ $user->balance }}</td> --}}
-                                <td>{{ $banner->created_at }}</td>
+                                <td>{{ $media->created_at }}</td>
 
                                 <td>
-                                    <!-- زر تعديل -->
-                                    {{-- <button class="btn-action edit"
-                                        onclick="showEditUserModal(
-                {{ $banner->id }}, 
-                '{{ addslashes($banner->title) }}', 
-                '{{ addslashes($banner->link) }}'
-            )">
-                                        <i class="fas fa-edit"></i>
-                                    </button> --}}
-
-                                    <!-- زر إضافة رصيد -->
-                                    {{-- <button class="btn-action balance"
-                                        onclick="showAddBalanceModal({{ $user->id }}, '{{ addslashes($user->name) }}', '{{ $user->balance }}')">
-                                        <i class="fas fa-plus"></i>
-                                    </button> --}}
-
+                                 
                                     <!-- زر حذف -->
-                                    <form action="{{ route('banners.delete', $banner->id) }}" method="post"
+                                    <form action="{{ route('admin.deletemedia', $media->id) }}" method="post"
                                         style="display:inline;"  >
                                         @csrf
                                         @method('DELETE')
@@ -175,18 +159,18 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('banners.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('media.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label>عنوان البانر</label>
+                            <label>عنوان االخبر</label>
                             <input name="title" type="text" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>رابط البانر</label>
-                            <input name="link" type="url" class="form-control" required>
+                            <label>وصف لخبر</label>
+                            <input name="desc" type="text" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>صورة البانر</label>
+                            <label>صورة الخبر</label>
                             <input name="image" type="file" class="form-control" accept="image/*" required
                                 onchange="previewBannerImage(event)">
                         </div>
@@ -235,7 +219,7 @@
     </main>
 
 
-    <script src="{{ asset('script.js') }}"></script>
+    <script src="{{ asset('admin/script.js') }}"></script>
 
     <script>
         function toggleBlockUser(userId, isBlocked) {
