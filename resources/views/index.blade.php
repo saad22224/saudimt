@@ -220,7 +220,7 @@
                     </div>
 
                     <h1 class="hero-title">
-                            {{ __('home.headline') }} </h1>
+                        {{ __('home.headline') }} </h1>
                     <p class="hero-subtitle">{{ __('home.tagline') }}</p>
 
                     <div class="hero-info">
@@ -234,102 +234,115 @@
                         </div>
                         <div class="info-item">
                             <i class="fas fa-users"></i>
-                            <span>  {{ __('home.participants') }} </span>
+                            <span> {{ __('home.participants') }} </span>
                         </div>
                     </div>
 
                     <div class="hero-buttons">
-                        <button class="btn btn-primary" onclick="showPage('registration')">{{ __('home.register_now') }}</button>
-                        <button class="btn btn-secondary" onclick="showPage('about')"> {{ __('home.learn_more') }} </button>
+                        <button class="btn btn-primary"
+                            onclick="showPage('registration')">{{ __('home.register_now') }}</button>
+                        <button class="btn btn-secondary" onclick="showPage('about')"> {{ __('home.learn_more') }}
+                        </button>
                     </div>
                 </div>
             </section>
 
-        <section class="about-preview"
-    style="padding: 4rem 0; background: linear-gradient(to bottom, #f8f9fa, #fff);">
-    <div class="container" style="width: 90%; max-width: 1400px; margin: 0 auto;">
-        
-        <!-- headline -->
-        <h2 data-aos="fade-down"
-            style="text-align: center; margin-bottom: 3rem; color: #2c3e50; font-size: 2.2rem; position: relative;">
-            {{ __('home.about') }}
-        </h2>
+            <section class="about-preview"
+                style="padding: 4rem 0; background: linear-gradient(to bottom, #f8f9fa, #fff);">
+                <div class="container" style="width: 90%; max-width: 1400px; margin: 0 auto;">
 
-        <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 10px 5px;">
+                    <!-- headline -->
+                    <h2 data-aos="fade-down"
+                        style="text-align: center; margin-bottom: 3rem; color: #2c3e50; font-size: 2.2rem; position: relative;">
+                        {{ __('home.about') }}
+                    </h2>
 
-            <!-- Vision -->
-            <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
+                    <div
+                        style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 10px 5px;">
+
+                        <!-- Vision -->
+                        <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
                 background: white; border-radius: 15px; 
                 padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 position: relative; overflow: hidden; height: 300px;"
-                data-aos="fade-left" data-aos-duration="3000">
+                            data-aos="fade-left" data-aos-duration="3000">
 
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #3498db, #2980b9);"></div>
-                <i class="fas fa-eye" style="font-size: 24px; color: #3498db; margin-bottom: 10px;"></i>
-                <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
-                    {{ __('home.our_vision') }}
-                </h3>
-                <p style="color: #666; line-height: 1.6; margin: 0;">
-                    {{ __('home.our_vision_text') }}
-                </p>
-            </div>
+                            <div
+                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #3498db, #2980b9);">
+                            </div>
+                            <i class="fas fa-eye" style="font-size: 24px; color: #3498db; margin-bottom: 10px;"></i>
+                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
+                                {{ __('home.our_vision') }}
+                            </h3>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">
+                                {{ __('home.our_vision_text') }}
+                            </p>
+                        </div>
 
-            <!-- Mission -->
-            <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
+                        <!-- Mission -->
+                        <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
                 background: white; border-radius: 15px; 
                 padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 position: relative; overflow: hidden; height: 300px;"
-                data-aos="fade-left" data-aos-duration="3000">
+                            data-aos="fade-left" data-aos-duration="3000">
 
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #2ecc71, #27ae60);"></div>
-                <i class="fas fa-bullseye" style="font-size: 24px; color: #2ecc71; margin-bottom: 10px;"></i>
-                <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
-                    {{ __('home.our_mission') }}
-                </h3>
-                <p style="color: #666; line-height: 1.6; margin: 0;">
-                    {{ __('home.our_mission_text') }}
-                </p>
-            </div>
+                            <div
+                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #2ecc71, #27ae60);">
+                            </div>
+                            <i class="fas fa-bullseye"
+                                style="font-size: 24px; color: #2ecc71; margin-bottom: 10px;"></i>
+                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
+                                {{ __('home.our_mission') }}
+                            </h3>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">
+                                {{ __('home.our_mission_text') }}
+                            </p>
+                        </div>
 
-            <!-- Values -->
-            <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
+                        <!-- Values -->
+                        <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
                 background: white; border-radius: 15px; 
                 padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 position: relative; overflow: hidden; height: 300px;"
-                data-aos="fade-left" data-aos-duration="3000">
+                            data-aos="fade-left" data-aos-duration="3000">
 
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #f39c12, #e67e22);"></div>
-                <i class="fas fa-handshake" style="font-size: 24px; color: #f39c12; margin-bottom: 10px;"></i>
-                <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
-                    {{ __('home.our_values') }}
-                </h3>
-                <p style="color: #666; line-height: 1.6; margin: 0;">
-                    {{ __('home.our_values_text') }}
-                </p>
-            </div>
+                            <div
+                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #f39c12, #e67e22);">
+                            </div>
+                            <i class="fas fa-handshake"
+                                style="font-size: 24px; color: #f39c12; margin-bottom: 10px;"></i>
+                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
+                                {{ __('home.our_values') }}
+                            </h3>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">
+                                {{ __('home.our_values_text') }}
+                            </p>
+                        </div>
 
-            <!-- Impact -->
-            <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
+                        <!-- Impact -->
+                        <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
                 background: white; border-radius: 15px; 
                 padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 position: relative; overflow: hidden; height: 300px;"
-                data-aos="fade-left" data-aos-duration="3000">
+                            data-aos="fade-left" data-aos-duration="3000">
 
-                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #9b59b6, #8e44ad);"></div>
-                <i class="fas fa-globe" style="font-size: 24px; color: #9b59b6; margin-bottom: 10px;"></i>
-                <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
-                    {{ __('home.our_impact') }}
-                </h3>
-                <p style="color: #666; line-height: 1.6; margin: 0;">
-                    {{ __('home.our_impact_text') }}
-                </p>
-            </div>
-        </div>
-    </div>
+                            <div
+                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #9b59b6, #8e44ad);">
+                            </div>
+                            <i class="fas fa-globe" style="font-size: 24px; color: #9b59b6; margin-bottom: 10px;"></i>
+                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">
+                                {{ __('home.our_impact') }}
+                            </h3>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">
+                                {{ __('home.our_impact_text') }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
 
                 <style>
@@ -352,280 +365,284 @@
                 <div class="container" style="width: 90%; max-width: 1400px; margin: 0 auto;">
                     <h2 data-aos="fade-dawn"
                         style="text-align: center; margin-bottom: 3rem; color: #2c3e50; font-size: 2.2rem; position: relative;">
-                   {{ __('home.future') }}
-                </h2>
-                <p data-aos="fade-up" style="text-align: center; color: #666; line-height: 1.6; margin: 0;">
+                        {{ __('home.future') }}
+                    </h2>
+                    <p data-aos="fade-up" style="text-align: center; color: #666; line-height: 1.6; margin: 0;">
                         {{ __('home.vision') }}
-               
+
                     </p>
                 </div>
             </section>
-            <section class="conference-preview" style="background-color: #f9f9f9; padding: 50px 0;">
-                <div class="container">
-                    <h2 data-aos="fade-dawn">المؤتمر</h2>
-                    <p data-aos="fade-dawn" data-aos-duration="3000" class="section-subtitle" style="color: #666;">
-                        انضم
-                        إلينا في هذا الحدث الاستثنائي لتبادل الخبرات
-                        والمعرفة في مجال السياحة العلاجية</p>
+<section class="conference-preview" style="background-color: #f9f9f9; padding: 50px 0;">
+    <div class="container">
+        
+        <!-- Conference Title -->
+        <h2 data-aos="fade-dawn">{{ __('home.conference_title') }}</h2>
+        
+        <!-- Subtitle -->
+        <p data-aos="fade-dawn" data-aos-duration="3000" class="section-subtitle" style="color: #666;">
+            {{ __('home.conference_subtitle') }}
+        </p>
 
-                    <div class="stats-grid">
-                        <div data-aos="fade-left" data-aos-duration="3000" class="stat-card"
-                            style="background-color: #ccfbf1 ; color: #333; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 40px; text-align: center;">
-                            <i class="fas fa-calendar-alt" style="font-size: 24px; margin-bottom: 10px;"></i>
-                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
-                                3
-                            </div>
-                            <div class="stat-label" style="font-size: 18px;">أيام</div>
-                        </div>
-                        <div class="stat-card" data-aos="fade-dawn" data-aos-duration="3000"
-                            style="background-color: #c7b8ea !important; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
-                            <i class="fas fa-users" style="font-size: 24px; margin-bottom: 10px;"></i>
-                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
-                                500+</div>
-                            <div class="stat-label" style="font-size: 18px;">مشارك</div>
-                        </div>
-                        <div class="stat-card" data-aos="fade-right" data-aos-duration="3000"
-                            style="background-color: #ffffcc; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
-                            <i class="fas fa-microphone" style="font-size: 24px; margin-bottom: 10px;"></i>
-                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
-                                25
-                            </div>
-                            <div class="stat-label" style="font-size: 18px;">متحدث</div>
-                        </div>
-                        <div class="stat-card"
-                            style="background-color: 
-                            #add8e6; color: #333; border-radius: 10px;
-                             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-                             padding: 20px; text-align: center;"
-                            data-aos="fade-right" data-aos-duration="3000">
-                            <i class="fas fa-clock" style="font-size: 24px; margin-bottom: 10px;"></i>
-                            <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
-                                15
-                            </div>
-                            <div class="stat-label" style="font-size: 18px;">جلسة</div>
-                        </div>
-                    </div>
+        <div class="stats-grid">
 
-                    <div class="cta-section">
-                        <button class="btn btn-primary"
-                            style="background-color: #3498db; color: #fff; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer;"
-                            onclick="showPage('program')">اكتشف المزيد عن المؤتمر</button>
-                    </div>
+            <!-- Days -->
+            <div data-aos="fade-left" data-aos-duration="3000" class="stat-card"
+                style="background-color: #ccfbf1 ; color: #333; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 40px; text-align: center;">
+                <i class="fas fa-calendar-alt" style="font-size: 24px; margin-bottom: 10px;"></i>
+                <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
+                    {{ __('home.days_number') }}
                 </div>
-            </section>
+                <div class="stat-label" style="font-size: 18px;">{{ __('home.days_label') }}</div>
+            </div>
+
+            <!-- Participants -->
+            <div class="stat-card" data-aos="fade-dawn" data-aos-duration="3000"
+                style="background-color: #c7b8ea !important; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
+                <i class="fas fa-users" style="font-size: 24px; margin-bottom: 10px;"></i>
+                <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
+                    {{ __('home.participants_number') }}
+                </div>
+                <div class="stat-label" style="font-size: 18px;">{{ __('home.participants_label') }}</div>
+            </div>
+
+            <!-- Speakers -->
+            <div class="stat-card" data-aos="fade-right" data-aos-duration="3000"
+                style="background-color: #ffffcc; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
+                <i class="fas fa-microphone" style="font-size: 24px; margin-bottom: 10px;"></i>
+                <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
+                    {{ __('home.speakers_number') }}
+                </div>
+                <div class="stat-label" style="font-size: 18px;">{{ __('home.speakers_label') }}</div>
+            </div>
+
+            <!-- Sessions -->
+            <div class="stat-card" data-aos="fade-right" data-aos-duration="3000"
+                style="background-color: #add8e6; color: #333; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
+                <i class="fas fa-clock" style="font-size: 24px; margin-bottom: 10px;"></i>
+                <div class="stat-number" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">
+                    {{ __('home.sessions_number') }}
+                </div>
+                <div class="stat-label" style="font-size: 18px;">{{ __('home.sessions_label') }}</div>
+            </div>
+
+        </div>
+
+        <!-- CTA Button -->
+        <div class="cta-section" style="margin-top: 30px; text-align: center;">
+            <button class="btn btn-primary"
+                style="background-color: #3498db; color: #fff; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer;"
+                onclick="showPage('program')">
+                {{ __('home.conference_cta') }}
+            </button>
+        </div>
+
+    </div>
+</section>
+
         </div>
 
         <!-- About Pages -->
-        <div id="about" class="page">
-            <section class="page-hero"
-                style="background: linear-gradient(135deg, #1abc9c 0%, #16a085 50%, #27ae60 100%); padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 
-            0; left: 0; right: 0; bottom: 0; ">
+    <div id="about" class="page">
+    <section class="page-hero"
+        style="background: linear-gradient(135deg, #1abc9c 0%, #16a085 50%, #27ae60 100%); padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
 
-                </div>
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
+            <div
+                style="display: inline-block; background: rgba(255, 255, 255, 0.15); padding: 1.5rem; border-radius: 50%; margin-bottom: 2rem; backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2);">
+                <i class="fas fa-hospital-alt" style="font-size: 3rem; color: white;"></i>
+            </div>
 
-                <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
-                    <div
-                        style="display: inline-block; background: rgba(255, 255, 255, 0.15); padding: 1.5rem; border-radius: 50%; margin-bottom: 2rem; backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2);">
-                        <i class="fas fa-hospital-alt" style="font-size: 3rem; color: white;"></i>
-                    </div>
+            <h1
+                style="font-size: 3.5rem; font-weight: 700; color: white; margin-bottom: 1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
+                {{ __('home.about_title') }}</h1>
 
-                    <h1
-                        style="font-size: 3.5rem; font-weight: 700; color: white; margin-bottom: 1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
-                        عن الجمعية</h1>
+            <p
+                style="font-size: 1.3rem; color: rgba(255, 255, 255, 0.95); max-width: 800px; margin: 0 auto 2rem; text-shadow: 1px 1px 5px rgba(0,0,0,0.2);">
+                {{ __('home.about_description_1') }}
+            </p>
 
-                    <p
-                        style="font-size: 1.3rem; color: rgba(255, 255, 255, 0.95); max-width: 800px; margin: 0 auto 2rem; text-shadow: 1px 1px 5px rgba(0,0,0,0.2);">
-                        الجمعية التعاونية للسياحة العلاجية هي جهة سعودية متخصصة تهدف من ضمن أهدافها إلى جذب المرضى من
-                        خارج
-                        المملكة العربية السعودية لتلقي العلاج في المستشفيات والمراكز الطبية الرائدة داخل المملكة
-                    </p>
+            <div
+                style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 20px; backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.2); max-width: 900px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; color: white; margin: 0; font-weight: 500; line-height: 1.8;">
+                    {{ __('home.about_description_2') }}
+                </p>
+            </div>
+        </div>
+    </section>
 
-                    <div
-                        style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 20px; backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.2); max-width: 900px; margin: 0 auto;">
-                        <p style="font-size: 1.2rem; color: white; margin: 0; font-weight: 500; line-height: 1.8;">
-                            نؤمن بأن الرعاية الصحية ليست مجرد علاج، بل تجربة متكاملة تبدأ من لحظة التواصل وتنتهي بتعافٍ
-                            آمن
-                            وذكريات طيبة
-                        </p>
-                    </div>
-                </div>
-            </section>
+    <!-- What We Offer Section -->
+    <section style="padding: 5rem 2rem; max-width: 1200px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h2
+                style="font-size: 2.5rem; font-weight: 700; color: #2c3e50; margin-bottom: 1rem; position: relative;">
+                {{ __('home.offer_title') }}
+                <span
+                    style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(135deg, #1abc9c, #27ae60); border-radius: 2px;"></span>
+            </h2>
+            <p style="font-size: 1.2rem; color: #7f8c8d; max-width: 600px; margin: 0 auto;">
+                {{ __('home.offer_subtitle') }}
+            </p>
+        </div>
 
-            <!-- What We Offer Section -->
-            <section style="padding: 5rem 2rem; max-width: 1200px; margin: 0 auto;">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <h2
-                        style="font-size: 2.5rem; font-weight: 700; color: #2c3e50; margin-bottom: 1rem; position: relative;">
-                        ما الذي نقدمه؟
-                        <span
-                            style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(135deg, #1abc9c, #27ae60); border-radius: 2px;"></span>
-                    </h2>
-                    <p style="font-size: 1.2rem; color: #7f8c8d; max-width: 600px; margin: 0 auto;">
-                        نُقدم تجربة علاجية متكاملة تشمل
-                    </p>
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+
+            <!-- Card 1 -->
+            <div
+                style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                <div
+                    style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #1abc9c, #27ae60); border-radius: 0 20px 0 100px; opacity: 0.1;">
                 </div>
 
                 <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-
-                    <!-- Card 1 -->
+                    style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
                     <div
-                        style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
-                        <div
-                            style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #1abc9c, #27ae60); border-radius: 0 20px 0 100px; opacity: 0.1;">
-                        </div>
-
-                        <div
-                            style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
-                            <div
-                                style="background: linear-gradient(135deg, #1abc9c, #27ae60); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
-                                <i class="fas fa-stethoscope" style="color: white; font-size: 1.5rem;"></i>
-                            </div>
-                            <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">تنسيق الخدمات
-                                الطبية
-                            </h3>
-                        </div>
-
-                        <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
-                            اختيار المنشآت والمراكز العلاجية المناسبة حسب حالة المريض واحتياجاته الصحية
-                        </p>
+                        style="background: linear-gradient(135deg, #1abc9c, #27ae60); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
+                        <i class="fas fa-stethoscope" style="color: white; font-size: 1.5rem;"></i>
                     </div>
-
-                    <!-- Card 2 -->
-                    <div
-                        style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
-                        <div
-                            style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #3498db, #2980b9); border-radius: 0 20px 0 100px; opacity: 0.1;">
-                        </div>
-
-                        <div
-                            style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
-                            <div
-                                style="background: linear-gradient(135deg, #3498db, #2980b9); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
-                                <i class="fas fa-plane" style="color: white; font-size: 1.5rem;"></i>
-                            </div>
-                            <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">الخدمات
-                                اللوجستية
-                            </h3>
-                        </div>
-
-                        <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
-                            تنظيم إجراءات السفر، الاستقبال، النقل، والإقامة طوال فترة العلاج
-                        </p>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div
-                        style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
-                        <div
-                            style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #e74c3c, #c0392b); border-radius: 0 20px 0 100px; opacity: 0.1;">
-                        </div>
-
-                        <div
-                            style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
-                            <div
-                                style="background: linear-gradient(135deg, #e74c3c, #c0392b); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
-                                <i class="fas fa-heartbeat" style="color: white; font-size: 1.5rem;"></i>
-                            </div>
-                            <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">برامج استشفائية
-                            </h3>
-                        </div>
-
-                        <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
-                            تصميم برامج تساعد على تسريع التعافي الجسدي والنفسي بعد العلاج، في بيئات صحية وطبيعية داعمة
-                        </p>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div
-                        style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
-                        <div
-                            style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #f39c12, #e67e22); border-radius: 0 20px 0 100px; opacity: 0.1;">
-                        </div>
-
-                        <div
-                            style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
-                            <div
-                                style="background: linear-gradient(135deg, #f39c12, #e67e22); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
-                                <i class="fas fa-camera" style="color: white; font-size: 1.5rem;"></i>
-                            </div>
-                            <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">رحلات سياحية
-                                مرافقة
-                            </h3>
-                        </div>
-
-                        <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
-                            توفير باقات سياحية مصممة بعناية تتيح للمريض ومرافقيه استكشاف معالم المملكة والاستمتاع بتجربة
-                            ثقافية فريدة
-                        </p>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div
-                        style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
-                        <div
-                            style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #9b59b6, #8e44ad); border-radius: 0 20px 0 100px; opacity: 0.1;">
-                        </div>
-
-                        <div
-                            style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
-                            <div
-                                style="background: linear-gradient(135deg, #9b59b6, #8e44ad); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
-                                <i class="fas fa-user-friends" style="color: white; font-size: 1.5rem;"></i>
-                            </div>
-                            <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">دعم ومتابعة
-                                شخصية
-                            </h3>
-                        </div>
-
-                        <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
-                            توفير مرافقين ومترجمين لضمان راحة المريض وسهولة التواصل، مع متابعة دقيقة من الفريق الطبي
-                            طوال
-                            فترة العلاج
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section
-                style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
-
+                    <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
+                        {{ __('home.offer_card_1_title') }}
+                    </h3>
                 </div>
 
-                <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 2;">
-                    <div
-                        style="display: inline-block; background: rgba(255, 255, 255, 0.1); padding: 1.2rem; border-radius: 50%; margin-bottom: 2rem; backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2);">
-                        <i class="fas fa-hands-helping" style="font-size: 2.5rem; color: white;"></i>
-                    </div>
+                <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                    {{ __('home.offer_card_1_desc') }}
+                </p>
+            </div>
 
-                    <h2
-                        style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
-                        نحن هنا لخدمتكم</h2>
-
-                    <p
-                        style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; line-height: 1.8; text-shadow: 1px 1px 5px rgba(0,0,0,0.2);">
-                        تواصلوا معنا لتجربة علاجية متميزة تجمع بين أفضل الخدمات الطبية والضيافة السعودية الأصيلة
-                    </p>
-
-                    <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-                        <a href="#"
-                            style="background: rgba(255, 255, 255, 0.2); color: white; text-decoration: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; border: 2px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-phone"></i>
-                            اتصل بنا
-                        </a>
-
-                        <a href="#"
-                            style="background: white; color: #2c3e50; text-decoration: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                            <i class="fas fa-envelope"></i>
-                            راسلنا
-                        </a>
-                    </div>
+            <!-- Card 2 -->
+            <div
+                style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                <div
+                    style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #3498db, #2980b9); border-radius: 0 20px 0 100px; opacity: 0.1;">
                 </div>
-            </section>
+
+                <div
+                    style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
+                    <div
+                        style="background: linear-gradient(135deg, #3498db, #2980b9); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
+                        <i class="fas fa-plane" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
+                        {{ __('home.offer_card_2_title') }}
+                    </h3>
+                </div>
+
+                <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                    {{ __('home.offer_card_2_desc') }}
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                <div
+                    style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #e74c3c, #c0392b); border-radius: 0 20px 0 100px; opacity: 0.1;">
+                </div>
+
+                <div
+                    style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
+                    <div
+                        style="background: linear-gradient(135deg, #e74c3c, #c0392b); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
+                        <i class="fas fa-heartbeat" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
+                        {{ __('home.offer_card_3_title') }}
+                    </h3>
+                </div>
+
+                <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                    {{ __('home.offer_card_3_desc') }}
+                </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+                style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                <div
+                    style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #f39c12, #e67e22); border-radius: 0 20px 0 100px; opacity: 0.1;">
+                </div>
+
+                <div
+                    style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
+                    <div
+                        style="background: linear-gradient(135deg, #f39c12, #e67e22); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
+                        <i class="fas fa-camera" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
+                        {{ __('home.offer_card_4_title') }}
+                    </h3>
+                </div>
+
+                <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                    {{ __('home.offer_card_4_desc') }}
+                </p>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+                style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid rgba(26, 188, 156, 0.1); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                <div
+                    style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #9b59b6, #8e44ad); border-radius: 0 20px 0 100px; opacity: 0.1;">
+                </div>
+
+                <div
+                    style="display: flex; align-items: center; margin-bottom: 1.5rem; position: relative; z-index: 2;">
+                    <div
+                        style="background: linear-gradient(135deg, #9b59b6, #8e44ad); width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
+                        <i class="fas fa-user-friends" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; color: #2c3e50; margin: 0;">
+                        {{ __('home.offer_card_5_title') }}
+                    </h3>
+                </div>
+
+                <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                    {{ __('home.offer_card_5_desc') }}
+                </p>
+            </div>
         </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+        style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+
+        <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 2;">
+            <div
+                style="display: inline-block; background: rgba(255, 255, 255, 0.1); padding: 1.2rem; border-radius: 50%; margin-bottom: 2rem; backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2);">
+                <i class="fas fa-hands-helping" style="font-size: 2.5rem; color: white;"></i>
+            </div>
+
+            <h2
+                style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
+                {{ __('home.contact_title') }}</h2>
+
+            <p
+                style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; line-height: 1.8; text-shadow: 1px 1px 5px rgba(0,0,0,0.2);">
+                {{ __('home.contact_desc') }}
+            </p>
+
+            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="#"
+                    style="background: rgba(255, 255, 255, 0.2); color: white; text-decoration: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; border: 2px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-phone"></i>
+                    {{ __('home.contact_call') }}
+                </a>
+
+                <a href="#"
+                    style="background: white; color: #2c3e50; text-decoration: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <i class="fas fa-envelope"></i>
+                    {{ __('home.contact_email') }}
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
         <div id="taif" class="page" style="font-family: system-ui, -apple-system, sans-serif;">
             <section class="page-hero"
                 style=" color: white; padding: 4rem 0; text-align: center; border-radius: 0 0 20px 20px; margin-bottom: 2rem;">
