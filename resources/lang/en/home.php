@@ -309,5 +309,83 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
     'term_2' => 'Attendance is mandatory.',
     'term_3' => 'You must complete the evaluation/survey to receive your certificate.',
     'term_4' => 'Certificates will be sent to the email address used in this form.',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    'sponsors' => 'Sponsors',
+'sponsors_subtitle' => 'Companies and institutions sponsoring the conference',
+'coming_soon' => 'Coming Soon',
+'coming_soon_description' => 'We are currently working on developing this page to provide the best user experience. Please visit the page again soon to view the new content.',
+
+
+
+
+
+
+
+
+
+
+
+
+
+'book_sponsorship' => 'Book Your Sponsorship',
+'sponsorship_subtitle' => 'Be part of this important event and support the future of medical tourism in the Kingdom',
+'sponsorship_packages' => 'Sponsorship Packages',
+
+// Package Types
+'gold_sponsor' => 'Gold Sponsor',
+'gold_sponsor_subtitle' => 'Get the best promotional and marketing opportunities',
+'silver_sponsor' => 'Silver Sponsor',
+'silver_sponsor_subtitle' => 'Distinguished sponsorship with diverse benefits',
+'bronze_sponsor' => 'Bronze Sponsor',
+'bronze_sponsor_subtitle' => 'An excellent start to partnership with us',
+
+// Gold Package Features
+'gold_feature_1' => 'Large logo on all promotional materials',
+'gold_feature_2' => 'Premium booth in the exhibition',
+'gold_feature_3' => 'Opportunity to give a speech at the ceremony',
+'gold_feature_4' => '10 free invitations',
+
+// Silver Package Features
+'silver_feature_1' => 'Medium logo on promotional materials',
+'silver_feature_2' => 'Booth in the exhibition',
+'silver_feature_3' => '5 free invitations',
+'silver_feature_4' => 'Media coverage',
+
+// Bronze Package Features
+'bronze_feature_1' => 'Logo in the program',
+'bronze_feature_2' => 'Space in the exhibition',
+'bronze_feature_3' => '3 free invitations',
+'bronze_feature_4' => 'Certificate of appreciation',
+
+// Form Fields
+'sponsorship_request' => 'Sponsorship Request',
+'institution_name' => 'Institution Name',
+'institution_name_placeholder' => 'Company or institution name',
+'responsible_person' => 'Responsible Person',
+'responsible_person_placeholder' => 'Name of responsible person',
+'phone_placeholder' => '05xxxxxxxx',
+'sponsorship_type' => 'Sponsorship Type',
+'select_sponsorship_type' => 'Select sponsorship type',
+'gold_sponsor_option' => 'Gold Sponsor',
+'silver_sponsor_option' => 'Silver Sponsor',
+'bronze_sponsor_option' => 'Bronze Sponsor',
+'custom_sponsorship' => 'Custom Sponsorship',
+'additional_notes' => 'Additional Notes',
+'additional_notes_placeholder' => 'Any additional notes or special requirements',
+'submit_sponsorship_request' => 'Submit Sponsorship Request',
 ];
 

@@ -2938,13 +2938,7 @@
                 style="background: linear-gradient(135deg, #4fd1c7 0%, #63b3ed 100%); padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
                 <!-- Medical Tourism Logo -->
                 <div style="position: absolute; top: 20px; right: 20px; opacity: 0.1;">
-                    <!-- <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M60 10 L50 30 L70 30 Z M60 70 L50 50 L70 50 Z M20 40 L40 30 L40 50 Z M100 40 L80 30 L80 50 Z"
-                            fill="white" />
-                        <circle cx="60" cy="40" r="15" fill="white" />
-                        <path d="M55 40 L65 40 M60 35 L60 45" stroke="#4fd1c7" stroke-width="2" />
-                    </svg> -->
+                    <!-- SVG content can go here -->
                 </div>
 
                 <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
@@ -2952,28 +2946,19 @@
                     <div style="margin-bottom: 30px; display: flex; justify-content: center;">
                         <div
                             style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-                            <!-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M15 5 L25 5 L25 15 L35 15 L35 25 L25 25 L25 35 L15 35 L15 25 L5 25 L5 15 L15 15 Z"
-                                    fill="white" />
-                                <circle cx="20" cy="20" r="3" fill="#4fd1c7" />
-                            </svg> -->
-
                             <img src="assets/logo.png"
-                                style="width: 200px; height: 100px;
-                            box-shadow:0 4px 10px rgba(0,0,0,.15); "
-                                alt="">
+                                style="width: 200px; height: 100px; box-shadow:0 4px 10px rgba(0,0,0,.15);"
+                                alt="logo">
                         </div>
                     </div>
 
                     <h1
                         style="color: white; font-size: 3.5rem; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        الرعاة</h1>
+                        {{ __('home.sponsors') }}
+                    </h1>
                     <p
-                        style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
-                        400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-                        الشركات والمؤسسات الراعية للمؤتمر
+                        style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                        {{ __('home.sponsors_subtitle') }}
                     </p>
                 </div>
             </section>
@@ -3006,19 +2991,13 @@
 
                         <h2
                             style="color: #2d3748; font-size: 2.5rem; font-weight: 700; margin: 0 0 20px 0; background: linear-gradient(135deg, #4fd1c7, #63b3ed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                            قريباً</h2>
+                            {{ __('home.coming_soon') }}
+                        </h2>
 
                         <p
                             style="color: #718096; font-size: 1.2rem; line-height: 1.8; margin: 0; max-width: 500px; margin: 0 auto 20px auto;">
-                            نعمل حالياً على تطوير هذه الصفحة لتقديم أفضل تجربة للمستخدمين. يرجى زيارة الصفحة مرة أخرى
-                            قريباً للاطلاع على المحتوى الجديد.</p>
-
-                        <!-- Progress Indicator -->
-                        <!-- <div style="width: 200px; height: 4px; background: #e2e8f0; border-radius: 2px; margin: 30px auto; overflow: hidden;">
-                        <div style="width: 65%; height: 100%; background: linear-gradient(90deg, #4fd1c7, #63b3ed); border-radius: 2px; animation: pulse 2s infinite;"></div>
-                    </div> -->
-
-                        <!-- <p style="color: #a0aec0; font-size: 0.9rem; margin: 0;">جاري التطوير... 65%</p> -->
+                            {{ __('home.coming_soon_description') }}
+                        </p>
                     </div>
 
                     <!-- Additional Info Cards -->
@@ -3287,104 +3266,103 @@
         </style>
 
         <div id="sponsorship" class="page">
-            <div class="header">
-                <div class="logo">
-                    <img src="assets/logo.png"
-                        style="width: 200px; height:
-                     100px; border-radius: 10px; box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);"
-                        alt="">
+          <div class="header">
+    <div class="logo">
+        <img src="assets/logo.png"
+            style="width: 200px; height: 100px; border-radius: 10px; box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);"
+            alt="logo">
+    </div>
+    <h1>{{ __('home.book_sponsorship') }}</h1>
+    <p>{{ __('home.sponsorship_subtitle') }}</p>
+</div>
+
+<div class="content">
+    <div class="packages-section">
+        <h2 class="packages-title">{{ __('home.sponsorship_packages') }}</h2>
+
+        <div class="packages-grid">
+            <div class="package gold">
+                <div class="package-header">
+                    <h3 class="package-title">{{ __('home.gold_sponsor') }}</h3>
+                    <p class="package-subtitle">{{ __('home.gold_sponsor_subtitle') }}</p>
                 </div>
-                <h1>احجز رعايتك</h1>
-                <p>كن جزءاً من هذا الحدث المهم وادعم مستقبل السياحة العلاجية في المملكة</p>
+                <ul class="package-features">
+                    <li>{{ __('home.gold_feature_1') }}</li>
+                    <li>{{ __('home.gold_feature_2') }}</li>
+                    <li>{{ __('home.gold_feature_3') }}</li>
+                    <li>{{ __('home.gold_feature_4') }}</li>
+                </ul>
             </div>
 
-            <div class="content">
-                <div class="packages-section">
-                    <h2 class="packages-title">باقات الرعاية</h2>
+            <div class="package silver">
+                <div class="package-header">
+                    <h3 class="package-title">{{ __('home.silver_sponsor') }}</h3>
+                    <p class="package-subtitle">{{ __('home.silver_sponsor_subtitle') }}</p>
+                </div>
+                <ul class="package-features">
+                    <li>{{ __('home.silver_feature_1') }}</li>
+                    <li>{{ __('home.silver_feature_2') }}</li>
+                    <li>{{ __('home.silver_feature_3') }}</li>
+                    <li>{{ __('home.silver_feature_4') }}</li>
+                </ul>
+            </div>
 
-                    <div class="packages-grid">
-                        <div class="package gold">
-                            <div class="package-header">
-                                <h3 class="package-title">الراعي الذهبي</h3>
-                                <p class="package-subtitle">الحصول على أفضل الفرص الترويجية والتسويقية</p>
-                            </div>
-                            <ul class="package-features">
-                                <li>شعار كبير في جميع المواد الترويجية</li>
-                                <li>جناح مميز في المعرض</li>
-                                <li>فرصة إلقاء كلمة في الحفل</li>
-                                <li>10 دعوات مجانية</li>
-                            </ul>
-                        </div>
+            <div class="package bronze">
+                <div class="package-header">
+                    <h3 class="package-title">{{ __('home.bronze_sponsor') }}</h3>
+                    <p class="package-subtitle">{{ __('home.bronze_sponsor_subtitle') }}</p>
+                </div>
+                <ul class="package-features">
+                    <li>{{ __('home.bronze_feature_1') }}</li>
+                    <li>{{ __('home.bronze_feature_2') }}</li>
+                    <li>{{ __('home.bronze_feature_3') }}</li>
+                    <li>{{ __('home.bronze_feature_4') }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-                        <div class="package silver">
-                            <div class="package-header">
-                                <h3 class="package-title">الراعي الفضي</h3>
-                                <p class="package-subtitle">رعاية مميزة بفوائد متنوعة</p>
-                            </div>
-                            <ul class="package-features">
-                                <li>شعار متوسط في المواد الترويجية</li>
-                                <li>جناح في المعرض</li>
-                                <li>5 دعوات مجانية</li>
-                                <li>تغطية إعلامية</li>
-                            </ul>
-                        </div>
+    <div class="form-section">
+        <h2 class="form-title">{{ __('home.sponsorship_request') }}</h2>
 
-                        <div class="package bronze">
-                            <div class="package-header">
-                                <h3 class="package-title">الراعي البرونزي</h3>
-                                <p class="package-subtitle">بداية مميزة للشراكة معنا</p>
-                            </div>
-                            <ul class="package-features">
-                                <li>شعار في البرنامج</li>
-                                <li>مساحة في المعرض</li>
-                                <li>3 دعوات مجانية</li>
-                                <li>شهادة تقدير</li>
-                            </ul>
-                        </div>
-                    </div>
+        <form>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>{{ __('home.institution_name') }} <span class="required">*</span></label>
+                    <input type="text" placeholder="{{ __('home.institution_name_placeholder') }}" required>
                 </div>
 
-                <div class="form-section">
-                    <h2 class="form-title">طلب الرعاية</h2>
+                <div class="form-group">
+                    <label>{{ __('home.responsible_person') }} <span class="required">*</span></label>
+                    <input type="text" placeholder="{{ __('home.responsible_person_placeholder') }}" required>
+                </div>
 
-                    <form>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label>اسم المؤسسة <span class="required">*</span></label>
-                                <input type="text" placeholder="اسم الشركة أو المؤسسة" required>
-                            </div>
+                <div class="form-group">
+                    <label>{{ __('home.phone') }} <span class="required">*</span></label>
+                    <input type="tel" placeholder="{{ __('home.phone_placeholder') }}" required>
+                </div>
 
-                            <div class="form-group">
-                                <label>الشخص المسؤول <span class="required">*</span></label>
-                                <input type="text" placeholder="اسم الشخص المسؤول" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label>رقم الهاتف <span class="required">*</span></label>
-                                <input type="tel" placeholder="05xxxxxxxx" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label>نوع الرعاية <span class="required">*</span></label>
-                                <select required>
-                                    <option value="">اختر نوع الرعاية</option>
-                                    <option value="gold">راعي ذهبي</option>
-                                    <option value="silver">راعي فضي</option>
-                                    <option value="bronze">راعي برونزي</option>
-                                    <option value="custom">رعاية مخصصة</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>ملاحظات إضافية</label>
-                            <textarea placeholder="أي ملاحظات أو متطلبات خاصة"></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">إرسال طلب الرعاية</button>
-                    </form>
+                <div class="form-group">
+                    <label>{{ __('home.sponsorship_type') }} <span class="required">*</span></label>
+                    <select required>
+                        <option value="">{{ __('home.select_sponsorship_type') }}</option>
+                        <option value="gold">{{ __('home.gold_sponsor_option') }}</option>
+                        <option value="silver">{{ __('home.silver_sponsor_option') }}</option>
+                        <option value="bronze">{{ __('home.bronze_sponsor_option') }}</option>
+                        <option value="custom">{{ __('home.custom_sponsorship') }}</option>
+                    </select>
                 </div>
             </div>
+
+            <div class="form-group">
+                <label>{{ __('home.additional_notes') }}</label>
+                <textarea placeholder="{{ __('home.additional_notes_placeholder') }}"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">{{ __('home.submit_sponsorship_request') }}</button>
+        </form>
+    </div>
+</div>
         </div>
 
         <!-- Media Pages -->

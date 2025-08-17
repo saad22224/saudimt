@@ -283,6 +283,73 @@ return [
     'term_1' => 'تأكد من كتابة اسمك بشكل صحيح كما سيظهر في الشهادة.',
     'term_2' => 'الحضور إلزامي.',
     'term_3' => 'يجب عليك إكمال التقييم/الاستبيان لتلقي شهادتك.',
-    'term_4' => 'سيتم إرسال الشهادات إلى عنوان البريد الإلكتروني المستخدم في هذا النموذج.',
+    'term_4' => 'سيتم إرسال الشهادات إلى عنوان 
+    البريد الإلكتروني المستخدم في هذا النموذج.',
+
+
+    'sponsors' => 'الرعاة',
+'sponsors_subtitle' => 'الشركات والمؤسسات الراعية للمؤتمر',
+'coming_soon' => 'قريباً',
+'coming_soon_description' => 'نعمل حالياً على تطوير هذه الصفحة
+ لتقديم أفضل تجربة للمستخدمين. يرجى
+  زيارة الصفحة مرة أخرى قريباً للاطلاع على المحتوى الجديد.',
+
+
+
+
+
+
+
+
+
+
+
+  'book_sponsorship' => 'احجز رعايتك',
+'sponsorship_subtitle' => 'كن جزءاً من هذا الحدث المهم وادعم مستقبل السياحة العلاجية في المملكة',
+'sponsorship_packages' => 'باقات الرعاية',
+
+// Package Types
+'gold_sponsor' => 'الراعي الذهبي',
+'gold_sponsor_subtitle' => 'الحصول على أفضل الفرص الترويجية والتسويقية',
+'silver_sponsor' => 'الراعي الفضي',
+'silver_sponsor_subtitle' => 'رعاية مميزة بفوائد متنوعة',
+'bronze_sponsor' => 'الراعي البرونزي',
+'bronze_sponsor_subtitle' => 'بداية مميزة للشراكة معنا',
+
+// Gold Package Features
+'gold_feature_1' => 'شعار كبير في جميع المواد الترويجية',
+'gold_feature_2' => 'جناح مميز في المعرض',
+'gold_feature_3' => 'فرصة إلقاء كلمة في الحفل',
+'gold_feature_4' => '10 دعوات مجانية',
+
+// Silver Package Features
+'silver_feature_1' => 'شعار متوسط في المواد الترويجية',
+'silver_feature_2' => 'جناح في المعرض',
+'silver_feature_3' => '5 دعوات مجانية',
+'silver_feature_4' => 'تغطية إعلامية',
+
+// Bronze Package Features
+'bronze_feature_1' => 'شعار في البرنامج',
+'bronze_feature_2' => 'مساحة في المعرض',
+'bronze_feature_3' => '3 دعوات مجانية',
+'bronze_feature_4' => 'شهادة تقدير',
+
+// Form Fields
+'sponsorship_request' => 'طلب الرعاية',
+'institution_name' => 'اسم المؤسسة',
+'institution_name_placeholder' => 'اسم الشركة أو المؤسسة',
+'responsible_person' => 'الشخص المسؤول',
+'responsible_person_placeholder' => 'اسم الشخص المسؤول',
+'phone_placeholder' => '05xxxxxxxx',
+'sponsorship_type' => 'نوع الرعاية',
+'select_sponsorship_type' => 'اختر نوع الرعاية',
+'gold_sponsor_option' => 'راعي ذهبي',
+'silver_sponsor_option' => 'راعي فضي',
+'bronze_sponsor_option' => 'راعي برونزي',
+'custom_sponsorship' => 'رعاية مخصصة',
+'additional_notes' => 'ملاحظات إضافية',
+'additional_notes_placeholder' => 'أي ملاحظات أو متطلبات خاصة',
+'submit_sponsorship_request' => 'إرسال طلب الرعاية',
+
 
 ];
