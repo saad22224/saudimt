@@ -284,19 +284,19 @@ function triggerPageAnimations(page) {
 }
 
 // Form handling
-function initializeForms() {
-    // Registration form
-    const registrationForm = document.getElementById('registrationForm');
-    if (registrationForm) {
-        registrationForm.addEventListener('submit', handleRegistrationSubmit);
-    }
+// function initializeForms() {
+//     // Registration form
+//     const registrationForm = document.getElementById('registrationForm');
+//     if (registrationForm) {
+//         registrationForm.addEventListener('submit', handleRegistrationSubmit);
+//     }
     
-    // Contact form
-    const contactForms = document.querySelectorAll('.contact-form');
-    contactForms.forEach(form => {
-        form.addEventListener('submit', handleContactSubmit);
-    });
-}
+//     // Contact form
+//     const contactForms = document.querySelectorAll('.contact-form');
+//     contactForms.forEach(form => {
+//         form.addEventListener('submit', handleContactSubmit);
+//     });
+// }
 
 function handleRegistrationSubmit(e) {
     e.preventDefault();

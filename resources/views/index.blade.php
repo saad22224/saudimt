@@ -2942,63 +2942,65 @@
                 <div class="form-section">
                     <h2 class="section-title">نموذج التسجيل</h2>
 
-                    <form id="registrationForm">
+                    <form id="registrationForm" method="post" action=
+                    "{{ route('participations') }}">
+                    @csrf
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="firstName">الاسم الأول <span class="required">*</span></label>
-                                <input type="text" id="firstName" name="firstName" required>
+                                <input name="firstName" type="text" id="firstName" name="firstName" required>
                             </div>
                             <div class="form-group">
                                 <label for="lastName"> الإسم الأوسط <span class="required">*</span></label>
-                                <input type="text" id="lastName" name="lastName" required>
+                                <input name="middleName" type="text" id="lastName" name="lastName" required>
                             </div>
                             <div class="form-group">
                                 <label for="lastName">اسم العائلة <span class="required">*</span></label>
-                                <input type="text" id="lastName" name="lastName" required>
+                                <input name="lastName" type="text" id="lastName" name="lastName" required>
                             </div>
                         </div>
 
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="email">البريد الإلكتروني <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" required>
+                                <input name="email" type="email" id="email" name="email" required>
                             </div>
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label for="emailConfirm">تأكيد البريد الإلكتروني <span
                                         class="required">*</span></label>
                                 <input type="email" id="emailConfirm" name="emailConfirm" required>
-                            </div>
+                            </div> --}}
                         </div>
 
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="phone">رقم الهاتف <span class="required">*</span></label>
-                                <input type="tel" id="phone" name="phone" required>
+                                <input name="phone" type="tel" id="phone" name="phone" required>
                             </div>
                             <div class="form-group">
                                 <label for="organization">اسم المؤسسة <span class="required">*</span></label>
-                                <input type="text" id="organization" name="organization" required>
+                                <input name="organization" type="text" id="organization" name="organization" required>
                             </div>
                             <div class="form-group">
                                 <label for="organization"> رقم جواز السفر <span class="required">*</span></label>
-                                <input type="text" id="organization" name="organization" required>
+                                <input name="passport" type="text" id="organization" name="organization" required>
                             </div>
                         </div>
 
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="country">الدولة <span class="required">*</span></label>
-                                <input type="text" id="country" name="country" required>
+                                <input name="country" type="text" id="country" name="country" required>
                             </div>
                             <div class="form-group">
                                 <label for="city">المدينة <span class="required">*</span></label>
-                                <input type="text" id="city" name="city" required>
+                                <input name="city" type="text" id="city" name="city" required>
                             </div>
                         </div>
 
                         <div class="form-group full-width">
                             <label for="specialization">التخصص <span class="required">*</span></label>
-                            <input type="text" id="specialization" name="specialization" required>
+                            <input name="specialization" type="text" id="specialization" name="specialization" required>
                         </div>
 
                         <div class="form-group full-width">
@@ -3016,8 +3018,8 @@
                         </div>
 
                         <div class="checkbox-group">
-                            <input type="checkbox" id="terms" name="terms" required>
-                            <label for="terms">أوافق على الشروط والأحكام <span class="required">*</span></label>
+                            <input name="terms" type="checkbox" id="terms" name="terms" required>
+                            <label  for="terms">أوافق على الشروط والأحكام <span class="required">*</span></label>
                         </div>
 
                         <button type="submit" class="submit-btn">
@@ -3055,40 +3057,40 @@
             </div>
 
             <script>
-                document.getElementById('registrationForm').addEventListener('submit', function (e) {
-                    e.preventDefault();
+                // document.getElementById('registrationForm').addEventListener('submit', function (e) {
+                //     e.preventDefault();
 
-                    // Basic validation
-                    const email = document.getElementById('email').value;
-                    const emailConfirm = document.getElementById('emailConfirm').value;
-                    const terms = document.getElementById('terms').checked;
+                //     // Basic validation
+                //     const email = document.getElementById('email').value;
+                //     const emailConfirm = document.getElementById('emailConfirm').value;
+                //     const terms = document.getElementById('terms').checked;
 
-                    if (email !== emailConfirm) {
-                        alert('البريد الإلكتروني وتأكيد البريد الإلكتروني غير متطابقين');
-                        return;
-                    }
+                //     if (email !== emailConfirm) {
+                //         alert('البريد الإلكتروني وتأكيد البريد الإلكتروني غير متطابقين');
+                //         return;
+                //     }
 
-                    if (!terms) {
-                        alert('يجب الموافقة على الشروط والأحكام');
-                        return;
-                    }
+                //     if (!terms) {
+                //         alert('يجب الموافقة على الشروط والأحكام');
+                //         return;
+                //     }
 
-                    // Simulate form submission
-                    const submitBtn = document.querySelector('.submit-btn');
-                    const successMessage = document.getElementById('successMessage');
+                //     // Simulate form submission
+                //     const submitBtn = document.querySelector('.submit-btn');
+                //     const successMessage = document.getElementById('successMessage');
 
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
-                    submitBtn.disabled = true;
+                //     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+                //     submitBtn.disabled = true;
 
-                    setTimeout(() => {
-                        successMessage.style.display = 'block';
-                        submitBtn.innerHTML = '<i class="fas fa-check"></i> تم الإرسال';
-                        submitBtn.style.background = 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)';
+                //     setTimeout(() => {
+                //         successMessage.style.display = 'block';
+                //         submitBtn.innerHTML = '<i class="fas fa-check"></i> تم الإرسال';
+                //         submitBtn.style.background = 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)';
 
-                        // Scroll to success message
-                        successMessage.scrollIntoView({ behavior: 'smooth' });
-                    }, 2000);
-                });
+                //         // Scroll to success message
+                //         successMessage.scrollIntoView({ behavior: 'smooth' });
+                //     }, 2000);
+                // });
             </script>
         </div>
 
