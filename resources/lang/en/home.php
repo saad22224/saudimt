@@ -109,4 +109,70 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
         'contact_desc' => 'Get in touch for an exceptional treatment experience combining the best medical services and authentic Saudi hospitality.',
         'contact_call' => 'Call Us',
         'contact_email' => 'Email Us',
+
+
+
+
+
+
+
+
+
+
+
+        'home_hero_title' => 'About Taif',
+    'home_hero_desc' => 'Taif, the Bride of Summer Resorts and the Pearl of Hijaz, a historic city that combines natural beauty and rich heritage.',
+    'home_main_card_title' => 'Taif in the Heart of Hijaz',
+    'home_main_card_desc_1' => 'Taif is located in the heart of the Hijaz highlands and is the largest governorate in the Makkah region and the seventh largest in Saudi Arabia in terms of area. Thanks to its unique geographic location and high altitude, Taif enjoys a mild climate year-round, making it a preferred local and regional tourist destination.',
+    'home_main_card_tag' => 'A Perfect Summer Destination',
+    'home_main_card_desc_2' => 'Known as the "Bride of Summer Resorts" for its cool and refreshing atmosphere, Taif attracts visitors seeking relief from the summer heat. The city is also an important stop for pilgrims arriving by land to Makkah from the east.',
+    'home_rose_city_title' => '🌹 City of Roses',
+    'home_rose_city_desc' => 'Taif is also known as the "City of Roses," with thousands of fragrant roses spreading across its valleys and mountains. The rose farms open to visitors every April.',
+    'home_rose_city_point_1' => 'Stroll through the colorful fields',
+    'home_rose_city_point_2' => 'Learn the methods of distilling essential oils',
+    'home_rose_city_point_3' => 'Visit the world-famous perfume factories',
+    'home_events_title' => '🎪 Events & Festivals',
+    'home_events_desc_1_title' => 'Annual Prominent Festivals',
+    'home_events_desc_1' => 'A rich cultural window showcasing Arab heritage, literature, and arts',
+    'home_events_desc_2_title' => 'Crown Prince Camel Festival',
+    'home_events_desc_2' => 'One of the biggest and most important camel races in the region, attracting participants from various Gulf countries',
+    'home_tourist_title' => '🏔️ Top Tourist Attractions',
+    'home_tourist_spot_1' => 'Al Hada Mountain',
+    'home_tourist_spot_1_desc' => 'One of the most famous mountains in the Kingdom, known for its panoramic views and cool climate, making it an ideal destination for visitors seeking relaxation and enjoying nature.',
+    'home_tourist_spot_2' => 'Al Hada Cable Car',
+    'home_tourist_spot_2_desc' => 'One of the longest cable car lines in 
+    the region, extending to Al Kar Tourist Village, which includes 
+    entertainment facilities and diverse family experiences. The cable
+     car offers a unique experience to enjoy breathtaking natural views from 
+     above.',
+       'conference_hero_title' => 'About the Conference',
+    'conference_title' => 'Taif Medical Tourism Conference 2024',
+    'conference_desc' => 'The Taif Medical Tourism Conference 2024 is a leading platform that brings together top healthcare providers, tourism experts, decision-makers, investors, and innovators to discuss growing opportunities in medical and wellness tourism in Saudi Arabia. The conference is held in Taif, known for its unique climate, natural beauty, and advanced healthcare infrastructure. The program includes keynote speeches, panel discussions, and networking sessions aimed at strengthening partnerships and supporting the Kingdom\'s position as a leading destination in medical tourism.',
+    
+    'conference_participant_1_title' => 'Healthcare Providers',
+    'conference_participant_1_desc' => 'A selection of top medical and healthcare service providers',
+
+    'conference_participant_2_title' => 'Tourism Experts',
+    'conference_participant_2_desc' => 'Specialists in medical and wellness tourism',
+
+    'conference_participant_3_title' => 'Decision Makers',
+    'conference_participant_3_desc' => 'Leaders and decision makers in the healthcare and tourism sectors',
+
+    'conference_participant_4_title' => 'Investors',
+    'conference_participant_4_desc' => 'Investors interested in the medical tourism sector',
+
+    'conference_participant_5_title' => 'Innovators',
+    'conference_participant_5_desc' => 'Entrepreneurs and innovators in the healthcare field',
+
+    'conference_participant_6_title' => 'Taif City',
+    'conference_participant_6_desc' => 'An ideal location with a unique climate and advanced infrastructure',
+
+    'conference_goals_title' => 'Conference Goals',
+
+    'conference_goal_1_title' => 'Strengthening Partnerships',
+    'conference_goal_1_desc' => 'Building strategic partnerships among various stakeholders in the medical tourism sector',
+
+    'conference_goal_2_title' => 'Supporting the Kingdom\'s Position',
+    'conference_goal_2_desc' => 'Enhancing Saudi Arabia\'s position as a leading destination in medical tourism',
 ];
+

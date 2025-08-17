@@ -644,108 +644,115 @@
                 </div>
             </section>
         </div>
-
-        <div id="taif" class="page" style="font-family: system-ui, -apple-system, sans-serif;">
-            <section class="page-hero"
-                style=" color: white; padding: 4rem 0; text-align: center; border-radius: 0 0 20px 20px; margin-bottom: 2rem;">
-                <div class="container" style="width: 90%; max-width: 1200px; margin: 0 auto;">
-                    <img src="assets/logo.png" style="width: 200px; height: 100px; margin-bottom: 1.5rem;"
-                        alt="شعار الطائف" style="width: 120px; height: auto; margin-bottom: 1.5rem;">
-                    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">عن الطائف</h1>
-                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">مدينة الطائف، عروس
-                        المصايف ولؤلؤة الحجاز، مدينة تاريخية تجمع بين الجمال الطبيعي والتراث العريق</p>
-                </div>
-            </section>
-
-            <section style="padding: 2rem 0;">
-                <div style="width: 90%; max-width: 1200px; margin: 0 auto;">
-                    <!-- بطاقة رئيسية -->
-                    <div
-                        style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: right;">
-                        <p style="font-size: 1.1rem; line-height: 1.8; color: #2c3e50; margin-bottom: 1.5rem;">
-                            تقع مدينة الطائف في قلب مرتفعات الحجاز، وتُعد أكبر محافظات منطقة مكة المكرمة، والسابعة على
-                            مستوى المملكة من حيث المساحة. بفضل موقعها الجغرافي الفريد وارتفاعها عن سطح البحر، تنعم
-                            الطائف بمناخ معتدل على مدار العام، ما يجعلها وجهة سياحية محلية وإقليمية مفضلة.
-                        </p>
-                        <div style="margin-bottom: 1.5rem;">
-                            <span
-                                style="display: inline-block; background: #e74c3c; color: white; padding: 8px 20px; border-radius: 25px; font-size: 1rem; font-weight: bold;">وجهة
-                                صيفية بامتياز</span>
-                        </div>
-                        <p style="font-size: 1.1rem; line-height: 1.8; color: #2c3e50; margin: 0;">
-                            تُعرف الطائف بلقب "عروس المصايف"، نظرًا لأجوائها الباردة والمنعشة التي تجذب الزوّار الباحثين
-                            عن ملاذ من حرارة الصيف. كما تشكل المدينة محطة مهمة للحجاج والمعتمرين القادمين برًّا إلى مكة
-                            المكرمة من جهة الشرق.
-                        </p>
-                    </div>
-
-                    <!-- شبكة البطاقات -->
-                    <div
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-                        <!-- بطاقة مدينة الورود -->
-                        <div
-                            style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: right;">
-                            <h3 style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.3rem;">🌹 مدينة الورود</h3>
-                            <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">الطائف تُلقب أيضًا بـ"مدينة
-                                الورود"، حيث تنتشر آلاف الورود العطرية في وديانها وجبالها. وتفتح مزارع الورود أبوابها
-                                للزوار في شهر أبريل من كل عام.</p>
-                            <ul style="list-style: none; padding: 0; margin: 0; color: #666;">
-                                <li style="padding: 0.4rem 0; border-bottom: 1px solid #eee;">• التجوّل بين الحقول
-                                    الزاهية</li>
-                                <li style="padding: 0.4rem 0; border-bottom: 1px solid #eee;">• التعرف على طرق تقطير
-                                    الزيوت العطرية</li>
-                                <li style="padding: 0.4rem 0;">• زيارة مصانع العطور الشهيرة عالميًا</li>
-                            </ul>
-                        </div>
-
-                        <!-- بطاقة الفعاليات -->
-                        <div
-                            style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: right;">
-                            <h3 style="color: #3498db; margin-bottom: 1rem; font-size: 1.3rem;">🎪 فعاليات ومهرجانات
-                            </h3>
-                            <ul style="list-style: none; padding: 0; margin: 0; color: #666;">
-                                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><strong>مهرجانات سنوية
-                                        بارزة:</strong><br>نافذة ثقافية عريقة تستعرض التراث العربي والأدب والفنون</li>
-                                <li style="padding: 0.5rem 0;"><strong>مهرجان ولي العهد للهجن:</strong><br>من أكبر وأهم
-                                    سباقات الهجن في المنطقة، يجذب مشاركين من مختلف الدول الخليجية</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- بطاقة عريضة للمعالم السياحية -->
-                    <div
-                        style="background: linear-gradient(to right, #f8f9fa, white); border-radius: 15px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: right;">
-                        <h3 style="color: #2c3e50; margin-bottom: 1.5rem; font-size: 1.4rem;">🏔️ أبرز المعالم السياحية
-                        </h3>
-
-                        <div style="margin-bottom: 2rem;">
-                            <h4 style="color: #27ae60; margin-bottom: 0.8rem; font-size: 1.2rem;">جبل الهدا</h4>
-                            <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">
-                                من أشهر جبال المملكة، ويتميز بإطلالاته البانورامية ومناخه البارد، مما يجعله مقصدًا
-                                مثاليًا للزوار الباحثين عن الاسترخاء والاستمتاع بالطبيعة الخلابة.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h4 style="color: #8e44ad; margin-bottom: 0.8rem; font-size: 1.2rem;">🚠 تلفريك الهدا</h4>
-                            <p style="color: #666; line-height: 1.8;">
-                                أحد أطول خطوط التلفريك في المنطقة، يمتد حتى قرية الكر السياحية، التي تضم مرافق ترفيهية
-                                وتجارب عائلية متنوعة. يوفر التلفريك تجربة فريدة للاستمتاع بالمناظر الطبيعية الساحرة من
-                                الأعلى.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<div id="taif" class="page" style="font-family: system-ui, -apple-system, sans-serif;">
+    <section class="page-hero"
+        style="color: white; padding: 4rem 0; text-align: center; border-radius: 0 0 20px 20px; margin-bottom: 2rem;">
+        <div class="container" style="width: 90%; max-width: 1200px; margin: 0 auto;">
+            <img src="assets/logo.png" style="width: 200px; height: 100px; margin-bottom: 1.5rem;"
+                alt="شعار الطائف">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">{{ __('home.home_hero_title') }}</h1>
+            <p style="font-size: 1.1rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                {{ __('home.home_hero_desc') }}
+            </p>
         </div>
+    </section>
 
-        <div id="conference-about" class="page">
+    <section style="padding: 2rem 0;">
+        <div style="width: 90%; max-width: 1200px; margin: 0 auto;">
+            <!-- بطاقة رئيسية -->
+            <div
+                style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: right;">
+                <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">{{ __('home.home_main_card_title') }}</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #2c3e50; margin-bottom: 1.5rem;">
+                    {{ __('home.home_main_card_desc_1') }}
+                </p>
+                <div style="margin-bottom: 1.5rem;">
+                    <span
+                        style="display: inline-block; background: #e74c3c; color: white; padding: 8px 20px; border-radius: 25px; font-size: 1rem; font-weight: bold;">
+                        {{ __('home.home_main_card_tag') }}
+                    </span>
+                </div>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #2c3e50; margin: 0;">
+                    {{ __('home.home_main_card_desc_2') }}
+                </p>
+            </div>
+
+            <!-- شبكة البطاقات -->
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                <!-- بطاقة مدينة الورود -->
+                <div
+                    style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: right;">
+                    <h3 style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.3rem;">
+                        {{ __('home.home_rose_city_title') }}
+                    </h3>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
+                        {{ __('home.home_rose_city_desc') }}
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0; color: #666;">
+                        <li style="padding: 0.4rem 0; border-bottom: 1px solid #eee;">• {{ __('home.home_rose_city_point_1') }}</li>
+                        <li style="padding: 0.4rem 0; border-bottom: 1px solid #eee;">• {{ __('home.home_rose_city_point_2') }}</li>
+                        <li style="padding: 0.4rem 0;">• {{ __('home.home_rose_city_point_3') }}</li>
+                    </ul>
+                </div>
+
+                <!-- بطاقة الفعاليات -->
+                <div
+                    style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: right;">
+                    <h3 style="color: #3498db; margin-bottom: 1rem; font-size: 1.3rem;">
+                        {{ __('home.home_events_title') }}
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; color: #666;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                            <strong>{{ __('home.home_events_desc_1_title') }}:</strong><br>
+                            {{ __('home.home_events_desc_1') }}
+                        </li>
+                        <li style="padding: 0.5rem 0;">
+                            <strong>{{ __('home.home_events_desc_2_title') }}:</strong><br>
+                            {{ __('home.home_events_desc_2') }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- بطاقة عريضة للمعالم السياحية -->
+            <div
+                style="background: linear-gradient(to right, #f8f9fa, white); border-radius: 15px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: right;">
+                <h3 style="color: #2c3e50; margin-bottom: 1.5rem; font-size: 1.4rem;">
+                    {{ __('home.home_tourist_title') }}
+                </h3>
+
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="color: #27ae60; margin-bottom: 0.8rem; font-size: 1.2rem;">
+                        {{ __('home.home_tourist_spot_1') }}
+                    </h4>
+                    <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">
+                        {{ __('home.home_tourist_spot_1_desc') }}
+                    </p>
+                </div>
+
+                <div>
+                    <h4 style="color: #8e44ad; margin-bottom: 0.8rem; font-size: 1.2rem;">
+                        {{ __('home.home_tourist_spot_2') }}
+                    </h4>
+                    <p style="color: #666; line-height: 1.8;">
+                        {{ __('home.home_tourist_spot_2_desc') }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+     <div id="conference-about" class="page">
             <section
                 style="background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%); padding: 60px 20px; text-align: center;">
                 <div style="max-width: 1200px; margin: 0 auto;">
                     <h1
                         style="font-size: 3rem; font-weight: 700; color: #2c3e50; margin: 0 0 30px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
-                        عن المؤتمر</h1>
+                        {{ __('home.conference_hero_title') }}</h1>
                 </div>
             </section>
 
@@ -755,15 +762,10 @@
                         style="background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%); border-radius: 25px; padding: 50px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); margin-bottom: 50px; border: 1px solid #e1e8ed;">
                         <h2
                             style="font-size: 2.5rem; font-weight: 600; color: #34495e; text-align: center; margin: 0 0 40px 0;">
-                            مؤتمر السياحة العلاجية بالطائف 2024</h2>
+                            {{ __('home.conference_title') }}</h2>
                         <p
                             style="font-size: 1.3rem; line-height: 2.2; color: #5a6c7d; text-align: justify; margin: 0;">
-                            يُعد مؤتمر السياحة العلاجية بالطائف 2024 منصة رائدة تجمع نخبة من مقدمي الرعاية الصحية،
-                            وخبراء السياحة، وصناع القرار، والمستثمرين، والمبتكرين، لمناقشة الفرص المتنامية في مجال
-                            السياحة العلاجية وسياحة العافية في المملكة العربية السعودية. يُقام المؤتمر في مدينة الطائف،
-                            المعروفة بمناخها الفريد وجمالها الطبيعي وبنيتها التحتية الصحية المتطورة، ويتضمن البرنامج
-                            كلمات رئيسية، وحلقات نقاش، وجلسات تواصل تهدف إلى تعزيز الشراكات ودعم مكانة المملكة كوجهة
-                            رائدة في مجال السياحة العلاجية.
+                            {{ __('home.conference_desc') }}
                         </p>
                     </div>
 
@@ -779,10 +781,8 @@
                                         d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #e65100; margin: 0 0 20px 0;">مقدمو
-                                الرعاية الصحية</h3>
-                            <p style="font-size: 1.1rem; color: #6d4c41; line-height: 1.8; margin: 0;">نخبة من أفضل
-                                مقدمي الخدمات الطبية والصحية</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #e65100; margin: 0 0 20px 0;">{{ __('home.conference_participant_1_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #6d4c41; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_1_desc') }}</p>
                         </div>
 
                         <div
@@ -794,10 +794,8 @@
                                         d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #6a1b9a; margin: 0 0 20px 0;">خبراء
-                                السياحة</h3>
-                            <p style="font-size: 1.1rem; color: #4a148c; line-height: 1.8; margin: 0;">متخصصون في مجال
-                                السياحة العلاجية والعافية</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #6a1b9a; margin: 0 0 20px 0;">{{ __('home.conference_participant_2_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #4a148c; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_2_desc') }}</p>
                         </div>
 
                         <div
@@ -809,10 +807,8 @@
                                         d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A3 3 0 0 0 17.1 7H14.9c-1.3 0-2.4.84-2.85 2.06L9.5 18H12v6h8z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #00695c; margin: 0 0 20px 0;">صناع
-                                القرار</h3>
-                            <p style="font-size: 1.1rem; color: #004d40; line-height: 1.8; margin: 0;">قادة وصناع قرار
-                                في القطاع الصحي والسياحي</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #00695c; margin: 0 0 20px 0;">{{ __('home.conference_participant_3_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #004d40; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_3_desc') }}</p>
                         </div>
 
                         <div
@@ -824,10 +820,8 @@
                                         d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34c-.39-.39-1.02-.39-1.41 0L9 12.25 11.75 15l8.96-8.96c.39-.39.39-1.02 0-1.41z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #2e7d32; margin: 0 0 20px 0;">
-                                المستثمرون</h3>
-                            <p style="font-size: 1.1rem; color: #1b5e20; line-height: 1.8; margin: 0;">مستثمرون مهتمون
-                                بقطاع السياحة العلاجية</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #2e7d32; margin: 0 0 20px 0;">{{ __('home.conference_participant_4_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #1b5e20; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_4_desc') }}</p>
                         </div>
 
                         <div
@@ -839,10 +833,8 @@
                                         d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #1565c0; margin: 0 0 20px 0;">
-                                المبتكرون</h3>
-                            <p style="font-size: 1.1rem; color: #0d47a1; line-height: 1.8; margin: 0;">رواد أعمال
-                                ومبتكرون في المجال الصحي</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #1565c0; margin: 0 0 20px 0;">{{ __('home.conference_participant_5_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #0d47a1; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_5_desc') }}</p>
                         </div>
 
                         <div
@@ -854,17 +846,15 @@
                                         d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #ad1457; margin: 0 0 20px 0;">مدينة
-                                الطائف</h3>
-                            <p style="font-size: 1.1rem; color: #880e4f; line-height: 1.8; margin: 0;">موقع مثالي بمناخ
-                                فريد وبنية تحتية متطورة</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #ad1457; margin: 0 0 20px 0;">{{ __('home.conference_participant_6_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #880e4f; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_6_desc') }}</p>
                         </div>
                     </div>
 
                     <div style="margin-top: 80px;">
                         <h2
                             style="font-size: 2.5rem; font-weight: 600; color: #34495e; text-align: center; margin: 0 0 50px 0;">
-                            أهداف المؤتمر</h2>
+                            {{ __('home.conference_goals_title') }}</h2>
 
                         <div
                             style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
@@ -880,10 +870,9 @@
                                                 d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A3 3 0 0 0 17.1 7H14.9c-1.3 0-2.4.84-2.85 2.06L9.5 18H12v6h8z" />
                                         </svg>
                                     </div>
-                                    تعزيز الشراكات
+                                    {{ __('home.conference_goal_1_title') }}
                                 </h3>
-                                <p style="font-size: 1.2rem; color: #5a6c7d; line-height: 1.9; margin: 0;">بناء شراكات
-                                    استراتيجية بين مختلف أصحاب المصلحة في قطاع السياحة العلاجية</p>
+                                <p style="font-size: 1.2rem; color: #5a6c7d; line-height: 1.9; margin: 0;">{{ __('home.conference_goal_1_desc') }}</p>
                             </div>
 
                             <div
@@ -897,10 +886,9 @@
                                                 d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                         </svg>
                                     </div>
-                                    دعم مكانة المملكة
+                                    {{ __('home.conference_goal_2_title') }}
                                 </h3>
-                                <p style="font-size: 1.2rem; color: #5a6c7d; line-height: 1.9; margin: 0;">تعزيز مكانة
-                                    المملكة العربية السعودية كوجهة رائدة في مجال السياحة العلاجية</p>
+                                <p style="font-size: 1.2rem; color: #5a6c7d; line-height: 1.9; margin: 0;">{{ __('home.conference_goal_2_desc') }}</p>
                             </div>
                         </div>
                     </div>
