@@ -29,9 +29,9 @@
                 </a>
             </li>
             <li class="" data-page="offices">
-                <a href="" class="menu-link">
+                <a href="{{ route('admin.images') }}" class="menu-link">
                     <i class="fas fa-building"></i>
-                    <span>مكاتب التحويل</span>
+                    <span> معرض الصور </span>
                 </a>
             </li>
             <li class="" data-page="offices">

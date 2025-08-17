@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -3434,6 +3435,9 @@
             </section>
 
             <!-- Content Section -->
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 <section style="padding: 100px 0; background-color: #f8f9fa; position: relative; overflow: hidden;">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
 
@@ -3441,137 +3445,52 @@
         <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
             
             <!-- Swiper Container -->
-            <div style="position: relative; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
-                <div id="gallery-swiper" style="border-radius: 20px;">
-                    <div style="display: flex; transition: transform 0.5s ease;" id="swiper-wrapper">
-                        <!-- Slide 1 -->
-                        <div style="min-width: 100%; position: relative; height: 400px; background: url('https://picsum.photos/1200/400?random=1') center/cover;">
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 30px;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0 0 10px 0;">منظر طبيعي رائع</h3>
-                                <p style="margin: 0; opacity: 0.9;">صورة جميلة من الطبيعة الساحرة</p>
+            <div class="swiper mySwiper" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                <div class="swiper-wrapper">
+                    @foreach ($images as $image)
+                        <div class="swiper-slide" style="height: 400px; display:flex; justify-content:center; align-items:center; background:#eee;">
+                            <img src="{{ asset($image->image) }}" alt="Gallery Image" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); color: white; padding: 20px;">
+                                <h3 style="font-size: 1.5rem; font-weight: 700; margin: 0;">
+                                    {{ $lang == 'ar' ? $image->title_ar : $image->title_en }}
+                                </h3>
                             </div>
                         </div>
-
-                        <!-- Slide 2 -->
-                        <div style="min-width: 100%; position: relative; height: 400px; background: url('https://picsum.photos/1200/400?random=2') center/cover;">
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 30px;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0 0 10px 0;">تصميم معماري</h3>
-                                <p style="margin: 0; opacity: 0.9;">لقطة مذهلة لتصميم معماري حديث</p>
-                            </div>
-                        </div>
-
-                        <!-- Slide 3 -->
-                        <div style="min-width: 100%; position: relative; height: 400px; background: url('https://picsum.photos/1200/400?random=3') center/cover;">
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 30px;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0 0 10px 0;">فن وإبداع</h3>
-                                <p style="margin: 0; opacity: 0.9;">عمل فني مبدع ومميز</p>
-                            </div>
-                        </div>
-
-                        <!-- Slide 4 -->
-                        <div style="min-width: 100%; position: relative; height: 400px; background: url('https://picsum.photos/1200/400?random=4') center/cover;">
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 30px;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0 0 10px 0;">لحظة جميلة</h3>
-                                <p style="margin: 0; opacity: 0.9;">لحظة مُلتقطة بعناية وإتقان</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
 
-                <!-- Navigation Arrows -->
-                <button id="prev-btn" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; z-index: 10;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <polyline points="15,18 9,12 15,6"/>
-                    </svg>
-                </button>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
 
-                <button id="next-btn" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; z-index: 10;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <polyline points="9,18 15,12 9,6"/>
-                    </svg>
-                </button>
+                <!-- Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
 
-            <!-- Pagination Dots -->
-            <div style="display: flex; justify-content: center; margin-top: 30px; gap: 12px;" id="pagination">
-                <button class="dot active" data-slide="0" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #4fd1c7; cursor: pointer; transition: all 0.3s ease; transform: scale(1.2); box-shadow: 0 0 10px rgba(79, 209, 199, 0.5);"></button>
-                <button class="dot" data-slide="1" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #ccc; cursor: pointer; transition: all 0.3s ease;"></button>
-                <button class="dot" data-slide="2" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #ccc; cursor: pointer; transition: all 0.3s ease;"></button>
-                <button class="dot" data-slide="3" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #ccc; cursor: pointer; transition: all 0.3s ease;"></button>
-            </div>
         </div>
     </div>
-
-    <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-        @keyframes glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.6); }
-        }
-        #prev-btn:hover, #next-btn:hover {
-            background: rgba(0,0,0,0.8) !important;
-            transform: translateY(-50%) scale(1.1) !important;
-        }
-        .dot:hover {
-            transform: scale(1.3) !important;
-        }
-    </style>
-
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('#swiper-wrapper > div');
-        const dots = document.querySelectorAll('.dot');
-        const wrapper = document.getElementById('swiper-wrapper');
-
-        function updateSlide() {
-            wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            // Update dots
-            dots.forEach((dot, index) => {
-                if (index === currentSlide) {
-                    dot.style.background = '#4fd1c7';
-                    dot.style.transform = 'scale(1.2)';
-                    dot.style.boxShadow = '0 0 10px rgba(79, 209, 199, 0.5)';
-                    dot.classList.add('active');
-                } else {
-                    dot.style.background = '#ccc';
-                    dot.style.transform = 'scale(1)';
-                    dot.style.boxShadow = 'none';
-                    dot.classList.remove('active');
-                }
-            });
-        }
-
-        // Next button
-        document.getElementById('next-btn').addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateSlide();
-        });
-
-        // Previous button
-        document.getElementById('prev-btn').addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            updateSlide();
-        });
-
-        // Dot navigation
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentSlide = index;
-                updateSlide();
-            });
-        });
-
-        // Auto slide (optional)
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateSlide();
-        }, 5000);
-    </script>
 </section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
         </div>
 
         <!-- Hospitality Pages -->
@@ -4785,6 +4704,7 @@
             </div>
         </div>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

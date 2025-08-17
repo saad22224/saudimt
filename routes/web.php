@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminAuth;
 use App\Http\Controllers\MailController;
+use App\Models\Image;
 use App\Models\Media;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
@@ -12,7 +13,8 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     $speakers = Speaker::all();
     $medias = Media::all();
-    return view('index', compact('speakers' , 'medias'));
+    $images = Image::all();
+    return view('index', compact('speakers' , 'medias'  , 'images'));
 });
 
 
@@ -129,3 +131,58 @@ Route::delete('admin/deletemedia/{id}', function ($id) {
     $media->delete();
     return redirect()->back();
 })->name('admin.deletemedia');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('admin/images', function () {
+    $images = Image::all();
+    return view('admin.images', compact('images'));
+})->name('admin.images');
+
+Route::post('admin/images', function (Request $request) {
+    $request->validate([
+        'title_ar' => 'required',
+        'title_en' => 'required',
+        'image' => 'required|image',
+    ]);
+
+    $image = $request->file('image');
+    $imageName = $image->getClientOriginalName();
+
+    // تخزين الصورة في storage/app/public/speakers
+    $imagePath = $image->storeAs('images', $imageName, 'public');
+
+    // تخزين البيانات في قاعدة البيانات
+    $image = new Image();
+    $image->title_ar = $request->title_ar;
+    $image->title_en = $request->title_en;
+    $image->image = $imagePath; // هنا بنخزن المسار في قاعدة البيانات
+    $image->save();
+
+    return redirect()->back()->with('success', 'تم إضافة المتحدث بنجاح!');
+})->name('images.store');
+
+Route::delete('admin/deleteimage/{id}', function ($id) {
+    $image = Image::find($id);
+     $image->delete();
+    return redirect()->back();
+})->name('admin.deleteimage');
