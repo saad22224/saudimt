@@ -35,16 +35,11 @@
                 </a>
             </li>
             <li class="" data-page="offices">
-                <a href="" class="menu-link">
+                <a href="{{ route('admin.sciences') }}" class="menu-link">
                     <i class="fas fa-building"></i>
-                    <span>الشكاوي</span>
+                    <span>اللجنة العلمية</span>
                 </a>
             </li>
-            <li class="" data-page="offices">
-                <a href="" class="menu-link">
-                    <i class="fas fa-building"></i>
-                    <span>البانرات الإعلانية</span>
-                </a>
-            </li>
+          
         </ul>
     </nav>

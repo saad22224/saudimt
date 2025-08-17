@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -955,45 +955,7 @@
                 <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
 
                     <!-- Coming Soon Card -->
-                    <div
-                        style="background: white; border-radius: 20px; padding: 60px 40px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 50px; position: relative; overflow: hidden;">
 
-                        <!-- Background Pattern -->
-                        <div
-                            style="position: absolute; top: -50px; left: -50px; width: 100px; height: 100px; background: linear-gradient(45deg, #4fd1c7, #63b3ed); border-radius: 50%; opacity: 0.1;">
-                        </div>
-                        <div
-                            style="position: absolute; bottom: -30px; right: -30px; width: 60px; height: 60px; background: linear-gradient(45deg, #63b3ed, #4fd1c7); border-radius: 50%; opacity: 0.1;">
-                        </div>
-
-                        <!-- Icon -->
-                        <div
-                            style="width: 80px; height: 80px; background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px auto; border: 3px solid #4fd1c7;">
-                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#4fd1c7"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9 5.16-1 9-3.45 9-9V7l-10-5z" />
-                                <path d="M8 11l2 2 4-4" />
-                            </svg>
-                        </div>
-
-                        <h2
-                            style="color: #2d3748; font-size: 2.5rem; font-weight: 700; margin: 0 0 20px 0; background: linear-gradient(135deg, #4fd1c7, #63b3ed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                            قريباً</h2>
-
-                        <p
-                            style="color: #718096; font-size: 1.2rem; line-height: 1.8; margin: 0; max-width: 500px; margin: 0 auto 20px auto;">
-                            نعمل حالياً على تطوير هذه الصفحة لتقديم أفضل تجربة للمستخدمين. يرجى زيارة الصفحة مرة أخرى
-                            قريباً للاطلاع على المحتوى الجديد.</p>
-
-                        <!-- Progress Indicator -->
-                        <!-- <div style="width: 200px; height: 4px; background: #e2e8f0; border-radius: 2px; margin: 30px auto; overflow: hidden;">
-                        <div style="width: 65%; height: 100%; background: linear-gradient(90deg, #4fd1c7, #63b3ed); border-radius: 2px; animation: pulse 2s infinite;"></div>
-                    </div> -->
-
-                        <!-- <p style="color: #a0aec0; font-size: 0.9rem; margin: 0;">جاري التطوير... 65%</p> -->
-                    </div>
-
-                    <!-- Additional Info Cards -->
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
 
@@ -1049,6 +1011,155 @@
                     </div>
                 </div>
             </section>
+
+            <section
+                style="padding: 80px 20px; background: #f8f9fa; min-height: 100vh; font-family: 'Cairo', sans-serif;">
+                <div style="max-width: 1200px; margin: 0 auto;">
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+@foreach ($sciences as $science)
+    
+
+                        <!-- عضو 1 -->
+                        <div style="background: #ffffff; border-radius: 20px; padding: 30px; text-align: center; border: 3px solid #87CEEB; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.15)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.1)'">
+                            <div
+                                style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 25px; overflow: hidden; border: 4px solid #87CEEB;">
+                                <img src="{{ asset($science->image) }}"
+                                    alt="د. أحمد محمد" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <h3 style="color: #333; font-size: 24px; 
+                            font-weight: 700; margin: 0 0 8px 0;">
+                            {{ $science->title_ar }}
+                                </h3>
+                            <p style="color: #666; font-size: 16px; margin: 0 0 20px 0; font-weight: 400;">Dr. Ahmed
+                              {{ $science->title_en }}</p>
+                            <div
+                                style="background: #f8f9fa; border-radius: 15px; padding: 15px; margin-top: 20px; border: 1px solid #e9ecef;">
+                                <p style="color: #555; font-size: 14px; line-height: 1.6; margin: 0;"> {{ $science->desc_ar }}
+                                     -  <br>    {{ $science->desc_en }} </p>
+                            </div>
+                        </div>
+@endforeach
+                        <!-- عضو 2 -->
+                        {{-- <div style="background: #ffffff; border-radius: 20px; padding: 30px; text-align: center; border: 3px solid #87CEEB; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.15)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.1)'">
+                            <div
+                                style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 25px; overflow: hidden; border: 4px solid #87CEEB;">
+                                <img src="https://images.unsplash.com/photo-1594824371042-319863e19ee3?w=120&h=120&fit=crop&crop=face"
+                                    alt="د. فاطمة السيد" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <h3 style="color: #333; font-size: 24px; font-weight: 700; margin: 0 0 8px 0;">د. فاطمة
+                                السيد محمود</h3>
+                            <p style="color: #666; font-size: 16px; margin: 0 0 20px 0; font-weight: 400;">Dr. Fatma
+                                El-Sayed Mahmoud</p>
+                            <div
+                                style="background: #f8f9fa; border-radius: 15px; padding: 15px; margin-top: 20px; border: 1px solid #e9ecef;">
+                                <p style="color: #555; font-size: 14px; line-height: 1.6; margin: 0;">أستاذ الأشعة
+                                    التشخيصية - جامعة عين شمس<br>Professor of Diagnostic Radiology - Ain Shams
+                                    University</p>
+                            </div>
+                        </div>
+
+                        <!-- عضو 3 -->
+                        <div style="background: #ffffff; border-radius: 20px; padding: 30px; text-align: center; border: 3px solid #87CEEB; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.15)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.1)'">
+                            <div
+                                style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 25px; overflow: hidden; border: 4px solid #87CEEB;">
+                                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=120&h=120&fit=crop&crop=face"
+                                    alt="د. محمد إبراهيم" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <h3 style="color: #333; font-size: 24px; font-weight: 700; margin: 0 0 8px 0;">د. محمد
+                                إبراهيم حسن</h3>
+                            <p style="color: #666; font-size: 16px; margin: 0 0 20px 0; font-weight: 400;">Dr. Mohamed
+                                Ibrahim Hassan</p>
+                            <div
+                                style="background: #f8f9fa; border-radius: 15px; padding: 15px; margin-top: 20px; border: 1px solid #e9ecef;">
+                                <p style="color: #555; font-size: 14px; line-height: 1.6; margin: 0;">أستاذ الجراحة
+                                    العامة - جامعة الإسكندرية<br>Professor of General Surgery - Alexandria University
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- عضو 4 -->
+                        <div style="background: #ffffff; border-radius: 20px; padding: 30px; text-align: center; border: 3px solid #87CEEB; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.15)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.1)'">
+                            <div
+                                style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 25px; overflow: hidden; border: 4px solid #87CEEB;">
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=120&h=120&fit=crop&crop=face"
+                                    alt="د. نورا أحمد" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <h3 style="color: #333; font-size: 24px; font-weight: 700; margin: 0 0 8px 0;">د. نورا أحمد
+                                سالم</h3>
+                            <p style="color: #666; font-size: 16px; margin: 0 0 20px 0; font-weight: 400;">Dr. Nora
+                                Ahmed Salem</p>
+                            <div
+                                style="background: #f8f9fa; border-radius: 15px; padding: 15px; margin-top: 20px; border: 1px solid #e9ecef;">
+                                <p style="color: #555; font-size: 14px; line-height: 1.6; margin: 0;">أستاذ أمراض
+                                    النساء والتوليد - جامعة أسيوط<br>Professor of Obstetrics & Gynecology - Assiut
+                                    University</p>
+                            </div>
+                        </div>
+
+                        <!-- عضو 5 -->
+                        <div style="background: #ffffff; border-radius: 20px; padding: 30px; text-align: center; border: 3px solid #87CEEB; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.15)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.1)'">
+                            <div
+                                style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 25px; overflow: hidden; border: 4px solid #87CEEB;">
+                                <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&h=120&fit=crop&crop=face"
+                                    alt="د. خالد يوسف" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <h3 style="color: #333; font-size: 24px; font-weight: 700; margin: 0 0 8px 0;">د. خالد يوسف
+                                عبدالله</h3>
+                            <p style="color: #666; font-size: 16px; margin: 0 0 20px 0; font-weight: 400;">Dr. Khaled
+                                Youssef Abdullah</p>
+                            <div
+                                style="background: #f8f9fa; border-radius: 15px; padding: 15px; margin-top: 20px; border: 1px solid #e9ecef;">
+                                <p style="color: #555; font-size: 14px; line-height: 1.6; margin: 0;">أستاذ طب الأطفال
+                                    - جامعة المنصورة<br>Professor of Pediatrics - Mansoura University</p>
+                            </div>
+                        </div> --}}
+
+                    </div>
+
+        <!-- تأثيرات الخلفية المتحركة -->
+        <div
+            style="position: absolute; top: 10%; left: 5%; width: 100px; height: 100px; background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%); border-radius: 50%; animation: float 6s ease-in-out infinite;">
+        </div>
+        <div
+            style="position: absolute; top: 60%; right: 8%; width: 60px; height: 60px; background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%); border-radius: 50%; animation: float 4s ease-in-out infinite reverse;">
+        </div>
+        <div
+            style="position: absolute; bottom: 20%; left: 15%; width: 80px; height: 80px; background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%); border-radius: 50%; animation: float 8s ease-in-out infinite;">
+        </div>
+
+        <style>
+            @keyframes float {
+
+                0%,
+                100% {
+                    transform: translateY(0px);
+                    opacity: 0.7;
+                }
+
+                50% {
+                    transform: translateY(-20px);
+                    opacity: 0.3;
+                }
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+        </style>
+        </section>
         </div>
 
         <style>
@@ -2885,8 +2996,9 @@
                         <!-- Icon -->
                         <div
                             style="width: 80px; height: 80px; background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px auto; border: 3px solid #4fd1c7;">
-                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#4fd1c7"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
+                                stroke="#4fd1c7" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9 5.16-1 9-3.45 9-9V7l-10-5z" />
                                 <path d="M8 11l2 2 4-4" />
                             </svg>
@@ -3324,61 +3436,80 @@
             </section>
 
             <!-- Content Section -->
-     <section class="content-section" style="padding: 100px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); position: relative; overflow: hidden;">
-    
-    <!-- Background decoration -->
-    <div style="position: absolute; top: -100px; left: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(102,126,234,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
-    <div style="position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(118,75,162,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
-    
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;">
-        
-        <!-- Section Title -->
-        <div style="text-align: center; margin-bottom: 70px;">
-            <h2 style="color: #2d3748; font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">التغطية الإعلامية</h2>
-            <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #667eea, #764ba2); margin: 0 auto; border-radius: 2px;"></div>
-        </div>
-        
-        <div class="news-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; margin-top: 50px;">
-            
-            @foreach ($medias as $media)
-                <div style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; border: 1px solid rgba(102,126,234,0.1);"
-                    
-                     >
-                    
-                    <!-- News Image -->
-                    <div style="width: 100%; height: 280px; position: relative; overflow: hidden;">
-                        <img src="{{ asset($media->image) }}" alt="{{ $media->title ?? 'صورة الخبر' }}"
-                             style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s ease-out;"
-                             onmouseover="this.style.transform='scale(1.08)'"
-                             onmouseout="this.style.transform='scale(1)'">
-                        
-                        <!-- Modern overlay -->
-                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
-                    </div>
-                    
-                    <!-- News Content -->
-                    <div style="padding: 35px;">
-                        <div style="color: #667eea; font-size: 0.95rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
-                            {{ $media->created_at ? $media->created_at->format('d M Y') : 'تاريخ غير محدد' }}
+            <section class="content-section"
+                style="padding: 100px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); position: relative; overflow: hidden;">
+
+                <!-- Background decoration -->
+                <div
+                    style="position: absolute; top: -100px; left: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(102,126,234,0.1) 0%, transparent 70%); border-radius: 50%;">
+                </div>
+                <div
+                    style="position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(118,75,162,0.1) 0%, transparent 70%); border-radius: 50%;">
+                </div>
+
+                <div class="container"
+                    style="max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;">
+
+                    <!-- Section Title -->
+                    <div style="text-align: center; margin-bottom: 70px;">
+                        <h2
+                            style="color: #2d3748; font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                            التغطية الإعلامية</h2>
+                        <div
+                            style="width: 80px; height: 4px; background: linear-gradient(90deg, #667eea, #764ba2); margin: 0 auto; border-radius: 2px;">
                         </div>
-                        
-                        <h3 style="color: #1a202c; font-size: 1.5rem; font-weight: 800; margin-bottom: 18px; line-height: 1.3; transition: color 0.3s ease;" onmouseover="this.style.color='#667eea'" onmouseout="this.style.color='#1a202c'">
-                            {{ $lang == 'ar' ? $media->title_ar : $media->title_en }}
-                        </h3>
-                        
-                        <p style="color: #4a5568; font-size: 1.05rem; line-height: 1.7; margin-bottom: 0; font-weight: 400;">
-                            {{ $lang == 'ar' ? $media->desc_ar : $media->desc_en  }}
-                        </p>
-                        
-                        <!-- Decorative element -->
-                        <div style="width: 50px; height: 3px; background: linear-gradient(90deg, #667eea, #764ba2); margin-top: 25px; border-radius: 2px; transition: width 0.3s ease;" onmouseover="this.style.width='80px'" onmouseout="this.style.width='50px'"></div>
+                    </div>
+
+                    <div class="news-grid"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; margin-top: 50px;">
+
+                        @foreach ($medias as $media)
+                            <div
+                                style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; border: 1px solid rgba(102,126,234,0.1);">
+
+                                <!-- News Image -->
+                                <div style="width: 100%; height: 280px; position: relative; overflow: hidden;">
+                                    <img src="{{ asset($media->image) }}"
+                                        alt="{{ $media->title ?? 'صورة الخبر' }}"
+                                        style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s ease-out;"
+                                        onmouseover="this.style.transform='scale(1.08)'"
+                                        onmouseout="this.style.transform='scale(1)'">
+
+                                    <!-- Modern overlay -->
+                                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); opacity: 0; transition: opacity 0.3s ease;"
+                                        onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'">
+                                    </div>
+                                </div>
+
+                                <!-- News Content -->
+                                <div style="padding: 35px;">
+                                    <div
+                                        style="color: #667eea; font-size: 0.95rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                        {{ $media->created_at ? $media->created_at->format('d M Y') : 'تاريخ غير محدد' }}
+                                    </div>
+
+                                    <h3 style="color: #1a202c; font-size: 1.5rem; font-weight: 800; margin-bottom: 18px; line-height: 1.3; transition: color 0.3s ease;"
+                                        onmouseover="this.style.color='#667eea'"
+                                        onmouseout="this.style.color='#1a202c'">
+                                        {{ $lang == 'ar' ? $media->title_ar : $media->title_en }}
+                                    </h3>
+
+                                    <p
+                                        style="color: #4a5568; font-size: 1.05rem; line-height: 1.7; margin-bottom: 0; font-weight: 400;">
+                                        {{ $lang == 'ar' ? $media->desc_ar : $media->desc_en }}
+                                    </p>
+
+                                    <!-- Decorative element -->
+                                    <div style="width: 50px; height: 3px; background: linear-gradient(90deg, #667eea, #764ba2); margin-top: 25px; border-radius: 2px; transition: width 0.3s ease;"
+                                        onmouseover="this.style.width='80px'" onmouseout="this.style.width='50px'">
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+
                     </div>
                 </div>
-            @endforeach
-            
-        </div>
-    </div>
-</section>
+            </section>
         </div>
 
         <div id="exhibition" class="page">
@@ -3435,61 +3566,66 @@
             </section>
 
             <!-- Content Section -->
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+            <!-- Swiper CSS -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-<section style="padding: 100px 0; background-color: #f8f9fa; position: relative; overflow: hidden;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <section style="padding: 100px 0; background-color: #f8f9fa; position: relative; overflow: hidden;">
+                <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
 
-        <!-- Gallery Container -->
-        <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-            
-            <!-- Swiper Container -->
-            <div class="swiper mySwiper" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
-                <div class="swiper-wrapper">
-                    @foreach ($images as $image)
-                        <div class="swiper-slide" style="height: 400px; display:flex; justify-content:center; align-items:center; background:#eee;">
-                            <img src="{{ asset($image->image) }}" alt="Gallery Image" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); color: white; padding: 20px;">
-                                <h3 style="font-size: 1.5rem; font-weight: 700; margin: 0;">
-                                    {{ $lang == 'ar' ? $image->title_ar : $image->title_en }}
-                                </h3>
+                    <!-- Gallery Container -->
+                    <div
+                        style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+
+                        <!-- Swiper Container -->
+                        <div class="swiper mySwiper"
+                            style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                            <div class="swiper-wrapper">
+                                @foreach ($images as $image)
+                                    <div class="swiper-slide"
+                                        style="height: 400px; display:flex; justify-content:center; align-items:center; background:#eee;">
+                                        <img src="{{ asset($image->image) }}" alt="Gallery Image"
+                                            style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+                                        <div
+                                            style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); color: white; padding: 20px;">
+                                            <h3 style="font-size: 1.5rem; font-weight: 700; margin: 0;">
+                                                {{ $lang == 'ar' ? $image->title_ar : $image->title_en }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
+
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- Navigation -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
-                    @endforeach
+
+                    </div>
                 </div>
+            </section>
 
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- Navigation -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script>
-    const swiper = new Swiper(".mySwiper", {
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-    });
-</script>
+            <!-- Swiper JS -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+            <script>
+                const swiper = new Swiper(".mySwiper", {
+                    loop: true,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    },
+                });
+            </script>
 
         </div>
 
@@ -4704,7 +4840,7 @@
             </div>
         </div>
     </footer>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

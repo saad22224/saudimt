@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminAuth;
 use App\Http\Controllers\MailController;
 use App\Models\Image;
 use App\Models\Media;
+use App\Models\Science;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 use App\Models\Speaker;
@@ -14,7 +15,8 @@ Route::get('/', function () {
     $speakers = Speaker::all();
     $medias = Media::all();
     $images = Image::all();
-    return view('index', compact('speakers' , 'medias'  , 'images'));
+    $sciences = Science::all();
+    return view('index', compact('speakers', 'medias', 'images' , 'sciences'));
 });
 
 
@@ -135,6 +137,47 @@ Route::delete('admin/deletemedia/{id}', function ($id) {
 
 
 
+Route::get('admin/sciences', function () {
+    $sciences = Science::all();
+    return view('admin.sciences', compact('sciences'));
+})->name('admin.sciences');
+
+Route::post('admin/sciences', function (Request $request) {
+    $request->validate([
+        'title_ar' => 'required',
+        'title_en' => 'required',
+        'desc_ar' => 'required',
+        'desc_en' => 'required',
+        'image' => 'required|image',
+    ]);
+
+    $image = $request->file('image');
+    $imageName = $image->getClientOriginalName();
+
+    // تخزين الصورة في storage/app/public/speakers
+    $imagePath = $image->storeAs('sciences', $imageName, 'public');
+
+    // تخزين البيانات في قاعدة البيانات
+    $science = new Science();
+    $science->title_ar = $request->title_ar;
+    $science->title_en = $request->title_en;
+    $science->desc_ar = $request->desc_ar;
+    $science->desc_en = $request->desc_en;
+    $science->image = $imagePath; // هنا بنخزن المسار في قاعدة البيانات
+    $science->save();
+
+    return redirect()->back()->with('success', 'تم إضافة المتحدث بنجاح!');
+})->name('sciences.store');
+
+Route::delete('admin/deletescience/{id}', function ($id) {
+    $media = Science::find($id);
+    $media->delete();
+    return redirect()->back();
+})->name('admin.deletescience');
+
+
+
+
 
 
 
@@ -183,6 +226,6 @@ Route::post('admin/images', function (Request $request) {
 
 Route::delete('admin/deleteimage/{id}', function ($id) {
     $image = Image::find($id);
-     $image->delete();
+    $image->delete();
     return redirect()->back();
 })->name('admin.deleteimage');

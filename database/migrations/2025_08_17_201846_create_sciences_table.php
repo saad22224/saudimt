@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('sciences', function (Blueprint $table) {
             $table->id();
+            $table->string('title_ar');
+            $table->string('title_en');
+            $table->string('desc_ar');
+            $table->string('desc_en');
+            $table->string('image');
             $table->timestamps();
         });
     }
