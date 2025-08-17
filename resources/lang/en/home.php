@@ -173,6 +173,99 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
     'conference_goal_1_desc' => 'Building strategic partnerships among various stakeholders in the medical tourism sector',
 
     'conference_goal_2_title' => 'Supporting the Kingdom\'s Position',
-    'conference_goal_2_desc' => 'Enhancing Saudi Arabia\'s position as a leading destination in medical tourism',
+    'conference_goal_2_desc' => 'Enhancing Saudi Arabia\'s position 
+    as a leading destination in medical tourism',
+     'scientific_committee_title' => 'Scientific Committee',
+    'scientific_committee_subtitle' => 'Scientific Committee Members and Experts',
+    
+    'scientific_committee_feature_1_title' => 'Specialized Experts',
+    'scientific_committee_feature_1_desc' => 'A group of the most prominent experts in medical tourism',
+    
+    'scientific_committee_feature_2_title' => 'Quality and Excellence',
+    'scientific_committee_feature_2_desc' => 'High standards in selecting scientific committee members',
+    
+    'scientific_committee_feature_3_title' => 'Coming Soon',
+    'scientific_committee_feature_3_desc' => 'Stay tuned for the announcement of scientific committee members',
+     'hero_title' => 'Annual Medical Tourism Conference',
+    'hero_subtitle' => 'Join us in this exceptional event to exchange experiences and knowledge in the field of medical tourism',
+    
+    // Event Details
+    'hero_participants' => 'More than 500 participants',
+    'hero_countries' => '8 different countries',
+    'hero_speakers' => '16 distinguished speakers',
+    
+    // Location & Date
+    'hero_location' => 'Taif, Saudi Arabia',
+    'hero_date' => 'July 2025',
+    
+    // Statistics Section
+    'stats_experience_number' => '25+',
+    'stats_experience_text' => 'Years of Experience',
+    
+    'stats_countries_number' => '8',
+    'stats_countries_text' => 'Different Countries',
+    
+    'stats_speakers_number' => '16',
+    'stats_speakers_text' => 'Distinguished Speakers',
+     'special' => 'Special Speakers',
+
+
+
+         'forum_program' => 'Forum Program',
+    'conference_agenda' => 'Annual Medical Tourism Conference Agenda with Distinguished Topics and Speakers',
+    'conference_date' => 'September 6 - 8',
+    'conference_duration' => '3 Days',
+    'conference_sessions' => '8 Sessions',
+
+      'additional_info' => 'Additional Information',
+    'announce' => 'More details about the specific timings
+     for each session will be announced soon. Please 
+     follow the website for the latest updates.',
+     'experts' => 'A select group of experts and specialists in the field of
+      medical tourism from around the world.',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       'forum_program' => 'Forum Program',
+    'conference_agenda' => 'Annual Medical Tourism Conference Agenda with Distinguished Topics and Speakers',
+    'conference_date' => 'September 6 - 8',
+    'conference_duration' => '3 Days',
+    'conference_sessions' => '8 Sessions',
+    
+    // Target Audiences Section
+    'target_audiences' => 'Target Audiences',
+    'healthcare_providers' => 'Healthcare Providers',
+    'healthcare_providers_desc' => 'A unique opportunity to showcase their medical expertise and highlight their position as innovators within the growing global medical healthcare market. Through participation in discussions and seminars, they can expand their network with decision-makers and establish strategic partnerships supporting their growth and international expansion.',
+    'travel_agencies' => 'Medical Tourism Specialized Travel Agencies',
+    'travel_agencies_desc' => 'Enabling them to build close relationships with leading medical tourism service providers to develop innovative packages representing a true competitive advantage. The event also allows them to communicate with government representatives and sector leaders to learn about future policies and influential trends.',
+    'medical_practitioners' => 'Medical Practitioners and Institutions',
+    'medical_practitioners_desc' => 'An ideal platform for global exposure by showcasing their services to an audience including specialized travel agencies and governments. They can also establish partnerships with luxury resorts and health centers to reach the upscale tourism segment interested in premium treatment.',
+    'universities' => 'Universities and Educational Institutions',
+    'universities_desc' => 'An opportunity to expand academic cooperation scope through local and international partnerships supporting scientific research in medical tourism. It also facilitates building relationships with researchers and investors interested in clinical studies.',
+    'government_representatives' => 'Government Representatives',
+    'government_representatives_desc' => 'A space for dialogue with stakeholders to discuss developing medical tourism infrastructure through public-private partnerships. The event allows policy alignment with global market developments.',
+    'investors_entrepreneurs' => 'Investors and Healthcare Entrepreneurs',
+    'investors_entrepreneurs_desc' => 'Enabling them to enter a fast-growing sector by identifying promising investment opportunities. The event also provides an opportunity to communicate with sector leaders and identify strategic market entry points.',
+    'startups_tech' => 'Startups and Technology Companies',
+    'startups_tech_desc' => 'A platform to showcase their innovative digital health solutions such as telemedicine and artificial intelligence. They can communicate with healthcare providers and travel agencies to establish strategic partnerships enhancing digital transformation in healthcare.',
+    'support_service_providers' => 'Medical Tourism Support Service Providers',
+    'support_service_providers_desc' => 'Such as transportation, hospitality, therapeutic nutrition companies and others, they can benefit from the event to market their services and form partnerships with insurance companies and travel agencies to provide a comprehensive and integrated patient experience.',
+    'health_resorts' => 'Health and Wellness Resorts',
+    'health_resorts_desc' => 'Attendance gives them an opportunity to build partnerships with medical tourism facilities and companies, and develop treatment programs integrating luxury with traditional practices, opening new horizons in international markets.',
+    'insurance_companies' => 'International and Local Insurance Companies',
+    'insurance_companies_desc' => 'Discovering opportunities to expand their coverage scope to include medical tourism services, and building specialized insurance packages in collaboration with healthcare providers and travel agencies, enhancing their position as leaders in comprehensive health insurance.',
 ];
 

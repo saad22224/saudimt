@@ -644,109 +644,111 @@
                 </div>
             </section>
         </div>
-<div id="taif" class="page" style="font-family: system-ui, -apple-system, sans-serif;">
-    <section class="page-hero"
-        style="color: white; padding: 4rem 0; text-align: center; border-radius: 0 0 20px 20px; margin-bottom: 2rem;">
-        <div class="container" style="width: 90%; max-width: 1200px; margin: 0 auto;">
-            <img src="assets/logo.png" style="width: 200px; height: 100px; margin-bottom: 1.5rem;"
-                alt="شعار الطائف">
-            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">{{ __('home.home_hero_title') }}</h1>
-            <p style="font-size: 1.1rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">
-                {{ __('home.home_hero_desc') }}
-            </p>
+        <div id="taif" class="page" style="font-family: system-ui, -apple-system, sans-serif;">
+            <section class="page-hero"
+                style="color: white; padding: 4rem 0; text-align: center; border-radius: 0 0 20px 20px; margin-bottom: 2rem;">
+                <div class="container" style="width: 90%; max-width: 1200px; margin: 0 auto;">
+                    <img src="assets/logo.png" style="width: 200px; height: 100px; margin-bottom: 1.5rem;"
+                        alt="شعار الطائف">
+                    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">{{ __('home.home_hero_title') }}</h1>
+                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                        {{ __('home.home_hero_desc') }}
+                    </p>
+                </div>
+            </section>
+
+            <section style="padding: 2rem 0;">
+                <div style="width: 90%; max-width: 1200px; margin: 0 auto;">
+                    <!-- بطاقة رئيسية -->
+                    <div
+                        style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: right;">
+                        <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">{{ __('home.home_main_card_title') }}</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #2c3e50; margin-bottom: 1.5rem;">
+                            {{ __('home.home_main_card_desc_1') }}
+                        </p>
+                        <div style="margin-bottom: 1.5rem;">
+                            <span
+                                style="display: inline-block; background: #e74c3c; color: white; padding: 8px 20px; border-radius: 25px; font-size: 1rem; font-weight: bold;">
+                                {{ __('home.home_main_card_tag') }}
+                            </span>
+                        </div>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #2c3e50; margin: 0;">
+                            {{ __('home.home_main_card_desc_2') }}
+                        </p>
+                    </div>
+
+                    <!-- شبكة البطاقات -->
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        <!-- بطاقة مدينة الورود -->
+                        <div
+                            style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: right;">
+                            <h3 style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.3rem;">
+                                {{ __('home.home_rose_city_title') }}
+                            </h3>
+                            <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
+                                {{ __('home.home_rose_city_desc') }}
+                            </p>
+                            <ul style="list-style: none; padding: 0; margin: 0; color: #666;">
+                                <li style="padding: 0.4rem 0; border-bottom: 1px solid #eee;">•
+                                    {{ __('home.home_rose_city_point_1') }}</li>
+                                <li style="padding: 0.4rem 0; border-bottom: 1px solid #eee;">•
+                                    {{ __('home.home_rose_city_point_2') }}</li>
+                                <li style="padding: 0.4rem 0;">• {{ __('home.home_rose_city_point_3') }}</li>
+                            </ul>
+                        </div>
+
+                        <!-- بطاقة الفعاليات -->
+                        <div
+                            style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: right;">
+                            <h3 style="color: #3498db; margin-bottom: 1rem; font-size: 1.3rem;">
+                                {{ __('home.home_events_title') }}
+                            </h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; color: #666;">
+                                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                                    <strong>{{ __('home.home_events_desc_1_title') }}:</strong><br>
+                                    {{ __('home.home_events_desc_1') }}
+                                </li>
+                                <li style="padding: 0.5rem 0;">
+                                    <strong>{{ __('home.home_events_desc_2_title') }}:</strong><br>
+                                    {{ __('home.home_events_desc_2') }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- بطاقة عريضة للمعالم السياحية -->
+                    <div
+                        style="background: linear-gradient(to right, #f8f9fa, white); border-radius: 15px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: right;">
+                        <h3 style="color: #2c3e50; margin-bottom: 1.5rem; font-size: 1.4rem;">
+                            {{ __('home.home_tourist_title') }}
+                        </h3>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h4 style="color: #27ae60; margin-bottom: 0.8rem; font-size: 1.2rem;">
+                                {{ __('home.home_tourist_spot_1') }}
+                            </h4>
+                            <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">
+                                {{ __('home.home_tourist_spot_1_desc') }}
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 style="color: #8e44ad; margin-bottom: 0.8rem; font-size: 1.2rem;">
+                                {{ __('home.home_tourist_spot_2') }}
+                            </h4>
+                            <p style="color: #666; line-height: 1.8;">
+                                {{ __('home.home_tourist_spot_2_desc') }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
-
-    <section style="padding: 2rem 0;">
-        <div style="width: 90%; max-width: 1200px; margin: 0 auto;">
-            <!-- بطاقة رئيسية -->
-            <div
-                style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: right;">
-                <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">{{ __('home.home_main_card_title') }}</h2>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: #2c3e50; margin-bottom: 1.5rem;">
-                    {{ __('home.home_main_card_desc_1') }}
-                </p>
-                <div style="margin-bottom: 1.5rem;">
-                    <span
-                        style="display: inline-block; background: #e74c3c; color: white; padding: 8px 20px; border-radius: 25px; font-size: 1rem; font-weight: bold;">
-                        {{ __('home.home_main_card_tag') }}
-                    </span>
-                </div>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: #2c3e50; margin: 0;">
-                    {{ __('home.home_main_card_desc_2') }}
-                </p>
-            </div>
-
-            <!-- شبكة البطاقات -->
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-                <!-- بطاقة مدينة الورود -->
-                <div
-                    style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: right;">
-                    <h3 style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.3rem;">
-                        {{ __('home.home_rose_city_title') }}
-                    </h3>
-                    <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
-                        {{ __('home.home_rose_city_desc') }}
-                    </p>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #666;">
-                        <li style="padding: 0.4rem 0; border-bottom: 1px solid #eee;">• {{ __('home.home_rose_city_point_1') }}</li>
-                        <li style="padding: 0.4rem 0; border-bottom: 1px solid #eee;">• {{ __('home.home_rose_city_point_2') }}</li>
-                        <li style="padding: 0.4rem 0;">• {{ __('home.home_rose_city_point_3') }}</li>
-                    </ul>
-                </div>
-
-                <!-- بطاقة الفعاليات -->
-                <div
-                    style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: right;">
-                    <h3 style="color: #3498db; margin-bottom: 1rem; font-size: 1.3rem;">
-                        {{ __('home.home_events_title') }}
-                    </h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #666;">
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
-                            <strong>{{ __('home.home_events_desc_1_title') }}:</strong><br>
-                            {{ __('home.home_events_desc_1') }}
-                        </li>
-                        <li style="padding: 0.5rem 0;">
-                            <strong>{{ __('home.home_events_desc_2_title') }}:</strong><br>
-                            {{ __('home.home_events_desc_2') }}
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- بطاقة عريضة للمعالم السياحية -->
-            <div
-                style="background: linear-gradient(to right, #f8f9fa, white); border-radius: 15px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: right;">
-                <h3 style="color: #2c3e50; margin-bottom: 1.5rem; font-size: 1.4rem;">
-                    {{ __('home.home_tourist_title') }}
-                </h3>
-
-                <div style="margin-bottom: 2rem;">
-                    <h4 style="color: #27ae60; margin-bottom: 0.8rem; font-size: 1.2rem;">
-                        {{ __('home.home_tourist_spot_1') }}
-                    </h4>
-                    <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">
-                        {{ __('home.home_tourist_spot_1_desc') }}
-                    </p>
-                </div>
-
-                <div>
-                    <h4 style="color: #8e44ad; margin-bottom: 0.8rem; font-size: 1.2rem;">
-                        {{ __('home.home_tourist_spot_2') }}
-                    </h4>
-                    <p style="color: #666; line-height: 1.8;">
-                        {{ __('home.home_tourist_spot_2_desc') }}
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
 
 
 
-     <div id="conference-about" class="page">
+        <div id="conference-about" class="page">
             <section
                 style="background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%); padding: 60px 20px; text-align: center;">
                 <div style="max-width: 1200px; margin: 0 auto;">
@@ -781,8 +783,10 @@
                                         d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #e65100; margin: 0 0 20px 0;">{{ __('home.conference_participant_1_title') }}</h3>
-                            <p style="font-size: 1.1rem; color: #6d4c41; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_1_desc') }}</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #e65100; margin: 0 0 20px 0;">
+                                {{ __('home.conference_participant_1_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #6d4c41; line-height: 1.8; margin: 0;">
+                                {{ __('home.conference_participant_1_desc') }}</p>
                         </div>
 
                         <div
@@ -794,8 +798,10 @@
                                         d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #6a1b9a; margin: 0 0 20px 0;">{{ __('home.conference_participant_2_title') }}</h3>
-                            <p style="font-size: 1.1rem; color: #4a148c; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_2_desc') }}</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #6a1b9a; margin: 0 0 20px 0;">
+                                {{ __('home.conference_participant_2_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #4a148c; line-height: 1.8; margin: 0;">
+                                {{ __('home.conference_participant_2_desc') }}</p>
                         </div>
 
                         <div
@@ -807,8 +813,10 @@
                                         d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A3 3 0 0 0 17.1 7H14.9c-1.3 0-2.4.84-2.85 2.06L9.5 18H12v6h8z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #00695c; margin: 0 0 20px 0;">{{ __('home.conference_participant_3_title') }}</h3>
-                            <p style="font-size: 1.1rem; color: #004d40; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_3_desc') }}</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #00695c; margin: 0 0 20px 0;">
+                                {{ __('home.conference_participant_3_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #004d40; line-height: 1.8; margin: 0;">
+                                {{ __('home.conference_participant_3_desc') }}</p>
                         </div>
 
                         <div
@@ -820,8 +828,10 @@
                                         d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34c-.39-.39-1.02-.39-1.41 0L9 12.25 11.75 15l8.96-8.96c.39-.39.39-1.02 0-1.41z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #2e7d32; margin: 0 0 20px 0;">{{ __('home.conference_participant_4_title') }}</h3>
-                            <p style="font-size: 1.1rem; color: #1b5e20; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_4_desc') }}</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #2e7d32; margin: 0 0 20px 0;">
+                                {{ __('home.conference_participant_4_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #1b5e20; line-height: 1.8; margin: 0;">
+                                {{ __('home.conference_participant_4_desc') }}</p>
                         </div>
 
                         <div
@@ -833,8 +843,10 @@
                                         d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #1565c0; margin: 0 0 20px 0;">{{ __('home.conference_participant_5_title') }}</h3>
-                            <p style="font-size: 1.1rem; color: #0d47a1; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_5_desc') }}</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #1565c0; margin: 0 0 20px 0;">
+                                {{ __('home.conference_participant_5_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #0d47a1; line-height: 1.8; margin: 0;">
+                                {{ __('home.conference_participant_5_desc') }}</p>
                         </div>
 
                         <div
@@ -846,8 +858,10 @@
                                         d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>
                             </div>
-                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #ad1457; margin: 0 0 20px 0;">{{ __('home.conference_participant_6_title') }}</h3>
-                            <p style="font-size: 1.1rem; color: #880e4f; line-height: 1.8; margin: 0;">{{ __('home.conference_participant_6_desc') }}</p>
+                            <h3 style="font-size: 1.8rem; font-weight: 600; color: #ad1457; margin: 0 0 20px 0;">
+                                {{ __('home.conference_participant_6_title') }}</h3>
+                            <p style="font-size: 1.1rem; color: #880e4f; line-height: 1.8; margin: 0;">
+                                {{ __('home.conference_participant_6_desc') }}</p>
                         </div>
                     </div>
 
@@ -872,7 +886,8 @@
                                     </div>
                                     {{ __('home.conference_goal_1_title') }}
                                 </h3>
-                                <p style="font-size: 1.2rem; color: #5a6c7d; line-height: 1.9; margin: 0;">{{ __('home.conference_goal_1_desc') }}</p>
+                                <p style="font-size: 1.2rem; color: #5a6c7d; line-height: 1.9; margin: 0;">
+                                    {{ __('home.conference_goal_1_desc') }}</p>
                             </div>
 
                             <div
@@ -888,7 +903,8 @@
                                     </div>
                                     {{ __('home.conference_goal_2_title') }}
                                 </h3>
-                                <p style="font-size: 1.2rem; color: #5a6c7d; line-height: 1.9; margin: 0;">{{ __('home.conference_goal_2_desc') }}</p>
+                                <p style="font-size: 1.2rem; color: #5a6c7d; line-height: 1.9; margin: 0;">
+                                    {{ __('home.conference_goal_2_desc') }}</p>
                             </div>
                         </div>
                     </div>
@@ -931,10 +947,10 @@
 
                     <h1
                         style="color: white; font-size: 3.5rem; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        اللجنة العلمية</h1>
+                        {{ __('home.scientific_committee_title') }}</h1>
                     <p
                         style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-                        أعضاء اللجنة العلمية للمؤتمر وخبرائهم</p>
+                        {{ __('home.scientific_committee_subtitle') }}</p>
                 </div>
             </section>
 
@@ -959,10 +975,9 @@
                                 </svg>
                             </div>
                             <h3 style="color: #2d3748; font-size: 1.3rem; font-weight: 600; margin: 0 0 15px 0;">
-                                الخبراء
-                                المتخصصون</h3>
-                            <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0;">مجموعة من أبرز
-                                الخبراء في مجال السياحة العلاجية</p>
+                                {{ __('home.scientific_committee_feature_1_title') }}</h3>
+                            <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0;">
+                                {{ __('home.scientific_committee_feature_1_desc') }}</p>
                         </div>
 
                         <div
@@ -974,10 +989,10 @@
                                     <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                                 </svg>
                             </div>
-                            <h3 style="color: #2d3748; font-size: 1.3rem; font-weight: 600; margin: 0 0 15px 0;">الجودة
-                                والتميز</h3>
-                            <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0;">معايير عالية في
-                                اختيار أعضاء اللجنة العلمية</p>
+                            <h3 style="color: #2d3748; font-size: 1.3rem; font-weight: 600; margin: 0 0 15px 0;">
+                                {{ __('home.scientific_committee_feature_2_title') }}</h3>
+                            <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0;">
+                                {{ __('home.scientific_committee_feature_2_desc') }}</p>
                         </div>
 
                         <div
@@ -990,10 +1005,11 @@
                                     <polyline points="12,6 12,12 16,14" />
                                 </svg>
                             </div>
-                            <h3 style="color: #2d3748; font-size: 1.3rem; font-weight: 600; margin: 0 0 15px 0;">قريباً
+                            <h3 style="color: #2d3748; font-size: 1.3rem; font-weight: 600; margin: 0 0 15px 0;">
+                                {{ __('home.scientific_committee_feature_3_title') }}
                             </h3>
-                            <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0;">ترقبوا الإعلان عن
-                                أعضاء اللجنة العلمية</p>
+                            <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0;">
+                                {{ __('home.scientific_committee_feature_3_desc') }}</p>
                         </div>
 
                     </div>
@@ -1005,31 +1021,32 @@
                 <div style="max-width: 1200px; margin: 0 auto;">
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
-@foreach ($sciences as $science)
-    
-
-                        <!-- عضو 1 -->
-                        <div style="background: #ffffff; border-radius: 20px; padding: 30px; text-align: center; border: 3px solid #87CEEB; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;"
-                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.15)'"
-                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.1)'">
-                            <div
-                                style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 25px; overflow: hidden; border: 4px solid #87CEEB;">
-                                <img src="{{ asset($science->image) }}"
-                                    alt="د. أحمد محمد" style="width: 100%; height: 100%; object-fit: cover;">
-                            </div>
-                            <h3 style="color: #333; font-size: 24px; 
+                        @foreach ($sciences as $science)
+                            <!-- عضو 1 -->
+                            <div style="background: #ffffff; border-radius: 20px; padding: 30px; text-align: center; border: 3px solid #87CEEB; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;"
+                                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.15)'"
+                                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.1)'">
+                                <div
+                                    style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 25px; overflow: hidden; border: 4px solid #87CEEB;">
+                                    <img src="{{ asset($science->image) }}" alt="د. أحمد محمد"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <h3
+                                    style="color: #333; font-size: 24px; 
                             font-weight: 700; margin: 0 0 8px 0;">
-                            {{ $science->title_ar }}
+                                    {{ $science->title_ar }}
                                 </h3>
-                            <p style="color: #666; font-size: 16px; margin: 0 0 20px 0; font-weight: 400;">Dr. Ahmed
-                              {{ $science->title_en }}</p>
-                            <div
-                                style="background: #f8f9fa; border-radius: 15px; padding: 15px; margin-top: 20px; border: 1px solid #e9ecef;">
-                                <p style="color: #555; font-size: 14px; line-height: 1.6; margin: 0;"> {{ $science->desc_ar }}
-                                     -  <br>    {{ $science->desc_en }} </p>
+                                <p style="color: #666; font-size: 16px; margin: 0 0 20px 0; font-weight: 400;">Dr.
+                                    Ahmed
+                                    {{ $science->title_en }}</p>
+                                <div
+                                    style="background: #f8f9fa; border-radius: 15px; padding: 15px; margin-top: 20px; border: 1px solid #e9ecef;">
+                                    <p style="color: #555; font-size: 14px; line-height: 1.6; margin: 0;">
+                                        {{ $science->desc_ar }}
+                                        - <br> {{ $science->desc_en }} </p>
+                                </div>
                             </div>
-                        </div>
-@endforeach
+                        @endforeach
                         <!-- عضو 2 -->
                         {{-- <div style="background: #ffffff; border-radius: 20px; padding: 30px; text-align: center; border: 3px solid #87CEEB; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;"
                             onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.15)'"
@@ -1115,39 +1132,39 @@
 
                     </div>
 
-        <!-- تأثيرات الخلفية المتحركة -->
-        <div
-            style="position: absolute; top: 10%; left: 5%; width: 100px; height: 100px; background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%); border-radius: 50%; animation: float 6s ease-in-out infinite;">
-        </div>
-        <div
-            style="position: absolute; top: 60%; right: 8%; width: 60px; height: 60px; background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%); border-radius: 50%; animation: float 4s ease-in-out infinite reverse;">
-        </div>
-        <div
-            style="position: absolute; bottom: 20%; left: 15%; width: 80px; height: 80px; background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%); border-radius: 50%; animation: float 8s ease-in-out infinite;">
-        </div>
+                    <!-- تأثيرات الخلفية المتحركة -->
+                    <div
+                        style="position: absolute; top: 10%; left: 5%; width: 100px; height: 100px; background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%); border-radius: 50%; animation: float 6s ease-in-out infinite;">
+                    </div>
+                    <div
+                        style="position: absolute; top: 60%; right: 8%; width: 60px; height: 60px; background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%); border-radius: 50%; animation: float 4s ease-in-out infinite reverse;">
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 20%; left: 15%; width: 80px; height: 80px; background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%); border-radius: 50%; animation: float 8s ease-in-out infinite;">
+                    </div>
 
-        <style>
-            @keyframes float {
+                    <style>
+                        @keyframes float {
 
-                0%,
-                100% {
-                    transform: translateY(0px);
-                    opacity: 0.7;
-                }
+                            0%,
+                            100% {
+                                transform: translateY(0px);
+                                opacity: 0.7;
+                            }
 
-                50% {
-                    transform: translateY(-20px);
-                    opacity: 0.3;
-                }
-            }
+                            50% {
+                                transform: translateY(-20px);
+                                opacity: 0.3;
+                            }
+                        }
 
-            body {
-                margin: 0;
-                padding: 0;
-                overflow-x: hidden;
-            }
-        </style>
-        </section>
+                        body {
+                            margin: 0;
+                            padding: 0;
+                            overflow-x: hidden;
+                        }
+                    </style>
+            </section>
         </div>
 
         <style>
@@ -1185,10 +1202,10 @@
                 <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
                     <h1
                         style="font-size: 3.5em; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
-                        المؤتمر السنوي للسياحة العلاجية</h1>
+                        {{ __('home.hero_title') }}</h1>
                     <p
                         style="font-size: 1.2em; font-weight: 300; margin: 0 0 40px 0; opacity: 0.95; line-height: 1.6;">
-                        انضم إلينا في هذا الحدث الاستثنائي لتبادل الخبرات والمعرفة في مجال السياحة العلاجية</p>
+                        {{ __('home.hero_subtitle') }}</p>
 
                     <!-- Event Details -->
                     <div
@@ -1199,7 +1216,7 @@
                                 <div style="width: 16px; height: 16px; background: white; border-radius: 2px;"></div>
                             </div>
                             <div>
-                                <div style="font-size: 0.9em; opacity: 0.8;">أكثر من 500 مشارك</div>
+                                <div style="font-size: 0.9em; opacity: 0.8;">{{ __('home.hero_participants') }}</div>
                             </div>
                         </div>
 
@@ -1209,7 +1226,7 @@
                                 <div style="width: 16px; height: 16px; background: white; border-radius: 50%;"></div>
                             </div>
                             <div>
-                                <div style="font-size: 0.9em; opacity: 0.8;">8 دولة مختلفة</div>
+                                <div style="font-size: 0.9em; opacity: 0.8;">{{ __('home.hero_countries') }}</div>
                             </div>
                         </div>
 
@@ -1219,7 +1236,7 @@
                                 <div style="width: 16px; height: 16px; background: white; border-radius: 2px;"></div>
                             </div>
                             <div>
-                                <div style="font-size: 0.9em; opacity: 0.8;">16 متحدث مميز</div>
+                                <div style="font-size: 0.9em; opacity: 0.8;">{{ __('home.hero_speakers') }}</div>
                             </div>
                         </div>
                     </div>
@@ -1227,10 +1244,10 @@
                     <!-- Location and Date -->
                     <div style="margin-top: 30px; display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;">
                         <div style="text-align: center;">
-                            <div style="font-size: 1.1em; font-weight: 600;">الطائف، المملكة العربية السعودية</div>
+                            <div style="font-size: 1.1em; font-weight: 600;">{{ __('home.hero_location') }}</div>
                         </div>
                         <div style="text-align: center;">
-                            <div style="font-size: 1.1em; font-weight: 600;">يوليو 2025</div>
+                            <div style="font-size: 1.1em; font-weight: 600;">{{ __('home.hero_date') }}</div>
                         </div>
                     </div>
                 </div>
@@ -1249,9 +1266,11 @@
                                 style="width: 60px; height: 60px; background: #f97316; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);">
                                 <div style="width: 24px; height: 24px; background: white; border-radius: 50%;"></div>
                             </div>
-                            <div style="font-size: 3em; font-weight: 700; color: #ea580c; margin-bottom: 10px;">25+
+                            <div style="font-size: 3em; font-weight: 700; color: #ea580c; margin-bottom: 10px;">
+                                {{ __('home.stats_experience_number') }}
                             </div>
-                            <div style="color: #9a3412; font-size: 1.1em; font-weight: 500;">سنة خبرة متراكمة</div>
+                            <div style="color: #9a3412; font-size: 1.1em; font-weight: 500;">
+                                {{ __('home.stats_experience_text') }}</div>
                         </div>
 
                         <!-- Stat 2 -->
@@ -1261,8 +1280,10 @@
                                 style="width: 60px; height: 60px; background: #8b5cf6; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);">
                                 <div style="width: 24px; height: 24px; background: white; border-radius: 4px;"></div>
                             </div>
-                            <div style="font-size: 3em; font-weight: 700; color: #7c3aed; margin-bottom: 10px;">8</div>
-                            <div style="color: #5b21b6; font-size: 1.1em; font-weight: 500;">دولة مختلفة</div>
+                            <div style="font-size: 3em; font-weight: 700; color: #7c3aed; margin-bottom: 10px;">
+                                {{ __('home.stats_countries_number') }}</div>
+                            <div style="color: #5b21b6; font-size: 1.1em; font-weight: 500;">
+                                {{ __('home.stats_countries_text') }}</div>
                         </div>
 
                         <!-- Stat 3 -->
@@ -1272,9 +1293,11 @@
                                 style="width: 60px; height: 60px; background: #10b981; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);">
                                 <div style="width: 24px; height: 24px; background: white; border-radius: 2px;"></div>
                             </div>
-                            <div style="font-size: 3em; font-weight: 700; color: #059669; margin-bottom: 10px;">16
+                            <div style="font-size: 3em; font-weight: 700; color: #059669; margin-bottom: 10px;">
+                                {{ __('home.stats_speakers_number') }}
                             </div>
-                            <div style="color: #065f46; font-size: 1.1em; font-weight: 500;">متحدث مميز</div>
+                            <div style="color: #065f46; font-size: 1.1em; font-weight: 500;">
+                                {{ __('home.stats_speakers_text') }}</div>
                         </div>
                     </div>
                 </div>
@@ -1285,7 +1308,7 @@
                 <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
                     <h2
                         style="text-align: center; font-size: 2.5em; font-weight: 700; color: #2d3748; margin-bottom: 60px;">
-                        المتحدثون المميزون
+                        {{ __('home.special') }}
                     </h2>
 
                     <div
@@ -1518,14 +1541,13 @@
             <div class="program-container fade-in">
                 <div class="header-section"
                     style="margin-top: 90px; transform: translateY(10%);
-                    display: flex; flex-direction: column; align-items: center;">
+     display: flex; flex-direction: column; align-items: center;">
                     <div class="logo" style="transform: translateY(10%);">
                         <img src="assets/logo.png" alt="logo"
                             style="width:250px; height:100px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.15); object-fit:cover;">
                     </div>
-                    <h1 class="main-title" style="transform: translateY(10%);">برنامج المنتدي</h1>
-                    <p class="subtitle" style="transform: translateY(10%);">جدول أعمال المؤتمر السنوي للسياحة
-                        العلاجية مع المواضيع والمتحدثين المميزين
+                    <h1 class="main-title" style="transform: translateY(10%);">{{ __('home.forum_program') }}</h1>
+                    <p class="subtitle" style="transform: translateY(10%);">{{ __('home.conference_agenda') }}
                     </p>
 
                     <div class="stats-row" style="background-color: #1abc9c; width: 80%;">
@@ -1534,21 +1556,21 @@
                                 <path
                                     d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
                             </svg>
-                            <span>6 - 8 سبتمبر</span>
+                            <span>{{ __('home.conference_date') }}</span>
                         </div>
                         <div class="stat-item">
                             <svg class="stat-icon" viewBox="0 0 24 24">
                                 <path
                                     d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                             </svg>
-                            <span>3 أيام</span>
+                            <span>{{ __('home.conference_duration') }}</span>
                         </div>
                         <div class="stat-item">
                             <svg class="stat-icon" viewBox="0 0 24 24">
                                 <path
                                     d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM4 18v-6h2.5l6 8h2L7 12V6H4.5l7-3V1.5L3 6v12h1zm9.5-3c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z" />
                             </svg>
-                            <span>8 جلسات</span>
+                            <span>{{ __('home.conference_sessions') }}</span>
                         </div>
                     </div>
                 </div>
@@ -1653,9 +1675,9 @@
                     </div>
 
                     <div class="additional-info">
-                        <h3>معلومات إضافية</h3>
-                        <p>سيتم الإعلان عن المزيد من التفاصيل حول التوقيتات المحددة لكل جلسة قريباً. يرجى متابعة
-                            الموقع للحصول على آخر التحديثات.</p>
+                        <h3>{{__('home.additional_info')}}</h3>
+                        <p> 
+                            {{__('home.announce')}}</p>
                     </div>
                 </div>
             </div>
@@ -1672,11 +1694,14 @@
 
                 <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
                     <h1
-                        style="font-size: 3.5em; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
-                        المتحدثون</h1>
+                        style="font-size: 3.5em; 
+                        font-weight: 700; margin: 0 0 20px 0; 
+                        text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                        {{ __('home.special') }}
+                        </h1>
                     <p
                         style="font-size: 1.2em; font-weight: 300; margin: 0 0 40px 0; opacity: 0.95; line-height: 1.6;">
-                        نخبة من الخبراء والمتخصصين في مجال السياحة العلاجية من جميع أنحاء العالم</p>
+                     {{__('home.experts')}}</p>
 
                     <!-- Event Details -->
                     <!-- <div
@@ -1737,9 +1762,11 @@
                                 style="width: 60px; height: 60px; background: #f97316; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);">
                                 <div style="width: 24px; height: 24px; background: white; border-radius: 50%;"></div>
                             </div>
-                            <div style="font-size: 3em; font-weight: 700; color: #ea580c; margin-bottom: 10px;">25+
+                            <div style="font-size: 3em; font-weight: 700; color: #ea580c; margin-bottom: 10px;">
+                                {{ __('home.stats_experience_number') }}
                             </div>
-                            <div style="color: #9a3412; font-size: 1.1em; font-weight: 500;">سنة خبرة متراكمة</div>
+                            <div style="color: #9a3412; font-size: 1.1em; font-weight: 500;">
+                                {{ __('home.stats_experience_text') }}</div>
                         </div>
 
                         <!-- Stat 2 -->
@@ -1749,8 +1776,10 @@
                                 style="width: 60px; height: 60px; background: #8b5cf6; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);">
                                 <div style="width: 24px; height: 24px; background: white; border-radius: 4px;"></div>
                             </div>
-                            <div style="font-size: 3em; font-weight: 700; color: #7c3aed; margin-bottom: 10px;">8</div>
-                            <div style="color: #5b21b6; font-size: 1.1em; font-weight: 500;">دولة مختلفة</div>
+                            <div style="font-size: 3em; font-weight: 700; color: #7c3aed; margin-bottom: 10px;">
+                                {{ __('home.stats_countries_number') }}</div>
+                            <div style="color: #5b21b6; font-size: 1.1em; font-weight: 500;">
+                                {{ __('home.stats_countries_text') }}</div>
                         </div>
 
                         <!-- Stat 3 -->
@@ -1760,9 +1789,11 @@
                                 style="width: 60px; height: 60px; background: #10b981; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);">
                                 <div style="width: 24px; height: 24px; background: white; border-radius: 2px;"></div>
                             </div>
-                            <div style="font-size: 3em; font-weight: 700; color: #059669; margin-bottom: 10px;">16
+                            <div style="font-size: 3em; font-weight: 700; color: #059669; margin-bottom: 10px;">
+                                {{ __('home.stats_speakers_number') }}
                             </div>
-                            <div style="color: #065f46; font-size: 1.1em; font-weight: 500;">متحدث مميز</div>
+                            <div style="color: #065f46; font-size: 1.1em; font-weight: 500;">
+                                {{ __('home.stats_speakers_text') }}</div>
                         </div>
                     </div>
                 </div>
@@ -2375,134 +2406,117 @@
         </style>
 
 
-        <div id="attendees" class="page">
-            <div class="test">
-                <div class="logo" style="width: 100%; text-align: center; padding-top: 60px;">
-                    <img src="assets/logo.png" alt="logo"
-                        style="width:250px; 
-                     height:100px; border-radius:12px;
-                      box-shadow:0 4px 10px rgba(0,0,0,.15); object-fit:cover;">
-                </div>
-                <h1 class="main-title">الفئات المستهدفة</h1>
-                <div class="attendee-card">
-                    <div class="card-header">
-                        <div class="card-icon">🩺</div>
-                        <h2 class="card-title">مقدمو الرعاية الصحية</h2>
-                    </div>
-                    <div class="card-content">
-                        فرصة فريدة لعرض خبراتهم الطبية وإبراز مكانتهم كمبتكرين ضمن سوق عالمي متنامٍ للرعاية الصحية
-                        العلاجية.
-                        من خلال المشاركة في الحوارات والندوات، يمكنهم توسيع شبكة علاقاتهم مع صناع القرار، وعقد شراكات
-                        استراتيجية تدعم نموهم وانتشارهم دوليًا.
-                    </div>
-                </div>
-
-                <div class="attendee-card">
-                    <div class="card-header">
-                        <div class="card-icon">✈️</div>
-                        <h2 class="card-title">وكالات السفر المتخصصة في السياحة العلاجية</h2>
-                    </div>
-                    <div class="card-content">
-                        تمكينهم من بناء علاقات وثيقة مع أبرز مزودي خدمات السياحة العلاجية، لتطوير باقات مبتكرة تمثل ميزة
-                        تنافسية حقيقية. كما تتيح لهم الفعالية التواصل مع ممثلي الحكومات وقادة القطاع للاطلاع على
-                        السياسات
-                        المستقبلية والاتجاهات المؤثرة.
-                    </div>
-                </div>
-
-                <div class="attendee-card">
-                    <div class="card-header">
-                        <div class="card-icon">🏥</div>
-                        <h2 class="card-title">الممارسون والمؤسسات الطبية</h2>
-                    </div>
-                    <div class="card-content">
-                        منصة مثالية للظهور العالمي من خلال عرض خدماتهم أمام جمهور يشمل وكالات السفر المتخصصة والحكومات.
-                        كما
-                        يمكنهم عقد شراكات مع منتجعات ومراكز صحية فاخرة، للوصول إلى شريحة السياحة الراقية المهتمة بالعلاج
-                        الفاخر.
-                    </div>
-                </div>
-
-                <div class="attendee-card">
-                    <div class="card-header">
-                        <div class="card-icon">🎓</div>
-                        <h2 class="card-title">الجامعات والمؤسسات التعليمية</h2>
-                    </div>
-                    <div class="card-content">
-                        فرصة لتوسيع نطاق التعاون الأكاديمي عبر شراكات محلية ودولية تدعم البحث العلمي في مجال السياحة
-                        العلاجية. كما تسهّل بناء علاقات مع باحثين ومستثمرين مهتمين بالدراسات السريرية.
-                    </div>
-                </div>
-
-                <div class="attendee-card">
-                    <div class="card-header">
-                        <div class="card-icon">🏛️</div>
-                        <h2 class="card-title">ممثلو الجهات الحكومية</h2>
-                    </div>
-                    <div class="card-content">
-                        مساحة للحوار مع أصحاب المصلحة لمناقشة تطوير البنية التحتية للسياحة العلاجية من خلال الشراكة بين
-                        القطاعين العام والخاص. تتيح الفعالية مواءمة السياسات مع تطورات السوق العالمي.
-                    </div>
-                </div>
-
-                <div class="attendee-card">
-                    <div class="card-header">
-                        <div class="card-icon">💼</div>
-                        <h2 class="card-title">المستثمرون ورواد الأعمال في قطاع الرعاية الصحية</h2>
-                    </div>
-                    <div class="card-content">
-                        تمكينهم من الدخول إلى قطاع سريع النمو عبر التعرف على فرص استثمارية واعدة. كما توفر الفعالية فرصة
-                        للتواصل مع قادة القطاع وتحديد نقاط الدخول الاستراتيجية إلى السوق.
-                    </div>
-                </div>
-
-                <div class="attendee-card">
-                    <div class="card-header">
-                        <div class="card-icon">🚀</div>
-                        <h2 class="card-title">الشركات الناشئة وشركات التقنية</h2>
-                    </div>
-                    <div class="card-content">
-                        منصة لعرض حلولهم الصحية الرقمية المبتكرة مثل الطب عن بعد والذكاء الاصطناعي. يمكنهم التواصل مع
-                        مزودي
-                        الرعاية ووكالات السفر لعقد شراكات استراتيجية تعزز التحول الرقمي في الرعاية الصحية.
-                    </div>
-                </div>
-
-                <div class="attendee-card">
-                    <div class="card-header">
-                        <div class="card-icon">🤝</div>
-                        <h2 class="card-title">مزودو الخدمات المساندة للسياحة العلاجية</h2>
-                    </div>
-                    <div class="card-content">
-                        مثل شركات النقل، الضيافة، التغذية العلاجية وغيرها، يمكنهم الاستفادة من الفعالية لتسويق خدماتهم
-                        وتشكيل شراكات مع شركات التأمين ووكالات السفر لتقديم تجربة مريض شاملة ومتكاملة.
-                    </div>
-                </div>
-
-                <div class="attendee-card">
-                    <div class="card-header">
-                        <div class="card-icon">🏖️</div>
-                        <h2 class="card-title">منتجعات الصحة والعافية</h2>
-                    </div>
-                    <div class="card-content">
-                        الحضور يمنحهم فرصة لبناء شراكات مع منشآت وشركات السياحة العلاجية، وتطوير برامج علاجية تدمج بين
-                        الرفاهية والممارسات التقليدية، ما يفتح لهم آفاق جديدة في الأسواق الدولية.
-                    </div>
-                </div>
-
-                <div class="attendee-card">
-                    <div class="card-header">
-                        <div class="card-icon">🛡️</div>
-                        <h2 class="card-title">شركات التأمين الدولية والمحلية</h2>
-                    </div>
-                    <div class="card-content">
-                        اكتشاف فرص لتوسيع نطاق تغطياتهم لتشمل خدمات السياحة العلاجية، وبناء باقات تأمينية متخصصة
-                        بالتعاون مع
-                        مقدمي الرعاية ووكالات السفر، مما يعزز مكانتهم كرُوّاد في التأمين الصحي الشامل.
-                    </div>
-                </div>
+      <div id="attendees" class="page">
+    <div class="test">
+        <div class="logo" style="width: 100%; text-align: center; padding-top: 60px;">
+            <img src="assets/logo.png" alt="logo"
+                style="width:250px; 
+             height:100px; border-radius:12px;
+              box-shadow:0 4px 10px rgba(0,0,0,.15); object-fit:cover;">
+        </div>
+        <h1 class="main-title">{{ __('home.target_audiences') }}</h1>
+        
+        <div class="attendee-card">
+            <div class="card-header">
+                <div class="card-icon">🩺</div>
+                <h2 class="card-title">{{ __('home.healthcare_providers') }}</h2>
+            </div>
+            <div class="card-content">
+                {{ __('home.healthcare_providers_desc') }}
             </div>
         </div>
+
+        <div class="attendee-card">
+            <div class="card-header">
+                <div class="card-icon">✈️</div>
+                <h2 class="card-title">{{ __('home.travel_agencies') }}</h2>
+            </div>
+            <div class="card-content">
+                {{ __('home.travel_agencies_desc') }}
+            </div>
+        </div>
+
+        <div class="attendee-card">
+            <div class="card-header">
+                <div class="card-icon">🏥</div>
+                <h2 class="card-title">{{ __('home.medical_practitioners') }}</h2>
+            </div>
+            <div class="card-content">
+                {{ __('home.medical_practitioners_desc') }}
+            </div>
+        </div>
+
+        <div class="attendee-card">
+            <div class="card-header">
+                <div class="card-icon">🎓</div>
+                <h2 class="card-title">{{ __('home.universities') }}</h2>
+            </div>
+            <div class="card-content">
+                {{ __('home.universities_desc') }}
+            </div>
+        </div>
+
+        <div class="attendee-card">
+            <div class="card-header">
+                <div class="card-icon">🏛️</div>
+                <h2 class="card-title">{{ __('home.government_representatives') }}</h2>
+            </div>
+            <div class="card-content">
+                {{ __('home.government_representatives_desc') }}
+            </div>
+        </div>
+
+        <div class="attendee-card">
+            <div class="card-header">
+                <div class="card-icon">💼</div>
+                <h2 class="card-title">{{ __('home.investors_entrepreneurs') }}</h2>
+            </div>
+            <div class="card-content">
+                {{ __('home.investors_entrepreneurs_desc') }}
+            </div>
+        </div>
+
+        <div class="attendee-card">
+            <div class="card-header">
+                <div class="card-icon">🚀</div>
+                <h2 class="card-title">{{ __('home.startups_tech') }}</h2>
+            </div>
+            <div class="card-content">
+                {{ __('home.startups_tech_desc') }}
+            </div>
+        </div>
+
+        <div class="attendee-card">
+            <div class="card-header">
+                <div class="card-icon">🤝</div>
+                <h2 class="card-title">{{ __('home.support_service_providers') }}</h2>
+            </div>
+            <div class="card-content">
+                {{ __('home.support_service_providers_desc') }}
+            </div>
+        </div>
+
+        <div class="attendee-card">
+            <div class="card-header">
+                <div class="card-icon">🏖️</div>
+                <h2 class="card-title">{{ __('home.health_resorts') }}</h2>
+            </div>
+            <div class="card-content">
+                {{ __('home.health_resorts_desc') }}
+            </div>
+        </div>
+
+        <div class="attendee-card">
+            <div class="card-header">
+                <div class="card-icon">🛡️</div>
+                <h2 class="card-title">{{ __('home.insurance_companies') }}</h2>
+            </div>
+            <div class="card-content">
+                {{ __('home.insurance_companies_desc') }}
+            </div>
+        </div>
+    </div>
+</div>
         </div>
 
         <!-- Registration Page -->
@@ -2984,9 +2998,8 @@
                         <!-- Icon -->
                         <div
                             style="width: 80px; height: 80px; background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px auto; border: 3px solid #4fd1c7;">
-                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
-                                stroke="#4fd1c7" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#4fd1c7"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9 5.16-1 9-3.45 9-9V7l-10-5z" />
                                 <path d="M8 11l2 2 4-4" />
                             </svg>
