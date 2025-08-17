@@ -3362,11 +3362,11 @@
                         </div>
                         
                         <h3 style="color: #1a202c; font-size: 1.5rem; font-weight: 800; margin-bottom: 18px; line-height: 1.3; transition: color 0.3s ease;" onmouseover="this.style.color='#667eea'" onmouseout="this.style.color='#1a202c'">
-                            {{ $media->title ?? 'عنوان الخبر' }}
+                            {{ $lang == 'ar' ? $media->title_ar : $media->title_en }}
                         </h3>
                         
                         <p style="color: #4a5568; font-size: 1.05rem; line-height: 1.7; margin-bottom: 0; font-weight: 400;">
-                            {{ $media->desc ?? 'وصف الخبر' }}
+                            {{ $lang == 'ar' ? $media->desc_ar : $media->desc_en  }}
                         </p>
                         
                         <!-- Decorative element -->
@@ -3382,7 +3382,10 @@
 
         <div id="exhibition" class="page">
             <section class="page-hero"
-                style="background: linear-gradient(135deg, #4fd1c7 0%, #63b3ed 100%); padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
+                style="background:
+                 linear-gradient(135deg, #4fd1c7 0%, #63b3ed 100%);
+                  padding: 80px 0; text-align: center; position: relative;
+                   overflow: hidden;">
                 <!-- Medical Tourism Logo -->
                 <div style="position: absolute; top: 20px; right: 20px; opacity: 0.1;">
                     <!-- <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3431,53 +3434,144 @@
             </section>
 
             <!-- Content Section -->
-            <section class="content-section" style="padding: 100px 0; background-color: #f8f9fa;">
-                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+<section style="padding: 100px 0; background-color: #f8f9fa; position: relative; overflow: hidden;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
 
-                    <!-- Coming Soon Card -->
-                    <div
-                        style="background: white; border-radius: 20px; padding: 60px 40px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 50px; position: relative; overflow: hidden;">
-
-                        <!-- Background Pattern -->
-                        <div
-                            style="position: absolute; top: -50px; left: -50px; width: 100px; height: 100px; background: linear-gradient(45deg, #4fd1c7, #63b3ed); border-radius: 50%; opacity: 0.1;">
-                        </div>
-                        <div
-                            style="position: absolute; bottom: -30px; right: -30px; width: 60px; height: 60px; background: linear-gradient(45deg, #63b3ed, #4fd1c7); border-radius: 50%; opacity: 0.1;">
-                        </div>
-
-                        <!-- Icon -->
-                        <div
-                            style="width: 80px; height: 80px; background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px auto; border: 3px solid #4fd1c7;">
-                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
-                                stroke="#4fd1c7" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9 5.16-1 9-3.45 9-9V7l-10-5z" />
-                                <path d="M8 11l2 2 4-4" />
-                            </svg>
+        <!-- Gallery Container -->
+        <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+            
+            <!-- Swiper Container -->
+            <div style="position: relative; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                <div id="gallery-swiper" style="border-radius: 20px;">
+                    <div style="display: flex; transition: transform 0.5s ease;" id="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div style="min-width: 100%; position: relative; height: 400px; background: url('https://picsum.photos/1200/400?random=1') center/cover;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 30px;">
+                                <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0 0 10px 0;">منظر طبيعي رائع</h3>
+                                <p style="margin: 0; opacity: 0.9;">صورة جميلة من الطبيعة الساحرة</p>
+                            </div>
                         </div>
 
-                        <h2
-                            style="color: #2d3748; font-size: 2.5rem; font-weight: 700; margin: 0 0 20px 0; background: linear-gradient(135deg, #4fd1c7, #63b3ed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                            قريباً</h2>
+                        <!-- Slide 2 -->
+                        <div style="min-width: 100%; position: relative; height: 400px; background: url('https://picsum.photos/1200/400?random=2') center/cover;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 30px;">
+                                <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0 0 10px 0;">تصميم معماري</h3>
+                                <p style="margin: 0; opacity: 0.9;">لقطة مذهلة لتصميم معماري حديث</p>
+                            </div>
+                        </div>
 
-                        <p
-                            style="color: #718096; font-size: 1.2rem; line-height: 1.8; margin: 0; max-width: 500px; margin: 0 auto 20px auto;">
-                            نعمل حالياً على تطوير هذه الصفحة لتقديم أفضل تجربة للمستخدمين. يرجى زيارة الصفحة مرة أخرى
-                            قريباً للاطلاع على المحتوى الجديد.</p>
+                        <!-- Slide 3 -->
+                        <div style="min-width: 100%; position: relative; height: 400px; background: url('https://picsum.photos/1200/400?random=3') center/cover;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 30px;">
+                                <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0 0 10px 0;">فن وإبداع</h3>
+                                <p style="margin: 0; opacity: 0.9;">عمل فني مبدع ومميز</p>
+                            </div>
+                        </div>
 
-                        <!-- Progress Indicator -->
-                        <!-- <div style="width: 200px; height: 4px; background: #e2e8f0; border-radius: 2px; margin: 30px auto; overflow: hidden;">
-                        <div style="width: 65%; height: 100%; background: linear-gradient(90deg, #4fd1c7, #63b3ed); border-radius: 2px; animation: pulse 2s infinite;"></div>
-                    </div> -->
-
-                        <!-- <p style="color: #a0aec0; font-size: 0.9rem; margin: 0;">جاري التطوير... 65%</p> -->
+                        <!-- Slide 4 -->
+                        <div style="min-width: 100%; position: relative; height: 400px; background: url('https://picsum.photos/1200/400?random=4') center/cover;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 30px;">
+                                <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0 0 10px 0;">لحظة جميلة</h3>
+                                <p style="margin: 0; opacity: 0.9;">لحظة مُلتقطة بعناية وإتقان</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Additional Info Cards -->
-
                 </div>
-            </section>
+
+                <!-- Navigation Arrows -->
+                <button id="prev-btn" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; z-index: 10;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <polyline points="15,18 9,12 15,6"/>
+                    </svg>
+                </button>
+
+                <button id="next-btn" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; z-index: 10;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Pagination Dots -->
+            <div style="display: flex; justify-content: center; margin-top: 30px; gap: 12px;" id="pagination">
+                <button class="dot active" data-slide="0" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #4fd1c7; cursor: pointer; transition: all 0.3s ease; transform: scale(1.2); box-shadow: 0 0 10px rgba(79, 209, 199, 0.5);"></button>
+                <button class="dot" data-slide="1" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #ccc; cursor: pointer; transition: all 0.3s ease;"></button>
+                <button class="dot" data-slide="2" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #ccc; cursor: pointer; transition: all 0.3s ease;"></button>
+                <button class="dot" data-slide="3" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #ccc; cursor: pointer; transition: all 0.3s ease;"></button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.6); }
+        }
+        #prev-btn:hover, #next-btn:hover {
+            background: rgba(0,0,0,0.8) !important;
+            transform: translateY(-50%) scale(1.1) !important;
+        }
+        .dot:hover {
+            transform: scale(1.3) !important;
+        }
+    </style>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#swiper-wrapper > div');
+        const dots = document.querySelectorAll('.dot');
+        const wrapper = document.getElementById('swiper-wrapper');
+
+        function updateSlide() {
+            wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.style.background = '#4fd1c7';
+                    dot.style.transform = 'scale(1.2)';
+                    dot.style.boxShadow = '0 0 10px rgba(79, 209, 199, 0.5)';
+                    dot.classList.add('active');
+                } else {
+                    dot.style.background = '#ccc';
+                    dot.style.transform = 'scale(1)';
+                    dot.style.boxShadow = 'none';
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Next button
+        document.getElementById('next-btn').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+        });
+
+        // Previous button
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlide();
+        });
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateSlide();
+            });
+        });
+
+        // Auto slide (optional)
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+        }, 5000);
+    </script>
+</section>
         </div>
 
         <!-- Hospitality Pages -->

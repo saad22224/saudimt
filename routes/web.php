@@ -99,8 +99,10 @@ Route::get('admin/media', function () {
 
 Route::post('admin/media', function (Request $request) {
     $request->validate([
-        'title' => 'required',
-        'desc' => 'required',
+        'title_ar' => 'required',
+        'title_en' => 'required',
+        'desc_ar' => 'required',
+        'desc_en' => 'required',
         'image' => 'required|image',
     ]);
 
@@ -112,8 +114,10 @@ Route::post('admin/media', function (Request $request) {
 
     // تخزين البيانات في قاعدة البيانات
     $media = new Media();
-    $media->title = $request->title;
-    $media->desc = $request->desc;
+    $media->title_ar = $request->title_ar;
+    $media->title_en = $request->title_en;
+    $media->desc_ar = $request->desc_ar;
+    $media->desc_en = $request->desc_en;
     $media->image = $imagePath; // هنا بنخزن المسار في قاعدة البيانات
     $media->save();
 

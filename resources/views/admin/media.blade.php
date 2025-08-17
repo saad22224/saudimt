@@ -86,9 +86,11 @@
                     <thead>
                         <tr>
                             <th>صورة الخبر</th>
-                            <th>العنوان </th>
+                            <th>العنوان عربي </th>
+                            <th>العنوان انجليزي </th>
 
-                            <th>المحتوي</th>
+                            <th>المحتوي عربي</th>
+                            <th>المحتوي انجليزي</th>
                             <th>تاريخ الإنشاء</th>
 
                             <th>الإجراءات</th>
@@ -106,8 +108,10 @@
                                         style="width: 120px; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);">
                                 </td> --}}
 
-                                <td>{{ $media->title }}</td>
-                                <td>{{ $media->desc }}</td>
+                                <td>{{ $media->title_ar }}</td>
+                                <td>{{ $media->title_en }}</td>
+                                <td>{{ $media->desc_ar }}</td>
+                                <td>{{ $media->desc_en }}</td>
                                 {{-- <td>{{ $user->balance }}</td> --}}
                                 <td>{{ $media->created_at }}</td>
 
@@ -162,12 +166,20 @@
                     <form action="{{ route('media.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label>عنوان االخبر</label>
-                            <input name="title" type="text" class="form-control" required>
+                            <label>عنوان الخبر عربي</label>
+                            <input name="title_ar" type="text" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>وصف لخبر</label>
-                            <input name="desc" type="text" class="form-control" required>
+                            <label>عنوان الخبر انجليزي</label>
+                            <input name="title_en" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>وصف الخبر عربي</label>
+                            <input name="desc_ar" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>وصف الخبر انجليزي</label>
+                            <input name="desc_en" type="text" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>صورة الخبر</label>
