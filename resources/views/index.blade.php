@@ -1675,9 +1675,9 @@
                     </div>
 
                     <div class="additional-info">
-                        <h3>{{__('home.additional_info')}}</h3>
-                        <p> 
-                            {{__('home.announce')}}</p>
+                        <h3>{{ __('home.additional_info') }}</h3>
+                        <p>
+                            {{ __('home.announce') }}</p>
                     </div>
                 </div>
             </div>
@@ -1698,10 +1698,10 @@
                         font-weight: 700; margin: 0 0 20px 0; 
                         text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
                         {{ __('home.special') }}
-                        </h1>
+                    </h1>
                     <p
                         style="font-size: 1.2em; font-weight: 300; margin: 0 0 40px 0; opacity: 0.95; line-height: 1.6;">
-                     {{__('home.experts')}}</p>
+                        {{ __('home.experts') }}</p>
 
                     <!-- Event Details -->
                     <!-- <div
@@ -2406,117 +2406,117 @@
         </style>
 
 
-      <div id="attendees" class="page">
-    <div class="test">
-        <div class="logo" style="width: 100%; text-align: center; padding-top: 60px;">
-            <img src="assets/logo.png" alt="logo"
-                style="width:250px; 
+        <div id="attendees" class="page">
+            <div class="test">
+                <div class="logo" style="width: 100%; text-align: center; padding-top: 60px;">
+                    <img src="assets/logo.png" alt="logo"
+                        style="width:250px; 
              height:100px; border-radius:12px;
               box-shadow:0 4px 10px rgba(0,0,0,.15); object-fit:cover;">
-        </div>
-        <h1 class="main-title">{{ __('home.target_audiences') }}</h1>
-        
-        <div class="attendee-card">
-            <div class="card-header">
-                <div class="card-icon">🩺</div>
-                <h2 class="card-title">{{ __('home.healthcare_providers') }}</h2>
-            </div>
-            <div class="card-content">
-                {{ __('home.healthcare_providers_desc') }}
-            </div>
-        </div>
+                </div>
+                <h1 class="main-title">{{ __('home.target_audiences') }}</h1>
 
-        <div class="attendee-card">
-            <div class="card-header">
-                <div class="card-icon">✈️</div>
-                <h2 class="card-title">{{ __('home.travel_agencies') }}</h2>
-            </div>
-            <div class="card-content">
-                {{ __('home.travel_agencies_desc') }}
-            </div>
-        </div>
+                <div class="attendee-card">
+                    <div class="card-header">
+                        <div class="card-icon">🩺</div>
+                        <h2 class="card-title">{{ __('home.healthcare_providers') }}</h2>
+                    </div>
+                    <div class="card-content">
+                        {{ __('home.healthcare_providers_desc') }}
+                    </div>
+                </div>
 
-        <div class="attendee-card">
-            <div class="card-header">
-                <div class="card-icon">🏥</div>
-                <h2 class="card-title">{{ __('home.medical_practitioners') }}</h2>
-            </div>
-            <div class="card-content">
-                {{ __('home.medical_practitioners_desc') }}
-            </div>
-        </div>
+                <div class="attendee-card">
+                    <div class="card-header">
+                        <div class="card-icon">✈️</div>
+                        <h2 class="card-title">{{ __('home.travel_agencies') }}</h2>
+                    </div>
+                    <div class="card-content">
+                        {{ __('home.travel_agencies_desc') }}
+                    </div>
+                </div>
 
-        <div class="attendee-card">
-            <div class="card-header">
-                <div class="card-icon">🎓</div>
-                <h2 class="card-title">{{ __('home.universities') }}</h2>
-            </div>
-            <div class="card-content">
-                {{ __('home.universities_desc') }}
-            </div>
-        </div>
+                <div class="attendee-card">
+                    <div class="card-header">
+                        <div class="card-icon">🏥</div>
+                        <h2 class="card-title">{{ __('home.medical_practitioners') }}</h2>
+                    </div>
+                    <div class="card-content">
+                        {{ __('home.medical_practitioners_desc') }}
+                    </div>
+                </div>
 
-        <div class="attendee-card">
-            <div class="card-header">
-                <div class="card-icon">🏛️</div>
-                <h2 class="card-title">{{ __('home.government_representatives') }}</h2>
-            </div>
-            <div class="card-content">
-                {{ __('home.government_representatives_desc') }}
-            </div>
-        </div>
+                <div class="attendee-card">
+                    <div class="card-header">
+                        <div class="card-icon">🎓</div>
+                        <h2 class="card-title">{{ __('home.universities') }}</h2>
+                    </div>
+                    <div class="card-content">
+                        {{ __('home.universities_desc') }}
+                    </div>
+                </div>
 
-        <div class="attendee-card">
-            <div class="card-header">
-                <div class="card-icon">💼</div>
-                <h2 class="card-title">{{ __('home.investors_entrepreneurs') }}</h2>
-            </div>
-            <div class="card-content">
-                {{ __('home.investors_entrepreneurs_desc') }}
-            </div>
-        </div>
+                <div class="attendee-card">
+                    <div class="card-header">
+                        <div class="card-icon">🏛️</div>
+                        <h2 class="card-title">{{ __('home.government_representatives') }}</h2>
+                    </div>
+                    <div class="card-content">
+                        {{ __('home.government_representatives_desc') }}
+                    </div>
+                </div>
 
-        <div class="attendee-card">
-            <div class="card-header">
-                <div class="card-icon">🚀</div>
-                <h2 class="card-title">{{ __('home.startups_tech') }}</h2>
-            </div>
-            <div class="card-content">
-                {{ __('home.startups_tech_desc') }}
-            </div>
-        </div>
+                <div class="attendee-card">
+                    <div class="card-header">
+                        <div class="card-icon">💼</div>
+                        <h2 class="card-title">{{ __('home.investors_entrepreneurs') }}</h2>
+                    </div>
+                    <div class="card-content">
+                        {{ __('home.investors_entrepreneurs_desc') }}
+                    </div>
+                </div>
 
-        <div class="attendee-card">
-            <div class="card-header">
-                <div class="card-icon">🤝</div>
-                <h2 class="card-title">{{ __('home.support_service_providers') }}</h2>
-            </div>
-            <div class="card-content">
-                {{ __('home.support_service_providers_desc') }}
-            </div>
-        </div>
+                <div class="attendee-card">
+                    <div class="card-header">
+                        <div class="card-icon">🚀</div>
+                        <h2 class="card-title">{{ __('home.startups_tech') }}</h2>
+                    </div>
+                    <div class="card-content">
+                        {{ __('home.startups_tech_desc') }}
+                    </div>
+                </div>
 
-        <div class="attendee-card">
-            <div class="card-header">
-                <div class="card-icon">🏖️</div>
-                <h2 class="card-title">{{ __('home.health_resorts') }}</h2>
-            </div>
-            <div class="card-content">
-                {{ __('home.health_resorts_desc') }}
-            </div>
-        </div>
+                <div class="attendee-card">
+                    <div class="card-header">
+                        <div class="card-icon">🤝</div>
+                        <h2 class="card-title">{{ __('home.support_service_providers') }}</h2>
+                    </div>
+                    <div class="card-content">
+                        {{ __('home.support_service_providers_desc') }}
+                    </div>
+                </div>
 
-        <div class="attendee-card">
-            <div class="card-header">
-                <div class="card-icon">🛡️</div>
-                <h2 class="card-title">{{ __('home.insurance_companies') }}</h2>
-            </div>
-            <div class="card-content">
-                {{ __('home.insurance_companies_desc') }}
+                <div class="attendee-card">
+                    <div class="card-header">
+                        <div class="card-icon">🏖️</div>
+                        <h2 class="card-title">{{ __('home.health_resorts') }}</h2>
+                    </div>
+                    <div class="card-content">
+                        {{ __('home.health_resorts_desc') }}
+                    </div>
+                </div>
+
+                <div class="attendee-card">
+                    <div class="card-header">
+                        <div class="card-icon">🛡️</div>
+                        <h2 class="card-title">{{ __('home.insurance_companies') }}</h2>
+                    </div>
+                    <div class="card-content">
+                        {{ __('home.insurance_companies_desc') }}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
         </div>
 
         <!-- Registration Page -->
@@ -2768,128 +2768,127 @@
                     <div class="logo">
                         <img src="assets/logo.png" alt="logo"
                             style="width:250px; height:100px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.15); object-fit:cover;">
-
                     </div>
-                    <h1>سجل الآن</h1>
-                    <p>انضم إلينا في المؤتمر السنوي للسياحة العلاجية واكتسب خبرات جديدة في هذا المجال المتنامي</p>
+                    <h1>{{ __('home.register_now') }}</h1>
+                    <p>{{ __('home.registration_subtitle') }}</p>
                 </div>
 
                 <div class="form-section">
-                    <h2 class="section-title">نموذج التسجيل</h2>
+                    <h2 class="section-title">{{ __('home.registration_form') }}</h2>
 
-                    <form id="registrationForm" method="post"
-                        action=
-                    "{{ route('participations') }}">
+                    <form id="registrationForm" method="post" action="{{ route('participations') }}">
                         @csrf
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="firstName">الاسم الأول <span class="required">*</span></label>
+                                <label for="firstName">{{ __('home.first_name') }} <span
+                                        class="required">*</span></label>
                                 <input name="firstName" type="text" id="firstName" name="firstName" required>
                             </div>
                             <div class="form-group">
-                                <label for="lastName"> الإسم الأوسط <span class="required">*</span></label>
-                                <input name="middleName" type="text" id="lastName" name="lastName" required>
+                                <label for="middleName">{{ __('home.middle_name') }} <span
+                                        class="required">*</span></label>
+                                <input name="middleName" type="text" id="middleName" name="middleName" required>
                             </div>
                             <div class="form-group">
-                                <label for="lastName">اسم العائلة <span class="required">*</span></label>
+                                <label for="lastName">{{ __('home.last_name') }} <span
+                                        class="required">*</span></label>
                                 <input name="lastName" type="text" id="lastName" name="lastName" required>
                             </div>
                         </div>
 
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="email">البريد الإلكتروني <span class="required">*</span></label>
+                                <label for="email">{{ __('home.email') }} <span class="required">*</span></label>
                                 <input name="email" type="email" id="email" name="email" required>
                             </div>
-                            {{-- <div class="form-group">
-                                <label for="emailConfirm">تأكيد البريد الإلكتروني <span
-                                        class="required">*</span></label>
-                                <input type="email" id="emailConfirm" name="emailConfirm" required>
-                            </div> --}}
                         </div>
 
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="phone">رقم الهاتف <span class="required">*</span></label>
+                                <label for="phone">{{ __('home.phone') }} <span class="required">*</span></label>
                                 <input name="phone" type="tel" id="phone" name="phone" required>
                             </div>
                             <div class="form-group">
-                                <label for="organization">اسم المؤسسة <span class="required">*</span></label>
+                                <label for="organization">{{ __('home.organization') }} <span
+                                        class="required">*</span></label>
                                 <input name="organization" type="text" id="organization" name="organization"
                                     required>
                             </div>
                             <div class="form-group">
-                                <label for="organization"> رقم جواز السفر <span class="required">*</span></label>
-                                <input name="passport" type="text" id="organization" name="organization"
-                                    required>
+                                <label for="passport">{{ __('home.passport_number') }} <span
+                                        class="required">*</span></label>
+                                <input name="passport" type="text" id="passport" name="passport" required>
                             </div>
                         </div>
 
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="country">الدولة <span class="required">*</span></label>
+                                <label for="country">{{ __('home.country') }} <span
+                                        class="required">*</span></label>
                                 <input name="country" type="text" id="country" name="country" required>
                             </div>
                             <div class="form-group">
-                                <label for="city">المدينة <span class="required">*</span></label>
+                                <label for="city">{{ __('home.city') }} <span class="required">*</span></label>
                                 <input name="city" type="text" id="city" name="city" required>
                             </div>
                         </div>
 
                         <div class="form-group full-width">
-                            <label for="specialization">التخصص <span class="required">*</span></label>
+                            <label for="specialization">{{ __('home.specialization') }} <span
+                                    class="required">*</span></label>
                             <input name="specialization" type="text" id="specialization" name="specialization"
                                 required>
                         </div>
 
                         <div class="form-group full-width">
-                            <label>الجنس</label>
+                            <label>{{ __('home.gender') }}</label>
                             <div class="gender-group">
                                 <div class="radio-option">
                                     <input type="radio" id="male" name="gender" value="male">
-                                    <label for="male">ذكر</label>
+                                    <label for="male">{{ __('home.male') }}</label>
                                 </div>
                                 <div class="radio-option">
                                     <input type="radio" id="female" name="gender" value="female">
-                                    <label for="female">أنثى</label>
+                                    <label for="female">{{ __('home.female') }}</label>
                                 </div>
                             </div>
                         </div>
 
                         <div class="checkbox-group">
                             <input name="terms" type="checkbox" id="terms" name="terms" required>
-                            <label for="terms">أوافق على الشروط والأحكام <span class="required">*</span></label>
+                            <label for="terms">{{ __('home.agree_terms') }} <span
+                                    class="required">*</span></label>
                         </div>
 
                         <button type="submit" class="submit-btn">
                             <i class="fas fa-paper-plane"></i>
-                            إرسال التسجيل
+                            {{ __('home.submit_registration') }}
                         </button>
 
                         <div id="successMessage" class="success-message">
-                            تم إرسال طلب التسجيل بنجاح! سيتم التواصل معك قريباً.
+                            {{ __('home.success_message') }}
                         </div>
                     </form>
                 </div>
 
                 <div class="terms-section">
-                    <h3 class="terms-title">الشروط والأحكام</h3>
+                    <h3 class="terms-title">{{ __('home.terms_conditions') }}</h3>
                     <ul class="terms-list">
                         <li>
                             <div class="term-number">1</div>
-                            <div>تأكد من كتابة اسمك بشكل صحيح كما سيظهر في الشهادة.</div>
+                            <div>{{ __('home.term_1') }}</div>
                         </li>
                         <li>
                             <div class="term-number">2</div>
-                            <div>الحضور إلزامي.</div>
+                            <div>{{ __('home.term_2') }}</div>
                         </li>
                         <li>
                             <div class="term-number">3</div>
-                            <div>يجب عليك إكمال التقييم/الاستبيان لتلقي شهادتك.</div>
+                            <div>{{ __('home.term_3') }}</div>
                         </li>
                         <li>
                             <div class="term-number">4</div>
-                            <div>سيتم إرسال الشهادات إلى عنوان البريد الإلكتروني المستخدم في هذا النموذج.</div>
+                            <div>{{ __('home.term_4') }}</div>
                         </li>
                     </ul>
                 </div>

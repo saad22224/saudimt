@@ -267,5 +267,47 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
     'health_resorts_desc' => 'Attendance gives them an opportunity to build partnerships with medical tourism facilities and companies, and develop treatment programs integrating luxury with traditional practices, opening new horizons in international markets.',
     'insurance_companies' => 'International and Local Insurance Companies',
     'insurance_companies_desc' => 'Discovering opportunities to expand their coverage scope to include medical tourism services, and building specialized insurance packages in collaboration with healthcare providers and travel agencies, enhancing their position as leaders in comprehensive health insurance.',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     'register_now' => 'Register Now',
+    'registration_subtitle' => 'Join us at the Annual Medical Tourism Conference and gain new experiences in this growing field',
+    'registration_form' => 'Registration Form',
+    'first_name' => 'First Name',
+    'middle_name' => 'Middle Name',
+    'last_name' => 'Last Name',
+    'email' => 'Email Address',
+    'phone' => 'Phone Number',
+    'organization' => 'Organization Name',
+    'passport_number' => 'Passport Number',
+    'country' => 'Country',
+    'city' => 'City',
+    'specialization' => 'Specialization',
+    'gender' => 'Gender',
+    'male' => 'Male',
+    'female' => 'Female',
+    'agree_terms' => 'I agree to the Terms and Conditions',
+    'submit_registration' => 'Submit Registration',
+    'success_message' => 'Registration request sent successfully! We will contact you soon.',
+    'terms_conditions' => 'Terms and Conditions',
+    'term_1' => 'Make sure to write your name correctly as it will appear on the certificate.',
+    'term_2' => 'Attendance is mandatory.',
+    'term_3' => 'You must complete the evaluation/survey to receive your certificate.',
+    'term_4' => 'Certificates will be sent to the email address used in this form.',
 ];
 
