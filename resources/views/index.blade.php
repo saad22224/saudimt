@@ -1190,393 +1190,27 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
 
-                        <!-- Abdelghani Rozy -->
+                        @foreach ($speakers as $speaker)
+                            
+                    
                         <div
                             style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
                             <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
+                                <img src="{{ asset( $speaker->image) }}"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
                                 <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
+                                  
                                 </div>
                             </div>
                             <div style="padding: 20px; background: white;">
                                 <h4
                                     style="color: #2d3748; font-size: 1.2em; font-weight: 600; margin: 0 0 8px 0; font-family: 'Cairo', sans-serif;">
-                                    Abdelghani Rozy</h4>
-                                <p style="color: #4fd1c7; margin: 0; font-size: 1em; font-weight: 500;">عبدالغني روزي
+                                    {{ $speaker->name_en }}</h4>
+                                <p style="color: #4fd1c7; margin: 0; font-size: 1em; font-weight: 500;">{{ $speaker->name_en }} 
                                 </p>
                             </div>
                         </div>
-
-                        <!-- Mohammed Aldar -->
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4>Mohammed Aldar</h4>
-                                <p style="color: #4fd1c7;">محمد الدار</p>
-                            </div>
-                        </div>
-
-                        <!-- Mohammed Aldukhaini -->
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4>Mohammed Aldukhaini</h4>
-                                <p style="color: #4fd1c7;">محمد الدخيني</p>
-                            </div>
-                        </div>
-
-                        <!-- Viana Hassan -->
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4>Viana Hassan</h4>
-                                <p style="color: #4fd1c7;">فيانا حسن</p>
-                            </div>
-                        </div>
-
-                        <!-- Christoph Weigel -->
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4>Christoph Weigel</h4>
-                                <p style="color: #4fd1c7;">كريستوف ويجل</p>
-                            </div>
-                        </div>
-
-                        <!-- Sultan Alsaadoon -->
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4>Sultan Alsaadoon</h4>
-                                <p style="color: #4fd1c7;">سلطان السعدون</p>
-                            </div>
-                        </div>
-
-                        <!-- Talal Almaliki -->
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4>Talal Almaliki</h4>
-                                <p style="color: #4fd1c7;">طلال المالكي</p>
-                            </div>
-                        </div>
-
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4>HRH Prince Saud bin Nahar</h4>
-                                <p style="color: #4fd1c7;">سمو الأمير سعود بن نهار</p>
-                            </div>
-                        </div>
-
-                        <!-- Prem Jagyasi -->
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4>Prem Jagyasi</h4>
-                                <p style="color: #4fd1c7;">بريم جاجياسي</p>
-                            </div>
-                        </div>
-
-
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4>Dr. Awad Alomari</h4>
-                                <p style="color: #4fd1c7;">د. عوض العمري</p>
-                            </div>
-                        </div>
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4>Dorit von der Osten</h4>
-                                <p style="color: #4fd1c7;">دوريت فون دير أوستن</p>
-                            </div>
-                        </div>
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4>Christian Fadi El-khouri </h4>
-                                <p style="color: #4fd1c7;">كريستيان فادي الخوري </p>
-                            </div>
-                        </div>
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4> Mohammed Aljahani
-                                </h4>
-                                <p style="color: #4fd1c7;"> محمد الجهني
-
-                                </p>
-                            </div>
-                        </div>
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4> Laszlo Puczko
-
-                                </h4>
-                                <p style="color: #4fd1c7;"> لازلو بوتسكو
-
-
-
-                                </p>
-                            </div>
-                        </div>
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4> Talal Althumali
-
-
-                                </h4>
-                                <p style="color: #4fd1c7;"> طلال الثمالي
-
-
-
-
-
-                                </p>
-                            </div>
-                        </div>
-                        <div
-                            style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
-                            <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
-                                <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 20px; background: white;">
-                                <h4> Ahmed Moshli
-
-
-
-                                </h4>
-                                <p style="color: #4fd1c7;"> أحمد مسحلي
-
-
-
-
-
-
-
-                                </p>
-                            </div>
-                        </div>
+@endforeach
             </section>
         </div>
 
@@ -2046,33 +1680,30 @@
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
 
                         <!-- Abdelghani Rozy -->
+
+                        @foreach ($speakers as $speaker)
+                            
+                    
                         <div
                             style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
                             <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
+                                <img src="{{ asset( $speaker->image) }}"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; opacity: 0.3;" />
                                 <div style="position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                                        <svg viewBox="0 0 200 200" style="width: 60px; height: 60px;">
-                                            <path
-                                                d="M50,50 Q100,20 150,50 Q180,100 150,150 Q100,180 50,150 Q20,100 50,50 Z"
-                                                fill="#cbd5e0" opacity="0.8" />
-                                        </svg>
-                                    </div>
+                                  
                                 </div>
                             </div>
                             <div style="padding: 20px; background: white;">
                                 <h4
                                     style="color: #2d3748; font-size: 1.2em; font-weight: 600; margin: 0 0 8px 0; font-family: 'Cairo', sans-serif;">
-                                    Abdelghani Rozy</h4>
-                                <p style="color: #4fd1c7; margin: 0; font-size: 1em; font-weight: 500;">عبدالغني روزي
+                                    {{ $speaker->name_en }}</h4>
+                                <p style="color: #4fd1c7; margin: 0; font-size: 1em; font-weight: 500;">{{ $speaker->name_en }} 
                                 </p>
                             </div>
                         </div>
-
+@endforeach
                         <!-- Mohammed Aldar -->
-                        <div
+                        {{-- <div
                             style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
                             <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
                                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
@@ -2398,8 +2029,8 @@
 
                                 </p>
                             </div>
-                        </div>
-                        <div
+                        </div> --}}
+                        {{-- <div
                             style="background: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 3px solid #4fd1c7; overflow: hidden; transition: all 0.3s ease; position: relative;">
                             <div style="background: #f7fafc; padding: 30px 20px 20px; position: relative;">
                                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cpath d='M0,0 Q50,30 100,0 T200,0 L200,120 Q150,90 100,120 T0,120 Z' fill='%23e2e8f0'/%3E%3C/svg%3E"
@@ -2431,7 +2062,7 @@
 
                                 </p>
                             </div>
-                        </div>
+                        </div> --}}
             </section>
         </div>
 

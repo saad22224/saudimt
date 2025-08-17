@@ -1,11 +1,16 @@
 <?php
 
+use App\Http\Controllers\AdminAuth;
 use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
+use App\Models\Speaker;
+use Illuminate\Http\Request;
+
 
 Route::get('/', function () {
-    return view('index');
+    $speakers = Speaker::all();
+    return view('index', compact('speakers'));
 });
 
 
@@ -28,3 +33,54 @@ Route::get('/lang/{locale}', function (string $locale) {
     // dd('Locale set to ' . $locale);
     return redirect()->back();
 })->name('lang');
+
+
+
+
+
+
+Route::get('/saudimtadmin', function () {
+    return view('admin.login');
+});
+Route::get('/admin/dashboard', [AdminAuth::class, 'dashboard'])
+    ->name('admin.dashboard');
+Route::post('/admin/login', [AdminAuth::class, 'login'])
+    ->name('admin.login');
+Route::post('/admin/logout', [AdminAuth::class, 'logout'])
+    ->name('admin.logout');
+
+
+
+Route::get('admin/speakers', function () {
+    $speakers = Speaker::all();
+    return view('admin.speakers', compact('speakers'));
+})->name('admin.speakers');
+
+Route::post('admin/speakers', function (Request $request) {
+    $request->validate([
+        'name_en' => 'required',
+        'name_ar' => 'required',
+        'image' => 'required|image',
+    ]);
+
+    $image = $request->file('image');
+    $imageName = $image->getClientOriginalName();
+
+    // تخزين الصورة في storage/app/public/speakers
+    $imagePath = $image->storeAs('speakers', $imageName, 'public');
+
+    // تخزين البيانات في قاعدة البيانات
+    $speaker = new Speaker();
+    $speaker->name_en = $request->name_en;
+    $speaker->name_ar = $request->name_ar;
+    $speaker->image = $imagePath; // هنا بنخزن المسار في قاعدة البيانات
+    $speaker->save();
+
+    return redirect()->back()->with('success', 'تم إضافة المتحدث بنجاح!');
+})->name('speakers.store');
+
+Route::delete('admin/deletespeakers/{id}', function ($id) {
+    $speakers = Speaker::find($id);
+    $speakers->delete();
+    return redirect()->back();
+})->name('admin.deletespeaker');
