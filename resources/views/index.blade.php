@@ -4330,89 +4330,85 @@
                                     alt="">
                             </div>
                         </div>
-                        <h1 class="flights-title">الرحلات الجوية</h1>
-                        <p class="flights-subtitle">شركات الطيران المتاحة للوصول إلى الطائف لحضور المؤتمر</p>
-
-
+                        <h1 class="flights-title">{{ __('home.flights_title') }}</h1>
+                        <p class="flights-subtitle">{{ __('home.flights_subtitle') }}</p>
                     </div>
 
                     <div class="airlines-section">
-                        <h2 class="airlines-title">شركات الطيران المتاحة</h2>
+                        <h2 class="airlines-title">{{ __('home.airlines_available_title') }}</h2>
 
                         <div class="airlines-grid">
                             <div class="airline-card">
                                 <div class="airline-icon">✈️</div>
-                                <div class="airline-name">Saudia</div>
-                                <div class="airline-name-ar">(الخطوط السعودية)</div>
+                                <div class="airline-name">{{ __('home.saudia_name') }}</div>
+                                <div class="airline-name-ar">{{ __('home.saudia_name_ar') }}</div>
                             </div>
 
                             <div class="airline-card">
                                 <div class="airline-icon">✈️</div>
-                                <div class="airline-name">Flyadeal</div>
-                                <div class="airline-name-ar">(طيران أديل)</div>
+                                <div class="airline-name">{{ __('home.flyadeal_name') }}</div>
+                                <div class="airline-name-ar">{{ __('home.flyadeal_name_ar') }}</div>
                             </div>
 
                             <div class="airline-card">
                                 <div class="airline-icon">✈️</div>
-                                <div class="airline-name">Flynas</div>
-                                <div class="airline-name-ar">(طيران ناس)</div>
+                                <div class="airline-name">{{ __('home.flynas_name') }}</div>
+                                <div class="airline-name-ar">{{ __('home.flynas_name_ar') }}</div>
                             </div>
 
                             <div class="airline-card">
                                 <div class="airline-icon">✈️</div>
-                                <div class="airline-name">Nile Air</div>
-                                <div class="airline-name-ar">(النيل)</div>
+                                <div class="airline-name">{{ __('home.nile_air_name') }}</div>
+                                <div class="airline-name-ar">{{ __('home.nile_air_name_ar') }}</div>
                             </div>
 
                             <div class="airline-card">
                                 <div class="airline-icon">✈️</div>
-                                <div class="airline-name">Air Arabia</div>
-                                <div class="airline-name-ar">(الشارقة)</div>
+                                <div class="airline-name">{{ __('home.air_arabia_name') }}</div>
+                                <div class="airline-name-ar">{{ __('home.air_arabia_name_ar') }}</div>
                             </div>
 
                             <div class="airline-card">
                                 <div class="airline-icon">✈️</div>
-                                <div class="airline-name">Air Arabia Egypt</div>
-                                <div class="airline-name-ar">(القاهرة)</div>
+                                <div class="airline-name">{{ __('home.air_arabia_egypt_name') }}</div>
+                                <div class="airline-name-ar">{{ __('home.air_arabia_egypt_name_ar') }}</div>
                             </div>
 
                             <div class="airline-card">
                                 <div class="airline-icon">✈️</div>
-                                <div class="airline-name">flydubai</div>
-                                <div class="airline-name-ar">(دبي)</div>
+                                <div class="airline-name">{{ __('home.flydubai_name') }}</div>
+                                <div class="airline-name-ar">{{ __('home.flydubai_name_ar') }}</div>
                             </div>
 
                             <div class="airline-card">
                                 <div class="airline-icon">✈️</div>
-                                <div class="airline-name">Jazeera Airways</div>
-                                <div class="airline-name-ar">(الكويت)</div>
+                                <div class="airline-name">{{ __('home.jazeera_airways_name') }}</div>
+                                <div class="airline-name-ar">{{ __('home.jazeera_airways_name_ar') }}</div>
                             </div>
 
                             <div class="airline-card">
                                 <div class="airline-icon">✈️</div>
-                                <div class="airline-name">Qatar Airways</div>
-                                <div class="airline-name-ar">(الدوحة)</div>
+                                <div class="airline-name">{{ __('home.qatar_airways_name') }}</div>
+                                <div class="airline-name-ar">{{ __('home.qatar_airways_name_ar') }}</div>
                             </div>
 
                             <div class="airline-card">
                                 <div class="airline-icon">✈️</div>
-                                <div class="airline-name">Turkish Airlines</div>
-                                <div class="airline-name-ar">(إسطنبول)</div>
+                                <div class="airline-name">{{ __('home.turkish_airlines_name') }}</div>
+                                <div class="airline-name-ar">{{ __('home.turkish_airlines_name_ar') }}</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="info-cards">
                         <div class="info-card">
-                            <h3>مطار الطائف الإقليمي</h3>
-                            <p>يقع مطار الطائف الإقليمي على بُعد حوالي 30 كيلومتراً من وسط المدينة، ويوفر رحلات منتظمة
-                                من وإلى المدن الرئيسية في المملكة والمنطقة.</p>
+                            <h3>{{ __('home.airport_info_title') }}</h3>
+                            <p>{{ __('home.airport_info_content') }}</p>
                         </div>
 
                         <div class="info-card">
-                            <h3>معلومات مهمة</h3>
-                            <p>ننصح بحجز الرحلات مبكراً لضمان الحصول على أفضل الأسعار والمواعيد المناسبة. كما يُنصح
-                                بالتأكد من متطلبات السفر والوثائق المطلوبة.</p>
+                            <h3>{{ __('home.important_info_title') }}</h3>
+                            <p>{{ __('home.important_info_content') }}</p>
                         </div>
                     </div>
                 </div>

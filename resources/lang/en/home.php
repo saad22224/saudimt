@@ -490,7 +490,51 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
     'international_participants_title' => 'For International Participants',
     'international_participants_content' => 'Please contact the Saudi Embassy in your country for updated information on visa requirements and required documents.',
     'required_documents_title' => 'Required Documents',
-    'required_documents_content' => 'Ensure your passport is valid for at least 6 months, in addition to any other documents that may be required according to your nationality.'
+    'required_documents_content' => 'Ensure your passport is valid for at least 6 months, in addition to any other documents that may be required according to your nationality.',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      'flights_title' => 'Flights',
+    'flights_subtitle' => 'Available airlines to reach Taif for conference attendance',
+    'airlines_available_title' => 'Available Airlines',
+    'saudia_name' => 'Saudia',
+    'saudia_name_ar' => '(Saudi Airlines)',
+    'flyadeal_name' => 'Flyadeal',
+    'flyadeal_name_ar' => '(Adeal Airlines)',
+    'flynas_name' => 'Flynas',
+    'flynas_name_ar' => '(Nas Airlines)',
+    'nile_air_name' => 'Nile Air',
+    'nile_air_name_ar' => '(Nile)',
+    'air_arabia_name' => 'Air Arabia',
+    'air_arabia_name_ar' => '(Sharjah)',
+    'air_arabia_egypt_name' => 'Air Arabia Egypt',
+    'air_arabia_egypt_name_ar' => '(Cairo)',
+    'flydubai_name' => 'flydubai',
+    'flydubai_name_ar' => '(Dubai)',
+    'jazeera_airways_name' => 'Jazeera Airways',
+    'jazeera_airways_name_ar' => '(Kuwait)',
+    'qatar_airways_name' => 'Qatar Airways',
+    'qatar_airways_name_ar' => '(Doha)',
+    'turkish_airlines_name' => 'Turkish Airlines',
+    'turkish_airlines_name_ar' => '(Istanbul)',
+    'airport_info_title' => 'Taif Regional Airport',
+    'airport_info_content' => 'Taif Regional Airport is located approximately 30 kilometers from the city center and provides regular flights to and from major cities in the Kingdom and the region.',
+    'important_info_title' => 'Important Information',
+    'important_info_content' => 'We recommend booking flights early to ensure the best prices and suitable schedules. It is also advised to verify travel requirements and required documents.'
 
 ];
 

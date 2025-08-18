@@ -439,8 +439,42 @@ return [
     'international_participants_title' => 'للمشاركين الدوليين',
     'international_participants_content' => 'يُرجى التواصل مع السفارة السعودية في بلدكم للحصول على معلومات محدثة حول متطلبات التأشيرة والوثائق المطلوبة.',
     'required_documents_title' => 'الوثائق المطلوبة',
-    'required_documents_content' => 'تأكد من صحة جواز السفر وصلاحيته لمدة لا تقل عن 6 أشهر، بالإضافة إلى أي وثائق أخرى قد تكون مطلوبة حسب جنسيتك.'
+    'required_documents_content' => 'تأكد من صحة جواز السفر وصلاحيته لمدة لا تقل عن 6 أشهر، بالإضافة إلى أي وثائق
+     أخرى قد تكون مطلوبة حسب جنسيتك.',
 
 
-    
+
+
+
+
+
+
+     'flights_title' => 'الرحلات الجوية',
+    'flights_subtitle' => 'شركات الطيران المتاحة للوصول إلى الطائف لحضور المؤتمر',
+    'airlines_available_title' => 'شركات الطيران المتاحة',
+    'saudia_name' => 'Saudia',
+    'saudia_name_ar' => '(الخطوط السعودية)',
+    'flyadeal_name' => 'Flyadeal',
+    'flyadeal_name_ar' => '(طيران أديل)',
+    'flynas_name' => 'Flynas',
+    'flynas_name_ar' => '(طيران ناس)',
+    'nile_air_name' => 'Nile Air',
+    'nile_air_name_ar' => '(النيل)',
+    'air_arabia_name' => 'Air Arabia',
+    'air_arabia_name_ar' => '(الشارقة)',
+    'air_arabia_egypt_name' => 'Air Arabia Egypt',
+    'air_arabia_egypt_name_ar' => '(القاهرة)',
+    'flydubai_name' => 'flydubai',
+    'flydubai_name_ar' => '(دبي)',
+    'jazeera_airways_name' => 'Jazeera Airways',
+    'jazeera_airways_name_ar' => '(الكويت)',
+    'qatar_airways_name' => 'Qatar Airways',
+    'qatar_airways_name_ar' => '(الدوحة)',
+    'turkish_airlines_name' => 'Turkish Airlines',
+    'turkish_airlines_name_ar' => '(إسطنبول)',
+    'airport_info_title' => 'مطار الطائف الإقليمي',
+    'airport_info_content' => 'يقع مطار الطائف الإقليمي على بُعد حوالي 30 كيلومتراً من وسط المدينة، ويوفر رحلات منتظمة من وإلى المدن الرئيسية في المملكة والمنطقة.',
+    'important_info_title' => 'معلومات مهمة',
+    'important_info_content' => 'ننصح بحجز الرحلات مبكراً لضمان الحصول على أفضل الأسعار والمواعيد المناسبة. كما يُنصح بالتأكد من متطلبات السفر والوثائق المطلوبة.'
 ];
+
