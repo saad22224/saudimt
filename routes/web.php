@@ -24,6 +24,7 @@ Route::post('participations', [MailController::class, 'participations'])->name('
 
 
 Route::post('contact', [MailController::class, 'contact'])->name('contact');
+Route::post('sponser', [MailController::class, 'sponser'])->name('sponser');
 
 
 

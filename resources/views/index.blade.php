@@ -198,9 +198,34 @@
                 <a href="#" onclick="showPage('contact')" class="mobile-link">اتصل بنا</a>
             </div>
 
-            <div class="mobile-lang">
-                <button onclick="switchLanguage('ar')" class="active">العربية</button>
-                <button onclick="switchLanguage('en')">EN</button>
+              <div style="display: flex; gap: 10px;">
+                @if (session()->has('locale'))
+                    @if (session('locale') == 'ar')
+                        <a href="{{ route('lang', ['locale' => 'en']) }}"
+                            style="display:inline-block; padding:8px 16px; border-radius:8px;
+                      background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
+                      text-decoration:none; transition:all 0.3s ease;
+                      backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                            EN
+                        </a>
+                    @else
+                        <a href="{{ route('lang', ['locale' => 'ar']) }}"
+                            style="display:inline-block; padding:8px 16px; border-radius:8px;
+                      background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
+                      text-decoration:none; transition:all 0.3s ease;
+                      backdrop-filter:blur(4px); box-shadow:0 4px 12px rgba(0,255,157,0.4);">
+                            العربية
+                        </a>
+                    @endif
+                @else
+                    <a href="{{ route('lang', ['locale' => 'en']) }}"
+                        style="display:inline-block; padding:8px 16px; border-radius:8px;
+                  background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
+                  text-decoration:none; transition:all 0.3s ease;
+                  backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                        EN
+                    </a>
+                @endif
             </div>
         </div>
     </nav>
@@ -3325,28 +3350,29 @@
                 <div class="form-section">
                     <h2 class="form-title">{{ __('home.sponsorship_request') }}</h2>
 
-                    <form>
+                    <form action="{{ route('sponser') }}" method="POST">
+                        @csrf
                         <div class="form-grid">
                             <div class="form-group">
                                 <label>{{ __('home.institution_name') }} <span class="required">*</span></label>
-                                <input type="text" placeholder="{{ __('home.institution_name_placeholder') }}"
+                                <input name="companyname" type="text" placeholder="{{ __('home.institution_name_placeholder') }}"
                                     required>
                             </div>
 
                             <div class="form-group">
                                 <label>{{ __('home.responsible_person') }} <span class="required">*</span></label>
-                                <input type="text"
+                                <input name="name" type="text"
                                     placeholder="{{ __('home.responsible_person_placeholder') }}" required>
                             </div>
 
                             <div class="form-group">
                                 <label>{{ __('home.phone') }} <span class="required">*</span></label>
-                                <input type="tel" placeholder="{{ __('home.phone_placeholder') }}" required>
+                                <input name="phone" type="tel" placeholder="{{ __('home.phone_placeholder') }}" required>
                             </div>
 
                             <div class="form-group">
                                 <label>{{ __('home.sponsorship_type') }} <span class="required">*</span></label>
-                                <select required>
+                                <select required name="type">
                                     <option value="">{{ __('home.select_sponsorship_type') }}</option>
                                     <option value="gold">{{ __('home.gold_sponsor_option') }}</option>
                                     <option value="silver">{{ __('home.silver_sponsor_option') }}</option>
@@ -3358,7 +3384,7 @@
 
                         <div class="form-group">
                             <label>{{ __('home.additional_notes') }}</label>
-                            <textarea placeholder="{{ __('home.additional_notes_placeholder') }}"></textarea>
+                            <textarea name="message" placeholder="{{ __('home.additional_notes_placeholder') }}"></textarea>
                         </div>
 
                         <button type="submit"
@@ -4634,8 +4660,8 @@
                             <label class="form-label">{{ __('home.message') }}</label>
                             <textarea name="message" class="form-input form-textarea" placeholder="{{ __('home.message_placeholder') }}"></textarea>
                         </div>
-                        <button type="submit" class="form-button">
-                            تواصل معنا
+                        <button type="submit" class="submit-btn">
+                         {{ __('home.contact') }}
                         </button>
                     </form>
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mail\ParticipationMail;
 use App\Mail\ContactMail;
+use App\Mail\SponserMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 
@@ -87,7 +88,7 @@ class MailController extends Controller
                 $request->phone,
                 $request->message
             ));
-             Log::info('Participation mail sent successfully', [
+            Log::info('Participation mail sent successfully', [
                 'to' => 'admin@saudimt2025.com',
                 'data' => $request->only([
                     'name',
@@ -105,9 +106,42 @@ class MailController extends Controller
 
         return redirect()->back()->with('success', 'تم ارسال الطلب بنجاح');
 
-// Mail::raw('Test from contact form', function ($msg) {
-//     $msg->to('info@saudimt2025.com')->subject('Contact Test');
-// });
+        // Mail::raw('Test from contact form', function ($msg) {
+        //     $msg->to('info@saudimt2025.com')->subject('Contact Test');
+        // });
+
+        // dd($request->all());
+    }
+    public function sponser(Request $request)
+    {
+        $request->validate([
+            'companyname' => 'required',
+            'name' => 'required',
+            'phone' => 'required',
+            'type' => 'required',
+            'message' => 'required',
+        ]);
+
+        try {
+            Mail::to('admin@saudimt2025.com')->send(new SponserMail(
+                $request->companyname,
+                $request->name,
+                $request->phone,
+                $request->type,
+                $request->message
+            ));
+        } catch (\Exception $e) {
+            Log::error('Failed to send contact mail', [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(),
+            ]);
+        }
+
+        return redirect()->back()->with('success', 'تم ارسال الطلب بنجاح');
+
+        // Mail::raw('Test from contact form', function ($msg) {
+        //     $msg->to('info@saudimt2025.com')->subject('Contact Test');
+        // });
 
         // dd($request->all());
     }

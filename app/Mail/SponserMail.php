@@ -16,9 +16,17 @@ class SponserMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+
+    public  $companyname;
+    public  $name;
+    public  $phone;
+    public  $userMessage;
+    public function __construct($name, $companyname, $phone, $userMessage)
     {
-        //
+        $this->name = $name;
+        $this->companyname = $companyname;
+        $this->phone = $phone;
+        $this->userMessage = $userMessage;
     }
 
     /**
@@ -37,7 +45,13 @@ class SponserMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.sponser',
+            with: [
+                'name' => $this->name,
+                'companyname' => $this->companyname,
+                'phone' => $this->phone,
+                'userMessage' => $this->userMessage
+            ]
         );
     }
 
