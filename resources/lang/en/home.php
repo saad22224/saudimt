@@ -534,7 +534,42 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
     'airport_info_title' => 'Taif Regional Airport',
     'airport_info_content' => 'Taif Regional Airport is located approximately 30 kilometers from the city center and provides regular flights to and from major cities in the Kingdom and the region.',
     'important_info_title' => 'Important Information',
-    'important_info_content' => 'We recommend booking flights early to ensure the best prices and suitable schedules. It is also advised to verify travel requirements and required documents.'
+    'important_info_content' => 'We recommend booking flights
+     early to ensure the best prices and suitable schedules.
+      It is also advised to verify travel requirements and required documents.',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        'contact_us' => 'Contact Us',
+    'contact_subtitle' => 'We are happy to hear from you for any inquiries or suggestions. Please fill out the form below and we will respond as soon as possible.',
+    'send_message' => 'Send Message',
+    'full_name' => 'Full Name',
+    'full_name_placeholder' => 'Enter your full name',
+    'email' => 'Email',
+    'email_placeholder' => 'example@email.com',
+    'phone' => 'Phone Number',
+    'phone_placeholder' => '05xxxxxxxx',
+    'message' => 'Message',
+    'message_placeholder' => 'Write your message here...',
+    'contact_info' => 'Contact Information',
+    'address' => 'Address',
+    'address_value' => 'Kingdom of Saudi Arabia - Taif',
+    'email_label' => 'Email',
+    'email_value' => 'example@email.com',
+    'contact_number' => 'Contact Number',
+    'contact_number_value' => '+966 555 555 555',
+    'footer_text' => 'We look forward to serving you and providing the best services in medical tourism',
 
 ];
 

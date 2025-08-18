@@ -4596,86 +4596,85 @@
                 }
             </style>
 
-            <div class="contact-container">
-                <div class="contact-header">
-                    <h1 class="contact-title">اتصل بنا</h1>
-                    <p class="contact-subtitle">
-                        يسعدنا تواصلكم معنا لأي استفسارات أو اقتراحات. نرحب بعبئة النموذج أدناه وسنقوم بالرد في أقرب
-                        وقت.
-                    </p>
+           <div class="contact-container">
+    <div class="contact-header">
+        <h1 class="contact-title">{{ __('home.contact_us') }}</h1>
+        <p class="contact-subtitle">
+            {{ __('home.contact_subtitle') }}
+        </p>
+    </div>
+
+    <div class="contact-content">
+        <div class="contact-form">
+            <h2 class="form-title">{{ __('home.send_message') }}</h2>
+
+            <div class="form-group">
+                <label class="form-label">{{ __('home.full_name') }}</label>
+                <input type="text" class="form-input" placeholder="{{ __('home.full_name_placeholder') }}">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">{{ __('home.email') }}</label>
+                <input type="email" class="form-input" placeholder="{{ __('home.email_placeholder') }}">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">{{ __('home.phone') }}</label>
+                <input type="tel" class="form-input" placeholder="{{ __('home.phone_placeholder') }}">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">{{ __('home.message') }}</label>
+                <textarea class="form-input form-textarea" placeholder="{{ __('home.message_placeholder') }}"></textarea>
+            </div>
+        </div>
+
+        <div class="contact-info2">
+            <h2 class="info-title">{{ __('home.contact_info') }}</h2>
+
+            <div class="info-item">
+                <div class="info-icon">
+                    📍
                 </div>
-
-                <div class="contact-content">
-                    <div class="contact-form">
-                        <h2 class="form-title">أرسل رسالة</h2>
-
-                        <div class="form-group">
-                            <label class="form-label">الاسم الكامل</label>
-                            <input type="text" class="form-input" placeholder="أدخل اسمك الكامل">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">البريد الإلكتروني</label>
-                            <input type="email" class="form-input" placeholder="example@email.com">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">رقم الهاتف</label>
-                            <input type="tel" class="form-input" placeholder="05xxxxxxxx">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">الرسالة</label>
-                            <textarea class="form-input form-textarea" placeholder="اكتب رسالتك هنا..."></textarea>
-                        </div>
-                    </div>
-
-                    <div class="contact-info2">
-                        <h2 class="info-title">معلومات التواصل</h2>
-
-                        <div class="info-item">
-                            <div class="info-icon">
-                                📍
-                            </div>
-                            <div class="info-content">
-                                <h3>العنوان</h3>
-                                <p>المملكة العربية السعودية - الطائف</p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="info-icon">
-                                📧
-                            </div>
-                            <div class="info-content">
-                                <h3>البريد الإلكتروني</h3>
-                                <p>example@email.com</p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="info-icon">
-                                📞
-                            </div>
-                            <div class="info-content">
-                                <h3>رقم التواصل</h3>
-                                <p>+966 555 555 555</p>
-                            </div>
-                        </div>
-
-                        <div class="footer-text">
-                            نتطلع لخدمتكم وتقديم أفضل الخدمات في مجال السياحة العلاجية
-                        </div>
-
-                        <!-- Logo watermark placeholder -->
-                        <div class="logo-watermark">
-                            <svg viewBox="0 0 100 100" fill="currentColor">
-                                <path d="M50 10 L90 50 L50 90 L10 50 Z" opacity="0.3" />
-                            </svg>
-                        </div>
-                    </div>
+                <div class="info-content">
+                    <h3>{{ __('home.address') }}</h3>
+                    <p>{{ __('home.address_value') }}</p>
                 </div>
             </div>
+
+            <div class="info-item">
+                <div class="info-icon">
+                    📧
+                </div>
+                <div class="info-content">
+                    <h3>{{ __('home.email_label') }}</h3>
+                    <p>{{ __('home.email_value') }}</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">
+                    📞
+                </div>
+                <div class="info-content">
+                    <h3>{{ __('home.contact_number') }}</h3>
+                    <p>{{ __('home.contact_number_value') }}</p>
+                </div>
+            </div>
+
+            <div class="footer-text">
+                {{ __('home.footer_text') }}
+            </div>
+
+            <!-- Logo watermark placeholder -->
+            <div class="logo-watermark">
+                <svg viewBox="0 0 100 100" fill="currentColor">
+                    <path d="M50 10 L90 50 L50 90 L10 50 Z" opacity="0.3" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
 
 
         </div>
