@@ -139,9 +139,40 @@
         <div class="mobile-logo">
             <img src="assets/logo.png" alt="Logo">
         </div>
+             <div style="display: flex; gap: 10px; transform:translateX(-80%)">
+            @if (session()->has('locale'))
+                @if (session('locale') == 'ar')
+                    <a href="{{ route('lang', ['locale' => 'en']) }}"
+                        style="display:inline-block; padding:8px 16px; border-radius:8px;
+                  background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
+                  text-decoration:none; transition:all 0.3s ease;
+                  backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                        EN
+                    </a>
+                @else
+                    <a href="{{ route('lang', ['locale' => 'ar']) }}"
+                        style="display:inline-block; padding:8px 16px; border-radius:8px;
+                  background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
+                  text-decoration:none; transition:all 0.3s ease;
+                  backdrop-filter:blur(4px); box-shadow:0 4px 12px rgba(0,255,157,0.4);">
+                        العربية
+                    </a>
+                @endif
+            @else
+                <a href="{{ route('lang', ['locale' => 'en']) }}"
+                    style="display:inline-block; padding:8px 16px; border-radius:8px;
+              background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
+              text-decoration:none; transition:all 0.3s ease;
+              backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                    EN
+                </a>
+            @endif
+        </div>
         <button class="mobile-toggle" aria-label="فتح القائمة">
             <i class="fas fa-bars"></i>
         </button>
+
+        
     </div>
 
     <div class="mobile-menu">
@@ -199,35 +230,7 @@
             <a href="#" onclick="showPage('contact')" class="mobile-link">{{ __('home.contact') }}</a>
         </div>
 
-        <div style="display: flex; gap: 10px;">
-            @if (session()->has('locale'))
-                @if (session('locale') == 'ar')
-                    <a href="{{ route('lang', ['locale' => 'en']) }}"
-                        style="display:inline-block; padding:8px 16px; border-radius:8px;
-                  background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
-                  text-decoration:none; transition:all 0.3s ease;
-                  backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-                        EN
-                    </a>
-                @else
-                    <a href="{{ route('lang', ['locale' => 'ar']) }}"
-                        style="display:inline-block; padding:8px 16px; border-radius:8px;
-                  background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
-                  text-decoration:none; transition:all 0.3s ease;
-                  backdrop-filter:blur(4px); box-shadow:0 4px 12px rgba(0,255,157,0.4);">
-                        العربية
-                    </a>
-                @endif
-            @else
-                <a href="{{ route('lang', ['locale' => 'en']) }}"
-                    style="display:inline-block; padding:8px 16px; border-radius:8px;
-              background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
-              text-decoration:none; transition:all 0.3s ease;
-              backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-                    EN
-                </a>
-            @endif
-        </div>
+   
     </div>
 </nav>
 
