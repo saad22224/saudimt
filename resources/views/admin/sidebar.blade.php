@@ -40,6 +40,12 @@
                     <span>اللجنة العلمية</span>
                 </a>
             </li>
+            <li class="" data-page="offices">
+                <a href="{{ route('admin.participation') }}" class="menu-link">
+                    <i class="fas fa-building"></i>
+                    <span>المسجلون</span>
+                </a>
+            </li>
           
         </ul>
     </nav>

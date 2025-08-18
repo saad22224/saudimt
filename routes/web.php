@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminAuth;
 use App\Http\Controllers\MailController;
 use App\Models\Image;
 use App\Models\Media;
+use App\Models\Participation;
 use App\Models\Science;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
@@ -233,6 +234,30 @@ Route::delete('admin/deleteimage/{id}', function ($id) {
     $image->delete();
     return redirect()->back();
 })->name('admin.deleteimage');
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('admin/participation', function () {
+    $participations = Participation::all();
+    return view('admin.participation', compact('participations'));
+})->name('admin.participation');
+
+
+
+Route::delete('admin/participation/{id}', function ($id) {
+    $participation = Participation::find($id);
+    $participation->delete();
+    return redirect()->back();
+})->name('admin.deleteparticipation');
 
 
 

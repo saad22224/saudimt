@@ -9,7 +9,7 @@ use App\Mail\SponserMail;
 use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
-
+use App\Models\Participation;
 class MailController extends Controller
 {
     public function participations(Request $request)
@@ -50,6 +50,20 @@ class MailController extends Controller
                 $request->middleName,
                 $request->lastName,
             ));
+
+            Participation::create([
+                'first_name' => $request->firstName,
+                'middle_name' => $request->middleName,
+                'last_name' => $request->lastName,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'country' => $request->country,
+                'city' => $request->city,
+                'passport' => $request->passport,
+                'gender' => $request->gender,
+                'organization' => $request->organization,
+                'specialization' => $request->specialization
+            ]);
 
             Log::info('Participation mail sent successfully', [
                 'to' => 'admin@saudimt2025.com',
