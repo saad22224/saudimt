@@ -15,7 +15,9 @@
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -23,6 +25,7 @@
 
 
 <body style="direction: {{ $lang == 'ar' ? 'rtl' : 'ltr' }} !important">
+   
     {{-- {{ dd(App::getLocale()) }} --}}
     <!-- Navigation -->
     <nav class="navbar" style="direction: {{ $lang == 'ar' ? 'rtl' : 'ltr' }} !important">
@@ -133,110 +136,145 @@
     </nav>
 
     <!-- Navbar للموبايل -->
-<!-- Navbar للموبايل -->
-<nav class="mobile-navbar">
-    <div class="mobile-nav-container">
-        <div class="mobile-logo">
-            <img src="assets/logo.png" alt="Logo">
-        </div>
-             <div style="display: flex; gap: 10px; transform:translateX(-80%)">
-            @if (session()->has('locale'))
-                @if (session('locale') == 'ar')
-                    <a href="{{ route('lang', ['locale' => 'en']) }}"
-                        style="display:inline-block; padding:8px 16px; border-radius:8px;
+    <!-- Navbar للموبايل -->
+    <nav class="mobile-navbar">
+        <div class="mobile-nav-container">
+            <div class="mobile-logo">
+                <img src="assets/logo.png" alt="Logo">
+            </div>
+            <div style="display: flex; gap: 10px; transform:translateX(-80%)">
+                @if (session()->has('locale'))
+                    @if (session('locale') == 'ar')
+                        <a href="{{ route('lang', ['locale' => 'en']) }}"
+                            style="display:inline-block; padding:8px 16px; border-radius:8px;
                   background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
                   text-decoration:none; transition:all 0.3s ease;
                   backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-                        EN
-                    </a>
-                @else
-                    <a href="{{ route('lang', ['locale' => 'ar']) }}"
-                        style="display:inline-block; padding:8px 16px; border-radius:8px;
+                            EN
+                        </a>
+                    @else
+                        <a href="{{ route('lang', ['locale' => 'ar']) }}"
+                            style="display:inline-block; padding:8px 16px; border-radius:8px;
                   background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
                   text-decoration:none; transition:all 0.3s ease;
                   backdrop-filter:blur(4px); box-shadow:0 4px 12px rgba(0,255,157,0.4);">
-                        العربية
-                    </a>
-                @endif
-            @else
-                <a href="{{ route('lang', ['locale' => 'en']) }}"
-                    style="display:inline-block; padding:8px 16px; border-radius:8px;
+                            العربية
+                        </a>
+                    @endif
+                @else
+                    <a href="{{ route('lang', ['locale' => 'en']) }}"
+                        style="display:inline-block; padding:8px 16px; border-radius:8px;
               background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
               text-decoration:none; transition:all 0.3s ease;
               backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-                    EN
-                </a>
-            @endif
-        </div>
-        <button class="mobile-toggle" aria-label="فتح القائمة">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        
-    </div>
-
-    <div class="mobile-menu">
-        <div class="mobile-item">
-            <a href="#" onclick="showPage('home')" class="mobile-link active">{{ __('home.home') }}</a>
-        </div>
-
-        <div class="mobile-item dropdown">
-            <button class="dropdown-btn">{{ __('home.about') }} <i class="fas fa-chevron-down"></i></button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showPage('about')">{{ __('home.about_association') }}</a>
-                <a href="#" onclick="showPage('taif')">{{ __('home.about_taif') }}</a>
-                <a href="#" onclick="showPage('conference-about')">{{ __('home.about_conference') }}</a>
-                <a href="#" onclick="showPage('committee')">{{ __('home.committee') }}</a>
+                        EN
+                    </a>
+                @endif
             </div>
+            <button class="mobile-toggle" aria-label="فتح القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+
+
         </div>
 
-        <div class="mobile-item dropdown">
-            <button class="dropdown-btn">{{ __('home.conference') }} <i class="fas fa-chevron-down"></i></button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showPage('program')">{{ __('home.program') }}</a>
-                <a href="#" onclick="showPage('program2')">{{ __('home.program2') }}</a>
-                <a href="#" onclick="showPage('speakers')">{{ __('home.speakers') }}</a>
-                <a href="#" onclick="showPage('attendees')">{{ __('home.attendees') }}</a>
-                <a href="#" onclick="showPage('registration')">{{ __('home.registration') }}</a>
+        <div class="mobile-menu">
+            <div class="mobile-item">
+                <a href="#" onclick="showPage('home')" class="mobile-link active">{{ __('home.home') }}</a>
             </div>
-        </div>
 
-        <div class="mobile-item dropdown">
-            <button class="dropdown-btn">{{ __('home.partners') }} <i class="fas fa-chevron-down"></i></button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showPage('sponsors')">{{ __('home.sponsors') }}</a>
-                <a href="#" onclick="showPage('sponsorship')">{{ __('home.sponsorship') }}</a>
+            <div class="mobile-item dropdown">
+                <button class="dropdown-btn">{{ __('home.about') }} <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showPage('about')">{{ __('home.about_association') }}</a>
+                    <a href="#" onclick="showPage('taif')">{{ __('home.about_taif') }}</a>
+                    <a href="#" onclick="showPage('conference-about')">{{ __('home.about_conference') }}</a>
+                    <a href="#" onclick="showPage('committee')">{{ __('home.committee') }}</a>
+                </div>
             </div>
-        </div>
 
-        <div class="mobile-item dropdown">
-            <button class="dropdown-btn">{{ __('home.media') }} <i class="fas fa-chevron-down"></i></button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showPage('media')">{{ __('home.media_coverage') }}</a>
-                <a href="#" onclick="showPage('exhibition')">{{ __('home.exhibition') }}</a>
+            <div class="mobile-item dropdown">
+                <button class="dropdown-btn">{{ __('home.conference') }} <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showPage('program')">{{ __('home.program') }}</a>
+                    <a href="#" onclick="showPage('program2')">{{ __('home.program2') }}</a>
+                    <a href="#" onclick="showPage('speakers')">{{ __('home.speakers') }}</a>
+                    <a href="#" onclick="showPage('attendees')">{{ __('home.attendees') }}</a>
+                    <a href="#" onclick="showPage('registration')">{{ __('home.registration') }}</a>
+                </div>
             </div>
-        </div>
 
-        <div class="mobile-item dropdown">
-            <button class="dropdown-btn">{{ __('home.hospitality') }} <i class="fas fa-chevron-down"></i></button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showPage('accommodation')">{{ __('home.accommodation') }}</a>
-                <a href="#" onclick="showPage('visa')">{{ __('home.visa') }}</a>
-                <a href="#" onclick="showPage('flights')">{{ __('home.flights') }}</a>
+            <div class="mobile-item dropdown">
+                <button class="dropdown-btn">{{ __('home.partners') }} <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showPage('sponsors')">{{ __('home.sponsors') }}</a>
+                    <a href="#" onclick="showPage('sponsorship')">{{ __('home.sponsorship') }}</a>
+                </div>
             </div>
-        </div>
 
-        <div class="mobile-item">
-            <a href="#" onclick="showPage('contact')" class="mobile-link">{{ __('home.contact') }}</a>
-        </div>
+            <div class="mobile-item dropdown">
+                <button class="dropdown-btn">{{ __('home.media') }} <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showPage('media')">{{ __('home.media_coverage') }}</a>
+                    <a href="#" onclick="showPage('exhibition')">{{ __('home.exhibition') }}</a>
+                </div>
+            </div>
 
-   
-    </div>
-</nav>
+            <div class="mobile-item dropdown">
+                <button class="dropdown-btn">{{ __('home.hospitality') }} <i
+                        class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showPage('accommodation')">{{ __('home.accommodation') }}</a>
+                    <a href="#" onclick="showPage('visa')">{{ __('home.visa') }}</a>
+                    <a href="#" onclick="showPage('flights')">{{ __('home.flights') }}</a>
+                </div>
+            </div>
+
+            <div class="mobile-item">
+                <a href="#" onclick="showPage('contact')" class="mobile-link">{{ __('home.contact') }}</a>
+            </div>
+
+
+        </div>
+    </nav>
 
 
     <!-- Main Content Container -->
     <main id="main-content">
+@if(session('success'))
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        Toastify({
+          text: "{{ session('success') }}",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "left",
+          style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+          },
+        }).showToast();
+    });
+</script>
+@endif
+@if(session('error'))
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        Toastify({
+          text: "{{ session('error') }}",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "left",
+          style: {
+            background: "red",
+          },
+        }).showToast();
+    });
+</script>
+@endif
+
+
         <!-- Home Page -->
         <div id="home" class="page active">
             <section class="hero">
@@ -691,7 +729,8 @@
                     <!-- بطاقة رئيسية -->
                     <div
                         style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: right;">
-                        <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">{{ __('home.home_main_card_title') }}</h2>
+                        <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">{{ __('home.home_main_card_title') }}
+                        </h2>
                         <p style="font-size: 1.1rem; line-height: 1.8; color: #2c3e50; margin-bottom: 1.5rem;">
                             {{ __('home.home_main_card_desc_1') }}
                         </p>
@@ -3359,8 +3398,8 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label>{{ __('home.institution_name') }} <span class="required">*</span></label>
-                                <input name="companyname" type="text" placeholder="{{ __('home.institution_name_placeholder') }}"
-                                    required>
+                                <input name="companyname" type="text"
+                                    placeholder="{{ __('home.institution_name_placeholder') }}" required>
                             </div>
 
                             <div class="form-group">
@@ -3371,7 +3410,8 @@
 
                             <div class="form-group">
                                 <label>{{ __('home.phone') }} <span class="required">*</span></label>
-                                <input name="phone" type="tel" placeholder="{{ __('home.phone_placeholder') }}" required>
+                                <input name="phone" type="tel"
+                                    placeholder="{{ __('home.phone_placeholder') }}" required>
                             </div>
 
                             <div class="form-group">
@@ -4637,8 +4677,7 @@
                 </div>
 
                 <div class="contact-content">
-                    <form action="{{ route('contact') }}" method="POST" 
-                    class="contact-form">
+                    <form action="{{ route('contact') }}" method="POST" class="contact-form">
                         @csrf
                         <h2 class="form-title">{{ __('home.send_message') }}</h2>
 
@@ -4665,7 +4704,7 @@
                             <textarea name="message" class="form-input form-textarea" placeholder="{{ __('home.message_placeholder') }}"></textarea>
                         </div>
                         <button type="submit" class="submit-btn">
-                         {{ __('home.contact') }}
+                            {{ __('home.contact') }}
                         </button>
                     </form>
 
@@ -4799,7 +4838,7 @@
                     <h4 style="color: orangered;">{{ __('home.contact_info_title') }}</h4>
                     <div class="contact-info">
                         <p><i style="color: orangered;" class="fas fa-map-marker-alt"></i>
-             
+
                             {{ __('home.location') }}</p>
                         <p
                             style="display: flex; flex-direction: {{ $lang == 'ar' ? 'row-reverse' : 'row' }}; align-items: center; gap: 8px; direction: ltr;">
@@ -4818,11 +4857,10 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
         AOS.init();
         const mobileToggle = document.querySelector('.mobile-toggle');
