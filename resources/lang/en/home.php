@@ -387,5 +387,110 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
 'additional_notes' => 'Additional Notes',
 'additional_notes_placeholder' => 'Any additional notes or special requirements',
 'submit_sponsorship_request' => 'Submit Sponsorship Request',
+
+
+'media_coverage' => 'Media Coverage',
+'media_coverage_subtitle' => 'Media coverage of the conference and events',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'gallary' => 'Gallery',
+'gallary_subtitle' => 'Medical tourism conference gallery',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 'accommodation_title' => 'Accommodation',
+    'accommodation_subtitle' => 'Available accommodation options for participants',
+    'hotels_title' => 'Featured Hotels in Taif',
+    'hotels_description' => 'Choose from the best hotels in Taif for your stay during the conference',
+    'view_location' => 'View Location on Map',
+    'intercontinental_name' => 'InterContinental Taif Hotel',
+    'intercontinental_address' => 'Al Khalidiya District, Airport Road, Taif',
+    'vander_name' => 'Vander Hotel',
+    'vander_address' => 'Al Khamseen Street, Near Jouri Mall, Taif',
+    'wrac_name' => 'WRAC Taif Hotel',
+    'wrac_address' => 'Al Salamah District, Airport Road, Taif',
+    'mina_plaza_name' => 'Mina Plaza Taif Hotel',
+    'mina_plaza_address' => 'Wadi Waj Street, City Center, Taif',
+    'swiss_spirit_name' => 'Swiss Spirit Taif Hotel',
+    'swiss_spirit_address' => 'Shahhar District, Abu Bakr Al-Siddiq Street, Taif',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    'visa_requirements' => 'Visa Requirements',
+    'visa_info_title_en' => 'Visa Information – Taif Medical Tourism Conference',
+    'visa_info_title_ar' => 'Visa Information - Taif Medical Tourism Conference',
+    'visa_info_conference' => 'Visa Information – Taif Medical Tourism Conference',
+    'visa_general_info' => 'All attendees at the Taif Medical Tourism Conference – whether exhibitors, visitors, sponsors, or speakers – need to obtain a visa to enter the Kingdom of Saudi Arabia. Below you will find a list of available visa types and information on application steps for each:',
+    'business_visa_title' => 'Business Visa',
+    'business_visa_point1' => 'Exclusively designated for exhibitors and sponsors of the Taif Medical Tourism Conference.',
+    'business_visa_point2' => 'It is important to apply for a business visa before traveling to the Kingdom.',
+    'business_visa_point3' => 'To obtain the visa invitation letter, please contact the conference customer service team.',
+    'business_visa_point4' => 'Citizens of GCC countries (UAE, Bahrain, Kuwait, Oman) do not need a business visa to enter the Kingdom.',
+    'tourist_evisa_title' => 'Tourist eVisa',
+    'tourist_evisa_point1' => 'All international visitors from eligible countries must apply for an electronic tourist visa before entering the Kingdom.',
+    'tourist_evisa_point2' => 'The electronic tourist visa is valid for one year, multiple entries, and allows stays in the Kingdom for up to 90 days per visit.',
+    'tourist_evisa_point3' => 'Visa application approval may take up to 72 hours, so we recommend applying early to avoid any potential delays or rejections.',
+    'application_steps_title' => 'Application Steps:',
+    'application_step1' => 'Start your electronic tourist visa application through the official portal.',
+    'application_step2' => 'Complete the application form, you will need to enter your personal information such as: (full name, address, date of birth, passport details, and travel plans)',
+    'application_step3' => 'Pay the visa fees using a credit card or debit card.',
+    'application_step4' => 'Upon approval, you will receive the visa via email.',
+    'visa_verification_note' => '* The data entered in the application form will be verified through multiple databases, so it is essential that the passport data entered matches the passport you will travel with, otherwise the visa will be invalid.',
+    'note_title' => 'Note',
+    'visit_purpose_note' => 'When filling out the purpose of visit field in the electronic visa form, please write: "Attending Taif Medical Tourism Conference 2024"',
+    'international_participants_title' => 'For International Participants',
+    'international_participants_content' => 'Please contact the Saudi Embassy in your country for updated information on visa requirements and required documents.',
+    'required_documents_title' => 'Required Documents',
+    'required_documents_content' => 'Ensure your passport is valid for at least 6 months, in addition to any other documents that may be required according to your nationality.'
+
 ];
 

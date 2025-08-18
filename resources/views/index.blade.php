@@ -3266,103 +3266,106 @@
         </style>
 
         <div id="sponsorship" class="page">
-          <div class="header">
-    <div class="logo">
-        <img src="assets/logo.png"
-            style="width: 200px; height: 100px; border-radius: 10px; box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);"
-            alt="logo">
-    </div>
-    <h1>{{ __('home.book_sponsorship') }}</h1>
-    <p>{{ __('home.sponsorship_subtitle') }}</p>
-</div>
-
-<div class="content">
-    <div class="packages-section">
-        <h2 class="packages-title">{{ __('home.sponsorship_packages') }}</h2>
-
-        <div class="packages-grid">
-            <div class="package gold">
-                <div class="package-header">
-                    <h3 class="package-title">{{ __('home.gold_sponsor') }}</h3>
-                    <p class="package-subtitle">{{ __('home.gold_sponsor_subtitle') }}</p>
+            <div class="header">
+                <div class="logo">
+                    <img src="assets/logo.png"
+                        style="width: 200px; height: 100px; border-radius: 10px; box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);"
+                        alt="logo">
                 </div>
-                <ul class="package-features">
-                    <li>{{ __('home.gold_feature_1') }}</li>
-                    <li>{{ __('home.gold_feature_2') }}</li>
-                    <li>{{ __('home.gold_feature_3') }}</li>
-                    <li>{{ __('home.gold_feature_4') }}</li>
-                </ul>
+                <h1>{{ __('home.book_sponsorship') }}</h1>
+                <p>{{ __('home.sponsorship_subtitle') }}</p>
             </div>
 
-            <div class="package silver">
-                <div class="package-header">
-                    <h3 class="package-title">{{ __('home.silver_sponsor') }}</h3>
-                    <p class="package-subtitle">{{ __('home.silver_sponsor_subtitle') }}</p>
+            <div class="content">
+                <div class="packages-section">
+                    <h2 class="packages-title">{{ __('home.sponsorship_packages') }}</h2>
+
+                    <div class="packages-grid">
+                        <div class="package gold">
+                            <div class="package-header">
+                                <h3 class="package-title">{{ __('home.gold_sponsor') }}</h3>
+                                <p class="package-subtitle">{{ __('home.gold_sponsor_subtitle') }}</p>
+                            </div>
+                            <ul class="package-features">
+                                <li>{{ __('home.gold_feature_1') }}</li>
+                                <li>{{ __('home.gold_feature_2') }}</li>
+                                <li>{{ __('home.gold_feature_3') }}</li>
+                                <li>{{ __('home.gold_feature_4') }}</li>
+                            </ul>
+                        </div>
+
+                        <div class="package silver">
+                            <div class="package-header">
+                                <h3 class="package-title">{{ __('home.silver_sponsor') }}</h3>
+                                <p class="package-subtitle">{{ __('home.silver_sponsor_subtitle') }}</p>
+                            </div>
+                            <ul class="package-features">
+                                <li>{{ __('home.silver_feature_1') }}</li>
+                                <li>{{ __('home.silver_feature_2') }}</li>
+                                <li>{{ __('home.silver_feature_3') }}</li>
+                                <li>{{ __('home.silver_feature_4') }}</li>
+                            </ul>
+                        </div>
+
+                        <div class="package bronze">
+                            <div class="package-header">
+                                <h3 class="package-title">{{ __('home.bronze_sponsor') }}</h3>
+                                <p class="package-subtitle">{{ __('home.bronze_sponsor_subtitle') }}</p>
+                            </div>
+                            <ul class="package-features">
+                                <li>{{ __('home.bronze_feature_1') }}</li>
+                                <li>{{ __('home.bronze_feature_2') }}</li>
+                                <li>{{ __('home.bronze_feature_3') }}</li>
+                                <li>{{ __('home.bronze_feature_4') }}</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <ul class="package-features">
-                    <li>{{ __('home.silver_feature_1') }}</li>
-                    <li>{{ __('home.silver_feature_2') }}</li>
-                    <li>{{ __('home.silver_feature_3') }}</li>
-                    <li>{{ __('home.silver_feature_4') }}</li>
-                </ul>
+
+                <div class="form-section">
+                    <h2 class="form-title">{{ __('home.sponsorship_request') }}</h2>
+
+                    <form>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>{{ __('home.institution_name') }} <span class="required">*</span></label>
+                                <input type="text" placeholder="{{ __('home.institution_name_placeholder') }}"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>{{ __('home.responsible_person') }} <span class="required">*</span></label>
+                                <input type="text"
+                                    placeholder="{{ __('home.responsible_person_placeholder') }}" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>{{ __('home.phone') }} <span class="required">*</span></label>
+                                <input type="tel" placeholder="{{ __('home.phone_placeholder') }}" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>{{ __('home.sponsorship_type') }} <span class="required">*</span></label>
+                                <select required>
+                                    <option value="">{{ __('home.select_sponsorship_type') }}</option>
+                                    <option value="gold">{{ __('home.gold_sponsor_option') }}</option>
+                                    <option value="silver">{{ __('home.silver_sponsor_option') }}</option>
+                                    <option value="bronze">{{ __('home.bronze_sponsor_option') }}</option>
+                                    <option value="custom">{{ __('home.custom_sponsorship') }}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>{{ __('home.additional_notes') }}</label>
+                            <textarea placeholder="{{ __('home.additional_notes_placeholder') }}"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="submit-btn">{{ __('home.submit_sponsorship_request') }}</button>
+                    </form>
+                </div>
             </div>
-
-            <div class="package bronze">
-                <div class="package-header">
-                    <h3 class="package-title">{{ __('home.bronze_sponsor') }}</h3>
-                    <p class="package-subtitle">{{ __('home.bronze_sponsor_subtitle') }}</p>
-                </div>
-                <ul class="package-features">
-                    <li>{{ __('home.bronze_feature_1') }}</li>
-                    <li>{{ __('home.bronze_feature_2') }}</li>
-                    <li>{{ __('home.bronze_feature_3') }}</li>
-                    <li>{{ __('home.bronze_feature_4') }}</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-section">
-        <h2 class="form-title">{{ __('home.sponsorship_request') }}</h2>
-
-        <form>
-            <div class="form-grid">
-                <div class="form-group">
-                    <label>{{ __('home.institution_name') }} <span class="required">*</span></label>
-                    <input type="text" placeholder="{{ __('home.institution_name_placeholder') }}" required>
-                </div>
-
-                <div class="form-group">
-                    <label>{{ __('home.responsible_person') }} <span class="required">*</span></label>
-                    <input type="text" placeholder="{{ __('home.responsible_person_placeholder') }}" required>
-                </div>
-
-                <div class="form-group">
-                    <label>{{ __('home.phone') }} <span class="required">*</span></label>
-                    <input type="tel" placeholder="{{ __('home.phone_placeholder') }}" required>
-                </div>
-
-                <div class="form-group">
-                    <label>{{ __('home.sponsorship_type') }} <span class="required">*</span></label>
-                    <select required>
-                        <option value="">{{ __('home.select_sponsorship_type') }}</option>
-                        <option value="gold">{{ __('home.gold_sponsor_option') }}</option>
-                        <option value="silver">{{ __('home.silver_sponsor_option') }}</option>
-                        <option value="bronze">{{ __('home.bronze_sponsor_option') }}</option>
-                        <option value="custom">{{ __('home.custom_sponsorship') }}</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>{{ __('home.additional_notes') }}</label>
-                <textarea placeholder="{{ __('home.additional_notes_placeholder') }}"></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">{{ __('home.submit_sponsorship_request') }}</button>
-        </form>
-    </div>
-</div>
         </div>
 
         <!-- Media Pages -->
@@ -3371,13 +3374,7 @@
                 style="background: linear-gradient(135deg, #4fd1c7 0%, #63b3ed 100%); padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
                 <!-- Medical Tourism Logo -->
                 <div style="position: absolute; top: 20px; right: 20px; opacity: 0.1;">
-                    <!-- <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M60 10 L50 30 L70 30 Z M60 70 L50 50 L70 50 Z M20 40 L40 30 L40 50 Z M100 40 L80 30 L80 50 Z"
-                            fill="white" />
-                        <circle cx="60" cy="40" r="15" fill="white" />
-                        <path d="M55 40 L65 40 M60 35 L60 45" stroke="#4fd1c7" stroke-width="2" />
-                    </svg> -->
+                    <!-- SVG content can go here -->
                 </div>
 
                 <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
@@ -3385,30 +3382,19 @@
                     <div style="margin-bottom: 30px; display: flex; justify-content: center;">
                         <div
                             style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-                            <!-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M15 5 L25 5 L25 15 L35 15 L35 25 L25 25 L25 35 L15 35 L15 25 L5 25 L5 15 L15 15 Z"
-                                    fill="white" />
-                                <circle cx="20" cy="20" r="3" fill="#4fd1c7" />
-                            </svg> -->
-
                             <img src="assets/logo.png"
-                                style="width: 200px; height: 100px;
-                            box-shadow:0 4px 10px rgba(0,0,0,.15); "
-                                alt="">
+                                style="width: 200px; height: 100px; box-shadow:0 4px 10px rgba(0,0,0,.15);"
+                                alt="logo">
                         </div>
                     </div>
 
                     <h1
                         style="color: white; font-size: 3.5rem; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        تغطية إعلامية</h1>
+                        {{ __('home.media_coverage') }}
+                    </h1>
                     <p
-                        style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
-                        400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-                        التغطية الإعلامية للمؤتمر والفعاليات
-
-
+                        style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                        {{ __('home.media_coverage_subtitle') }}
                     </p>
                 </div>
             </section>
@@ -3430,12 +3416,12 @@
 
                     <!-- Section Title -->
                     <div style="text-align: center; margin-bottom: 70px;">
-                        <h2
+                        {{-- <h2
                             style="color: #2d3748; font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                            التغطية الإعلامية</h2>
-                        <div
+                            التغطية الإعلامية</h2> --}}
+                        {{-- <div
                             style="width: 80px; height: 4px; background: linear-gradient(90deg, #667eea, #764ba2); margin: 0 auto; border-radius: 2px;">
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="news-grid"
@@ -3529,12 +3515,12 @@
 
                     <h1
                         style="color: white; font-size: 3.5rem; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        المعرض
+                        {{ __('home.gallary') }}
                     </h1>
                     <p
                         style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
                         400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-                        معرض السياحة العلاجية المصاحب للمؤتمر
+                        {{ __('home.gallary_subtitle') }}
 
 
 
@@ -3644,19 +3630,12 @@
 
                     <h1
                         style="color: white; font-size: 3.5rem; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        الإقامة
-
+                        {{ __('home.accommodation_title') }}
                     </h1>
                     <p
                         style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
                         400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-                        خيارات الإقامة المتاحة للمشاركين
-
-
-
-
-
-
+                        {{ __('home.accommodation_subtitle') }}
                     </p>
                 </div>
             </section>
@@ -3666,14 +3645,14 @@
             <div style="text-align: center; margin-bottom: 60px;">
                 <h2
                     style="color: #2d3748; font-size: 2.8rem; font-weight: 700; margin: 0 0 15px 0; background: linear-gradient(135deg, #4fd1c7, #63b3ed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                    فنادق الطائف المميزة
+                    {{ __('home.hotels_title') }}
                 </h2>
                 <div
                     style="width: 80px; height: 4px; background: linear-gradient(90deg, #4fd1c7, #63b3ed); margin: 0 auto 20px auto; border-radius: 2px;">
                 </div>
                 <p
                     style="color: #718096; font-size: 1.2rem; line-height: 1.6; margin: 0; max-width: 600px; margin: 0 auto;">
-                    اختر من بين أفضل الفنادق في الطائف للإقامة أثناء المؤتمر
+                    {{ __('home.hotels_description') }}
                 </p>
             </div>
 
@@ -3699,18 +3678,17 @@
                         </svg>
                     </div>
 
-                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">فندق
-                        إنتركونتيننتال الطائف</h3>
-                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">حي الخالدية،
-                        طريق
-                        المطار، الطائف</p>
+                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">
+                        {{ __('home.intercontinental_name') }}</h3>
+                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">
+                        {{ __('home.intercontinental_address') }}</p>
 
                     <!-- Location Button -->
                     <a href="#"
                         style="display: inline-flex; align-items: center; background: linear-gradient(135deg, #4fd1c7, #63b3ed); color: white; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(79,209,199,0.3);"
                         onmouseover="this.style.boxShadow='0 6px 20px rgba(79,209,199,0.4)'; this.style.transform='translateY(-2px)'"
                         onmouseout="this.style.boxShadow='0 4px 15px rgba(79,209,199,0.3)'; this.style.transform='translateY(0px)'">
-                        📍 عرض الموقع على الخريطة
+                        📍 {{ __('home.view_location') }}
                     </a>
                 </div>
 
@@ -3732,17 +3710,16 @@
                         </svg>
                     </div>
 
-                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">فندق فندر
-                    </h3>
-                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">شارع الخمسين،
-                        قرب
-                        جوري مول، الطائف</p>
+                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">
+                        {{ __('home.vander_name') }}</h3>
+                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">
+                        {{ __('home.vander_address') }}</p>
 
                     <a href="#"
                         style="display: inline-flex; align-items: center; background: linear-gradient(135deg, #63b3ed, #9f7aea); color: white; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(99,179,237,0.3);"
                         onmouseover="this.style.boxShadow='0 6px 20px rgba(99,179,237,0.4)'; this.style.transform='translateY(-2px)'"
                         onmouseout="this.style.boxShadow='0 4px 15px rgba(99,179,237,0.3)'; this.style.transform='translateY(0px)'">
-                        📍 عرض الموقع على الخريطة
+                        📍 {{ __('home.view_location') }}
                     </a>
                 </div>
 
@@ -3776,16 +3753,16 @@
                         </svg>
                     </div>
 
-                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">فندق وريك
-                        الطائف</h3>
-                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">حي السلامة، طريق
-                        المطار، الطائف</p>
+                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">
+                        {{ __('home.wrac_name') }}</h3>
+                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">
+                        {{ __('home.wrac_address') }}</p>
 
                     <a href="#"
                         style="display: inline-flex; align-items: center; background: linear-gradient(135deg, #48bb78, #38b2ac); color: white; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(72,187,120,0.3);"
                         onmouseover="this.style.boxShadow='0 6px 20px rgba(72,187,120,0.4)'; this.style.transform='translateY(-2px)'"
                         onmouseout="this.style.boxShadow='0 4px 15px rgba(72,187,120,0.3)'; this.style.transform='translateY(0px)'">
-                        📍 عرض الموقع على الخريطة
+                        📍 {{ __('home.view_location') }}
                     </a>
                 </div>
 
@@ -3811,18 +3788,16 @@
                         </svg>
                     </div>
 
-                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">فندق مينا
-                        بلازا
-                        الطائف</h3>
-                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">شارع وادي وج،
-                        وسط
-                        المدينة، الطائف</p>
+                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">
+                        {{ __('home.mina_plaza_name') }}</h3>
+                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">
+                        {{ __('home.mina_plaza_address') }}</p>
 
                     <a href="#"
                         style="display: inline-flex; align-items: center; background: linear-gradient(135deg, #ed8936, #f56500); color: white; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(237,137,54,0.3);"
                         onmouseover="this.style.boxShadow='0 6px 20px rgba(237,137,54,0.4)'; this.style.transform='translateY(-2px)'"
                         onmouseout="this.style.boxShadow='0 4px 15px rgba(237,137,54,0.3)'; this.style.transform='translateY(0px)'">
-                        📍 عرض الموقع على الخريطة
+                        📍 {{ __('home.view_location') }}
                     </a>
                 </div>
 
@@ -3844,17 +3819,16 @@
                         </svg>
                     </div>
 
-                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">فندق سويس
-                        سبيريت الطائف</h3>
-                    <p style="color: #718096; font-size: 1rem; line-height: 1.6; margin: 0 0 20px 0;">حي شهار، شارع
-                        أبو
-                        بكر الصديق، الطائف</p>
+                    <h3 style="color: #2d3748; font-size: 1.4rem; font-weight: 700; margin: 0 0 15px 0;">
+                        {{ __('home.swiss_spirit_name') }}</h3>
+                    <p style="color: #718096; font-size: 1.6; margin: 0 0 20px 0;">
+                        {{ __('home.swiss_spirit_address') }}</p>
 
                     <a href="#"
                         style="display: inline-flex; align-items: center; background: linear-gradient(135deg, #e53e3e, #c53030); color: white; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(229,62,62,0.3);"
                         onmouseover="this.style.boxShadow='0 6px 20px rgba(229,62,62,0.4)'; this.style.transform='translateY(-2px)'"
                         onmouseout="this.style.boxShadow='0 4px 15px rgba(229,62,62,0.3)'; this.style.transform='translateY(0px)'">
-                        📍 عرض الموقع على الخريطة
+                        📍 {{ __('home.view_location') }}
                     </a>
                 </div>
             </div>
@@ -4078,73 +4052,59 @@
                                  border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.15); object-fit:cover;">
                         </div>
                     </div>
-                    <h1 class="main-title">متطلبات التأشيرة</h1>
+                    <h1 class="main-title">{{ __('home.visa_requirements') }}</h1>
                 </div>
 
                 <div class="content">
                     <div class="visa-info-box">
-                        <h2 class="visa-info-title">Visa Information – Taif Medical Tourism Conference</h2>
-                        <h3 class="visa-info-subtitle">معلومات التأشيرة - مؤتمر السياحة العلاجية بالطائف</h3>
+                        <h2 class="visa-info-title">{{ __('home.visa_info_title_en') }}</h2>
+                        <h3 class="visa-info-subtitle">{{ __('home.visa_info_title_ar') }}</h3>
 
                         <p class="section-content"
                             style="text-align: center; margin-bottom: 25px; font-weight: 600;">
-                            معلومات التأشيرة – مؤتمر السياحة العلاجية بالطائف
+                            {{ __('home.visa_info_conference') }}
                         </p>
 
                         <p class="section-content" style="margin-bottom: 25px;">
-                            جميع الحضور في مؤتمر السياحة العلاجية بالطائف – سواء من العارضين أو الزوار أو الرعاة أو
-                            المتحدثين – يحتاجون
-                            إلى الحصول على تأشيرة دخول إلى المملكة العربية السعودية. أدناه تجدون قائمة بأنواع
-                            التأشيرات المتاحة
-                            ومعلومات عن خطوات التقديم لكل منها:
+                            {{ __('home.visa_general_info') }}
                         </p>
 
                         <div class="section">
-                            <h3 class="section-title">تأشيرة الأعمال (Business Visa)</h3>
+                            <h3 class="section-title">{{ __('home.business_visa_title') }}</h3>
                             <div class="section-content">
-                                <div class="bullet-point">مخصصة حصريًا لعارضي ورعاة مؤتمر السياحة العلاجية بالطائف.
+                                <div class="bullet-point">{{ __('home.business_visa_point1') }}
                                 </div>
-                                <div class="bullet-point">من المهم التقديم على تأشيرة الأعمال قبل السفر إلى المملكة.
+                                <div class="bullet-point">{{ __('home.business_visa_point2') }}
                                 </div>
-                                <div class="bullet-point">للحصول على خطاب الدعوة الخاص بالتأشيرة، يرجى التواصل مع
-                                    فريق خدمة العملاء للمؤتمر.</div>
-                                <div class="bullet-point">مواطنو دول مجلس التعاون الخليجي (الإمارات العربية المتحدة،
-                                    البحرين، الكويت، عمان) لا يحتاجون إلى تأشيرة أعمال لدخول المملكة.</div>
+                                <div class="bullet-point">{{ __('home.business_visa_point3') }}</div>
+                                <div class="bullet-point">{{ __('home.business_visa_point4') }}</div>
                             </div>
                         </div>
 
                         <div class="section">
-                            <h3 class="section-title">التأشيرة السياحية الإلكترونية (Tourist eVisa)</h3>
+                            <h3 class="section-title">{{ __('home.tourist_evisa_title') }}</h3>
                             <div class="section-content">
-                                <div class="bullet-point">جميع الزوار الدوليين من الدول المؤهلة يجب عليهم التقديم
-                                    للحصول على تأشيرة سياحية إلكترونية قبل دخول المملكة.</div>
-                                <div class="bullet-point">التأشيرة السياحية الإلكترونية تكون صالحة لمدة سنة، متعددة
-                                    الدخول، وتسمح بالبقاء في المملكة لمدة تصل إلى 90 يومًا في كل زيارة.</div>
-                                <div class="bullet-point">قد يستغرق قبول طلب التأشيرة حتى 72 ساعة، لذا ننصح بالتقديم
-                                    مبكرًا لتفادي أي تأخير أو رفض محتمل.</div>
+                                <div class="bullet-point">{{ __('home.tourist_evisa_point1') }}</div>
+                                <div class="bullet-point">{{ __('home.tourist_evisa_point2') }}</div>
+                                <div class="bullet-point">{{ __('home.tourist_evisa_point3') }}</div>
 
-                                <h4 style="margin: 20px 0 15px 0; color: #2d3748; font-weight: 700;">خطوات التقديم:
+                                <h4 style="margin: 20px 0 15px 0; color: #2d3748; font-weight: 700;">{{ __('home.application_steps_title') }}
                                 </h4>
                                 <div class="steps">
-                                    <div class="step">ابدأ طلب التأشيرة السياحية الإلكترونية عبر البوابة الرسمية.
+                                    <div class="step">{{ __('home.application_step1') }}
                                     </div>
-                                    <div class="step">أكمل نموذج الطلب، وستحتاج إلى إدخال معلوماتك الشخصية مثل:
-                                        (الاسم الكامل، العنوان، تاريخ الميلاد، بيانات جواز السفر، وخطط السفر)</div>
-                                    <div class="step">ادفع رسوم التأشيرة باستخدام بطاقة ائتمان أو بطاقة خصم مباشر.
+                                    <div class="step">{{ __('home.application_step2') }}</div>
+                                    <div class="step">{{ __('home.application_step3') }}
                                     </div>
-                                    <div class="step">عند الموافقة، ستتلقى التأشيرة عبر البريد الإلكتروني.</div>
+                                    <div class="step">{{ __('home.application_step4') }}</div>
                                 </div>
 
                                 <div class="note">
-                                    * سيتم التحقق من البيانات المدخلة في نموذج الطلب عبر عدة قواعد بيانات، لذلك من
-                                    الضروري أن تتطابق بيانات
-                                    جواز السفر المدخلة مع الجواز الذي ستسافر به، وإلا ستكون التأشيرة غير صالحة.
+                                    {{ __('home.visa_verification_note') }}
                                 </div>
 
                                 <div class="note">
-                                    <strong>ملاحظة:</strong> عند تعبئة خانة سبب الزيارة في نموذج التأشيرة
-                                    الإلكترونية، يرجى كتابة:
-                                    "زيارة مؤتمر السياحة العلاجية بالطائف 2024"
+                                    <strong>{{ __('home.note_title') }}:</strong> {{ __('home.visit_purpose_note') }}
                                 </div>
                             </div>
                         </div>
@@ -4153,19 +4113,17 @@
                     <div class="international-section">
                         <div class="info-box">
                             <div class="icon">🌍</div>
-                            <h3 class="info-box-title">للمشاركين الدوليين</h3>
+                            <h3 class="info-box-title">{{ __('home.international_participants_title') }}</h3>
                             <div class="info-box-content">
-                                يُرجى التواصل مع السفارة السعودية في بلدكم للحصول على معلومات محدثة حول متطلبات
-                                التأشيرة والوثائق المطلوبة.
+                                {{ __('home.international_participants_content') }}
                             </div>
                         </div>
 
                         <div class="info-box">
                             <div class="icon">📋</div>
-                            <h3 class="info-box-title">الوثائق المطلوبة</h3>
+                            <h3 class="info-box-title">{{ __('home.required_documents_title') }}</h3>
                             <div class="info-box-content">
-                                تأكد من صحة جواز السفر وصلاحيته لمدة لا تقل عن 6 أشهر، بالإضافة إلى أي وثائق أخرى قد
-                                تكون مطلوبة حسب جنسيتك.
+                                {{ __('home.required_documents_content') }}
                             </div>
                         </div>
                     </div>
