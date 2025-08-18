@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::post('participations', [MailController::class, 'participations'])->name('participations');
 
 
+Route::post('contact', [MailController::class, 'contact'])->name('contact');
+
+
 
 
 
@@ -229,3 +232,16 @@ Route::delete('admin/deleteimage/{id}', function ($id) {
     $image->delete();
     return redirect()->back();
 })->name('admin.deleteimage');
+
+
+
+
+
+
+
+
+
+
+// Route::get('test' , function () {
+//     return view('emails.ParticipationMail');
+// });

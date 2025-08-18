@@ -4607,32 +4607,37 @@
                 </div>
 
                 <div class="contact-content">
-                    <div class="contact-form">
+                    <form action="{{ route('contact') }}" method="POST" 
+                    class="contact-form">
+                        @csrf
                         <h2 class="form-title">{{ __('home.send_message') }}</h2>
 
                         <div class="form-group">
                             <label class="form-label">{{ __('home.full_name') }}</label>
-                            <input type="text" class="form-input"
+                            <input name="name" type="text" class="form-input"
                                 placeholder="{{ __('home.full_name_placeholder') }}">
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">{{ __('home.email') }}</label>
-                            <input type="email" class="form-input"
+                            <input name="email" type="email" class="form-input"
                                 placeholder="{{ __('home.email_placeholder') }}">
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">{{ __('home.phone') }}</label>
-                            <input type="tel" class="form-input"
+                            <input name="phone" type="tel" class="form-input"
                                 placeholder="{{ __('home.phone_placeholder') }}">
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">{{ __('home.message') }}</label>
-                            <textarea class="form-input form-textarea" placeholder="{{ __('home.message_placeholder') }}"></textarea>
+                            <textarea name="message" class="form-input form-textarea" placeholder="{{ __('home.message_placeholder') }}"></textarea>
                         </div>
-                    </div>
+                        <button type="submit" class="form-button">
+                            تواصل معنا
+                        </button>
+                    </form>
 
                     <div class="contact-info2">
                         <h2 class="info-title">{{ __('home.contact_info') }}</h2>
@@ -4764,11 +4769,13 @@
                     <h4 style="color: orangered;">{{ __('home.contact_info_title') }}</h4>
                     <div class="contact-info">
                         <p><i style="color: orangered;" class="fas fa-map-marker-alt"></i>
+             
                             {{ __('home.location') }}</p>
-               <p style="display: flex; flex-direction: {{ $lang == 'ar' ? 'row-reverse' : 'row' }}; align-items: center; gap: 8px; direction: ltr;">
-    <i class="fas fa-phone" style="color: orangered;"></i>
-    <span>{{ __('home.phone_footer') }}</span>
-</p>
+                        <p
+                            style="display: flex; flex-direction: {{ $lang == 'ar' ? 'row-reverse' : 'row' }}; align-items: center; gap: 8px; direction: ltr;">
+                            <i class="fas fa-phone" style="color: orangered;"></i>
+                            <span>{{ __('home.phone_footer') }}</span>
+                        </p>
 
                         <p><i style="color: orangered;" class="fas fa-envelope"></i> {{ __('home.email_footer') }}
                         </p>

@@ -16,9 +16,16 @@ class ContactMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public  $name;
+    public  $email;
+    public  $phone;
+    public  $userMessage;
+    public function __construct($name, $email, $phone, $userMessage)
     {
-        //
+        $this->name = $name;
+        $this->email = $email;
+        $this->phone = $phone;
+          $this->userMessage = $userMessage;
     }
 
     /**
@@ -37,7 +44,13 @@ class ContactMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.contact',
+            with: [
+                'name' => $this->name,
+                'email' => $this->email,
+                'phone' => $this->phone,
+                'userMessage' => $this->userMessage
+            ]
         );
     }
 

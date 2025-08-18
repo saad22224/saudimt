@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>طلب تسجيل جديد - New Registration Request</title>
+    <title>رسالة تواصل جديدة - New Contact Message</title>
     <style>
         * {
             margin: 0;
@@ -21,7 +20,7 @@
         }
 
         .email-container {
-            max-width: 800px;
+            max-width: 750px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
@@ -48,7 +47,7 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.05"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
         }
 
-        .notification-icon {
+        .message-icon {
             width: 80px;
             height: 80px;
             background: rgba(255, 255, 255, 0.2);
@@ -60,27 +59,13 @@
             font-size: 40px;
             backdrop-filter: blur(10px);
             border: 2px solid rgba(255, 255, 255, 0.3);
-            animation: bounce 2s infinite;
+            animation: shake 2s infinite;
         }
 
-        @keyframes bounce {
-
-            0%,
-            20%,
-            53%,
-            80%,
-            100% {
-                transform: translateY(0);
-            }
-
-            40%,
-            43% {
-                transform: translateY(-10px);
-            }
-
-            70% {
-                transform: translateY(-5px);
-            }
+        @keyframes shake {
+            0%, 50%, 100% { transform: rotate(0deg); }
+            10%, 30% { transform: rotate(-3deg); }
+            20%, 40% { transform: rotate(3deg); }
         }
 
         .email-header h1 {
@@ -102,17 +87,17 @@
             padding: 40px 30px;
         }
 
-        .alert-section {
+        .priority-alert {
             text-align: center;
             margin-bottom: 35px;
             padding: 25px;
-            background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 152, 0, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.15) 0%, rgba(41, 128, 185, 0.1) 100%);
             border-radius: 15px;
-            border-left: 5px solid #ffc107;
+            border-left: 5px solid #3498db;
         }
 
-        .alert-section h2 {
-            color: #e67e22;
+        .priority-alert h2 {
+            color: #2980b9;
             font-size: 1.6rem;
             margin-bottom: 10px;
             display: flex;
@@ -121,8 +106,8 @@
             gap: 10px;
         }
 
-        .alert-section p {
-            color: #d68910;
+        .priority-alert p {
+            color: #3498db;
             font-size: 1rem;
             font-weight: 500;
         }
@@ -149,12 +134,12 @@
             font-weight: 600;
         }
 
-        .participant-info {
-            background: #f8fbff;
+        .sender-info {
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.08) 0%, rgba(192, 57, 43, 0.05) 100%);
             border-radius: 15px;
             padding: 30px;
             margin-bottom: 30px;
-            border: 2px solid rgba(79, 172, 254, 0.1);
+            border-left: 5px solid #e74c3c;
         }
 
         .section-title {
@@ -178,38 +163,29 @@
             border-radius: 2px;
         }
 
-        .info-grid {
+        .sender-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
 
-        .info-item {
+        .sender-item {
             background: white;
             padding: 20px;
             border-radius: 12px;
-            border-left: 4px solid #4facfe;
-            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.1);
+            border-left: 4px solid #e74c3c;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .info-item:hover {
+        .sender-item:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.15);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.15);
         }
 
-        .info-item.important {
-            border-left-color: #e74c3c;
-            border-left-width: 6px;
-        }
-
-        .info-item.important .info-label {
-            color: #e74c3c;
-        }
-
-        .info-label {
+        .sender-label {
             font-weight: bold;
-            color: #4facfe;
+            color: #e74c3c;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -219,19 +195,56 @@
             gap: 8px;
         }
 
-        .info-value {
+        .sender-value {
             color: #2c3e50;
             font-size: 1.1rem;
             font-weight: 500;
             word-break: break-word;
         }
 
+        .message-section {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.08) 0%, rgba(39, 174, 96, 0.05) 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #2ecc71;
+        }
+
+        .message-content {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #2ecc71;
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.1);
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .message-content::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: #2ecc71;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .message-text {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            line-height: 1.8;
+            margin-right: 30px;
+            font-style: italic;
+        }
+
         .action-section {
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(39, 174, 96, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(142, 68, 173, 0.05) 100%);
             padding: 30px;
             border-radius: 15px;
             margin-bottom: 30px;
-            border: 1px solid rgba(46, 204, 113, 0.2);
+            border: 1px solid rgba(155, 89, 182, 0.2);
             text-align: center;
         }
 
@@ -256,38 +269,38 @@
             gap: 8px;
         }
 
-        .approve-btn {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+        .reply-btn {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: white;
         }
 
-        .approve-btn:hover {
+        .reply-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(46, 204, 113, 0.3);
+            box-shadow: 0 8px 15px rgba(52, 152, 219, 0.3);
         }
 
-        .reject-btn {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        .archive-btn {
+            background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
             color: white;
         }
 
-        .reject-btn:hover {
+        .archive-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(231, 76, 60, 0.3);
+            box-shadow: 0 8px 15px rgba(149, 165, 166, 0.3);
         }
 
-        .review-btn {
+        .priority-btn {
             background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
             color: white;
         }
 
-        .review-btn:hover {
+        .priority-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 15px rgba(243, 156, 18, 0.3);
         }
 
         .stats-section {
-            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(142, 68, 173, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(41, 128, 185, 0.05) 100%);
             padding: 25px;
             border-radius: 15px;
             margin-bottom: 25px;
@@ -304,13 +317,13 @@
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(155, 89, 182, 0.1);
+            box-shadow: 0 3px 10px rgba(52, 152, 219, 0.1);
         }
 
         .stat-number {
             font-size: 2rem;
             font-weight: bold;
-            color: #9b59b6;
+            color: #3498db;
             margin-bottom: 5px;
         }
 
@@ -339,6 +352,26 @@
             opacity: 0.8;
         }
 
+        .contact-warning {
+            background: rgba(241, 196, 15, 0.1);
+            border: 2px solid #f1c40f;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .contact-warning-text {
+            color: #f39c12;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .contact-warning-sub {
+            color: #e67e22;
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
             .email-container {
                 margin: 10px;
@@ -350,7 +383,7 @@
                 padding: 30px 20px;
             }
 
-            .info-grid {
+            .sender-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -381,101 +414,92 @@
         }
     </style>
 </head>
-
 <body>
     <div class="email-container">
         <div class="email-header">
-            <div class="notification-icon">🔔</div>
-            <h1>طلب تسجيل جديد!</h1>
-            <p>تم استلام طلب تسجيل جديد يحتاج لمراجعتك</p>
+            <div class="message-icon">💬</div>
+            <h1>رسالة تواصل جديدة!</h1>
+            <p>تم استلام رسالة جديدة من موقع التواصل</p>
             <div class="decorative-wave"></div>
         </div>
 
         <div class="email-body">
-            <div class="alert-section">
-                <h2>⚠️ يتطلب إجراء</h2>
-                <p>طلب تسجيل جديد في انتظار الموافقة أو الرفض</p>
+            <div class="priority-alert">
+                <h2>📨 رسالة واردة</h2>
+                <p>رسالة تواصل جديدة تحتاج لمراجعتك والرد عليها</p>
             </div>
 
             <div class="timestamp">
-                <div class="timestamp-label">تاريخ ووقت التسجيل</div>
+                <div class="timestamp-label">تاريخ ووقت الإرسال</div>
                 <div class="timestamp-value" id="currentDateTime"></div>
             </div>
 
-            <div class="participant-info">
-                <h3 class="section-title">بيانات المتقدم للتسجيل</h3>
-                <div class="info-grid">
-                    <div class="info-item important">
-                        <div class="info-label">👤 الاسم الكامل</div>
-                        <div class="info-value">{{ $firstName }} {{ $middleName }} {{ $lastName }}</div>
+            <div class="sender-info">
+                <h3 class="section-title">معلومات المرسل</h3>
+                <div class="sender-grid">
+                    <div class="sender-item">
+                        <div class="sender-label">👤 الاسم</div>
+                        <div class="sender-value">{{ $name }}</div>
                     </div>
-                    <div class="info-item important">
-                        <div class="info-label">📧 البريد الإلكتروني</div>
-                        <div class="info-value">{{ $email }}</div>
+                    <div class="sender-item">
+                        <div class="sender-label">📧 البريد الإلكتروني</div>
+                        <div class="sender-value">{{ $email }}</div>
                     </div>
-                    <div class="info-item important">
-                        <div class="info-label">📞 رقم الهاتف</div>
-                        <div class="info-value">{{ $phone }}</div>
+                    <div class="sender-item">
+                        <div class="sender-label">📞 رقم الهاتف</div>
+                        <div class="sender-value">{{ $phone }}</div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-label">🏢 المنظمة/الشركة</div>
-                        <div class="info-value">{{ $organization }}</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">🌍 البلد</div>
-                        <div class="info-value">{{ $country }}</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">🏙️ المدينة</div>
-                        <div class="info-value">{{ $city }}</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">🛂 رقم الجواز</div>
-                        <div class="info-value">{{ $passport }}</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">🎓 التخصص</div>
-                        <div class="info-value">{{ $specialization }}</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">⚧️ الجنس</div>
-                        <div class="info-value">{{ $gender == 'male' ? 'ذكر' : 'أنثى' }}</div>
-                    </div>
+                </div>
+                
+                <div class="contact-warning">
+                    <div class="contact-warning-text">⚠️ تذكير مهم</div>
+                    <div class="contact-warning-sub">يُنصح بالرد على الرسالة خلال 24 ساعة لضمان أفضل خدمة عملاء</div>
+                </div>
+            </div>
+
+            <div class="message-section">
+                <h3 class="section-title">محتوى الرسالة</h3>
+                <div class="message-content">
+                    <div class="message-text">{{ $userMessage }}</div>
                 </div>
             </div>
 
             <div class="action-section">
                 <h3 class="section-title">الإجراءات المتاحة</h3>
-                <p style="color: #27ae60; font-size: 1.1rem; margin-bottom: 20px;">
-                    يرجى مراجعة البيانات واتخاذ الإجراء المناسب
+                <p style="color: #9b59b6; font-size: 1.1rem; margin-bottom: 20px;">
+                    اختر الإجراء المناسب للتعامل مع هذه الرسالة
                 </p>
                 <div class="action-buttons">
-                    <a href="#" class="action-btn approve-btn">
-                        ✅ الموافقة على الطلب
+                    <a href="mailto:{{ $email }}?subject=رد على استفسارك&body=مرحباً {{ $name }}،%0A%0Aشكراً لتواصلك معنا..." class="action-btn reply-btn">
+                        📧 الرد بالإيميل
                     </a>
-                    <a href="#" class="action-btn reject-btn">
-                        ❌ رفض الطلب
+                    <a href="tel:{{ $phone }}" class="action-btn priority-btn">
+                        📞 اتصال هاتفي
                     </a>
-                    <a href="#" class="action-btn review-btn">
-                        👁️ عرض التفاصيل
+                    <a href="#" class="action-btn archive-btn">
+                        📁 أرشفة الرسالة
                     </a>
                 </div>
             </div>
 
             <div class="stats-section">
-                <h3 class="section-title">إحصائيات سريعة</h3>
+                <h3 class="section-title">إحصائيات الرسائل</h3>
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <div class="stat-number">42</div>
-                        <div class="stat-label">طلبات اليوم</div>
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">رسائل اليوم</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">8</div>
-                        <div class="stat-label">في الانتظار</div>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">لم يُرد عليها</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">156</div>
+                        <div class="stat-number">89</div>
                         <div class="stat-label">إجمالي الشهر</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">معدل الرد</div>
                     </div>
                 </div>
             </div>
@@ -483,17 +507,18 @@
 
         <div class="email-footer">
             <div class="footer-content">
-                <h3>نظام إدارة التسجيلات</h3>
-                <p>تم إرسال هذا الإشعار تلقائياً من النظام</p>
+                <h3>نظام إدارة الرسائل</h3>
+                <p>تم إرسال هذا الإشعار تلقائياً من نظام التواصل</p>
             </div>
-
+            
             <div class="system-info">
                 <h4 style="margin-bottom: 15px; color: #4facfe;">معلومات النظام</h4>
                 <div>🖥️ IP Address: 192.168.1.100</div>
-                <div>🌐 User Agent: Web Registration Form</div>
+                <div>🌐 Source: Contact Form</div>
                 <div>⏰ Server Time: <span id="serverTime"></span></div>
+                <div>🔗 Reply Link: <a href="mailto:{{ $email }}" style="color: #4facfe;">{{ $email }}</a></div>
                 <div style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">
-                    هذا إشعار آلي - لا ترد على هذا الإيميل
+                    هذا إشعار آلي - يمكنك الرد مباشرة على المرسل
                 </div>
             </div>
         </div>
@@ -503,33 +528,32 @@
         // عرض الوقت الحالي
         function updateDateTime() {
             const now = new Date();
-            const options = {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
+            const options = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric', 
+                hour: '2-digit', 
                 minute: '2-digit',
                 timeZone: 'Africa/Cairo',
                 locale: 'ar-EG'
             };
-
-            document.getElementById('currentDateTime').textContent =
+            
+            document.getElementById('currentDateTime').textContent = 
                 now.toLocaleDateString('ar-EG', options);
-
-            document.getElementById('serverTime').textContent =
+            
+            document.getElementById('serverTime').textContent = 
                 now.toLocaleString('ar-EG', {
-                    hour: '2-digit',
-                    minute: '2-digit',
+                    hour: '2-digit', 
+                    minute: '2-digit', 
                     second: '2-digit'
                 });
         }
 
         // تحديث الوقت عند تحميل الصفحة
         updateDateTime();
-
+        
         // تحديث الوقت كل دقيقة
         setInterval(updateDateTime, 60000);
     </script>
 </body>
-
 </html>
