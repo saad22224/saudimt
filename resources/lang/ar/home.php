@@ -511,5 +511,45 @@ return [
     'contact_number_value' => '+966 555 555 555',
     'footer_text' => 'نتطلع لخدمتكم وتقديم أفضل الخدمات في مجال السياحة العلاجية',
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     'medical_tourism_association' => 'جمعية السياحة العلاجية',
+    'footer_description' => 'منظمة رائدة في تطوير قطاع السياحة العلاجية وتعزيز التنمية المستدامة في المملكة العربية السعودية.',
+    'quick_links' => 'روابط سريعة',
+    'home' => 'الرئيسية',
+    'about_us' => 'من نحن',
+    'conference' => 'المؤتمر',
+    'registration' => 'التسجيل',
+    'contact_us_link' => 'اتصل بنا',
+    'conference_section' => 'المؤتمر',
+    'speakers' => 'المتحدثون',
+    'program' => 'البرنامج',
+    'sponsors' => 'الرعاة',
+    'accommodation' => 'الإقامة',
+    'media' => 'الإعلام',
+    'contact_info_title' => 'معلومات التواصل',
+    'location' => 'الطائف، المملكة العربية السعودية',
+    'phone_footer' => '+966 50 930 0053',
+    'email_footer' => 'info@saudimt2025.com',
+    'copyright' => '© 2025 جمعية السياحة العلاجية. جميع الحقوق محفوظة.',
 ];
 

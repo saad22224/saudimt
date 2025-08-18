@@ -4088,7 +4088,8 @@
                                 <div class="bullet-point">{{ __('home.tourist_evisa_point2') }}</div>
                                 <div class="bullet-point">{{ __('home.tourist_evisa_point3') }}</div>
 
-                                <h4 style="margin: 20px 0 15px 0; color: #2d3748; font-weight: 700;">{{ __('home.application_steps_title') }}
+                                <h4 style="margin: 20px 0 15px 0; color: #2d3748; font-weight: 700;">
+                                    {{ __('home.application_steps_title') }}
                                 </h4>
                                 <div class="steps">
                                     <div class="step">{{ __('home.application_step1') }}
@@ -4104,7 +4105,8 @@
                                 </div>
 
                                 <div class="note">
-                                    <strong>{{ __('home.note_title') }}:</strong> {{ __('home.visit_purpose_note') }}
+                                    <strong>{{ __('home.note_title') }}:</strong>
+                                    {{ __('home.visit_purpose_note') }}
                                 </div>
                             </div>
                         </div>
@@ -4596,85 +4598,88 @@
                 }
             </style>
 
-           <div class="contact-container">
-    <div class="contact-header">
-        <h1 class="contact-title">{{ __('home.contact_us') }}</h1>
-        <p class="contact-subtitle">
-            {{ __('home.contact_subtitle') }}
-        </p>
-    </div>
-
-    <div class="contact-content">
-        <div class="contact-form">
-            <h2 class="form-title">{{ __('home.send_message') }}</h2>
-
-            <div class="form-group">
-                <label class="form-label">{{ __('home.full_name') }}</label>
-                <input type="text" class="form-input" placeholder="{{ __('home.full_name_placeholder') }}">
-            </div>
-
-            <div class="form-group">
-                <label class="form-label">{{ __('home.email') }}</label>
-                <input type="email" class="form-input" placeholder="{{ __('home.email_placeholder') }}">
-            </div>
-
-            <div class="form-group">
-                <label class="form-label">{{ __('home.phone') }}</label>
-                <input type="tel" class="form-input" placeholder="{{ __('home.phone_placeholder') }}">
-            </div>
-
-            <div class="form-group">
-                <label class="form-label">{{ __('home.message') }}</label>
-                <textarea class="form-input form-textarea" placeholder="{{ __('home.message_placeholder') }}"></textarea>
-            </div>
-        </div>
-
-        <div class="contact-info2">
-            <h2 class="info-title">{{ __('home.contact_info') }}</h2>
-
-            <div class="info-item">
-                <div class="info-icon">
-                    📍
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h1 class="contact-title">{{ __('home.contact_us') }}</h1>
+                    <p class="contact-subtitle">
+                        {{ __('home.contact_subtitle') }}
+                    </p>
                 </div>
-                <div class="info-content">
-                    <h3>{{ __('home.address') }}</h3>
-                    <p>{{ __('home.address_value') }}</p>
-                </div>
-            </div>
 
-            <div class="info-item">
-                <div class="info-icon">
-                    📧
-                </div>
-                <div class="info-content">
-                    <h3>{{ __('home.email_label') }}</h3>
-                    <p>{{ __('home.email_value') }}</p>
-                </div>
-            </div>
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <h2 class="form-title">{{ __('home.send_message') }}</h2>
 
-            <div class="info-item">
-                <div class="info-icon">
-                    📞
-                </div>
-                <div class="info-content">
-                    <h3>{{ __('home.contact_number') }}</h3>
-                    <p>{{ __('home.contact_number_value') }}</p>
-                </div>
-            </div>
+                        <div class="form-group">
+                            <label class="form-label">{{ __('home.full_name') }}</label>
+                            <input type="text" class="form-input"
+                                placeholder="{{ __('home.full_name_placeholder') }}">
+                        </div>
 
-            <div class="footer-text">
-                {{ __('home.footer_text') }}
-            </div>
+                        <div class="form-group">
+                            <label class="form-label">{{ __('home.email') }}</label>
+                            <input type="email" class="form-input"
+                                placeholder="{{ __('home.email_placeholder') }}">
+                        </div>
 
-            <!-- Logo watermark placeholder -->
-            <div class="logo-watermark">
-                <svg viewBox="0 0 100 100" fill="currentColor">
-                    <path d="M50 10 L90 50 L50 90 L10 50 Z" opacity="0.3" />
-                </svg>
+                        <div class="form-group">
+                            <label class="form-label">{{ __('home.phone') }}</label>
+                            <input type="tel" class="form-input"
+                                placeholder="{{ __('home.phone_placeholder') }}">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">{{ __('home.message') }}</label>
+                            <textarea class="form-input form-textarea" placeholder="{{ __('home.message_placeholder') }}"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="contact-info2">
+                        <h2 class="info-title">{{ __('home.contact_info') }}</h2>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                📍
+                            </div>
+                            <div class="info-content">
+                                <h3>{{ __('home.address') }}</h3>
+                                <p>{{ __('home.address_value') }}</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                📧
+                            </div>
+                            <div class="info-content">
+                                <h3>{{ __('home.email_label') }}</h3>
+                                <p>{{ __('home.email_value') }}</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                📞
+                            </div>
+                            <div class="info-content">
+                                <h3>{{ __('home.contact_number') }}</h3>
+                                <p>{{ __('home.contact_number_value') }}</p>
+                            </div>
+                        </div>
+
+                        <div class="footer-text">
+                            {{ __('home.footer_text') }}
+                        </div>
+
+                        <!-- Logo watermark placeholder -->
+                        <div class="logo-watermark">
+                            <svg viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M50 10 L90 50 L50 90 L10 50 Z" opacity="0.3" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
 
 
         </div>
@@ -4719,11 +4724,9 @@
                     <div class="footer-logo">
                         <img src="assets/logo.png" style="width: 150px; height: 70px; border-radius: 10px;"
                             alt="">
-
                     </div>
-                    <h3>جمعية السياحة العلاجية</h3>
-                    <p>منظمة رائدة في تطوير قطاع السياحة العلاجية وتعزيز التنمية المستدامة في المملكة العربية السعودية.
-                    </p>
+                    <h3>{{ __('home.medical_tourism_association') }}</h3>
+                    <p>{{ __('home.footer_description') }}</p>
                     <div class="social-icons">
                         <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -4732,42 +4735,49 @@
                     </div>
                 </div>
 
-
                 <div class="footer-section">
-                    <h4 style="color: rgba(0, 255, 157, 0.5);">روابط سريعة</h4>
+                    <h4 style="color: rgba(0, 255, 157, 0.5);">{{ __('home.quick_links') }}</h4>
                     <ul class="footer-links">
-                        <li><a href="#" onclick="showPage('home')">الرئيسية</a></li>
-                        <li><a href="#" onclick="showPage('about')">من نحن</a></li>
-                        <li><a href="#" onclick="showPage('program')">المؤتمر</a></li>
-                        <li><a href="#" onclick="showPage('registration')">التسجيل</a></li>
-                        <li><a href="#" onclick="showPage('contact')">اتصل بنا</a></li>
+                        <li><a href="#" onclick="showPage('home')">{{ __('home.home') }}</a></li>
+                        <li><a href="#" onclick="showPage('about')">{{ __('home.about_us') }}</a></li>
+                        <li><a href="#" onclick="showPage('program')">{{ __('home.conference') }}</a></li>
+                        <li><a href="#" onclick="showPage('registration')">{{ __('home.registration') }}</a>
+                        </li>
+                        <li><a href="#" onclick="showPage('contact')">{{ __('home.contact_us_link') }}</a>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 style="color: palegreen;">المؤتمر</h4>
+                    <h4 style="color: palegreen;">{{ __('home.conference_section') }}</h4>
                     <ul class="footer-links">
-                        <li><a href="#" onclick="showPage('speakers')">المتحدثون</a></li>
-                        <li><a href="#" onclick="showPage('program')">البرنامج</a></li>
-                        <li><a href="#" onclick="showPage('sponsors')">الرعاة</a></li>
-                        <li><a href="#" onclick="showPage('accommodation')">الإقامة</a></li>
-                        <li><a href="#" onclick="showPage('media')">الإعلام</a></li>
+                        <li><a href="#" onclick="showPage('speakers')">{{ __('home.speakers') }}</a></li>
+                        <li><a href="#" onclick="showPage('program')">{{ __('home.program') }}</a></li>
+                        <li><a href="#" onclick="showPage('sponsors')">{{ __('home.sponsors') }}</a></li>
+                        <li><a href="#"
+                                onclick="showPage('accommodation')">{{ __('home.accommodation') }}</a></li>
+                        <li><a href="#" onclick="showPage('media')">{{ __('home.media') }}</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 style="color: orangered;">معلومات التواصل</h4>
+                    <h4 style="color: orangered;">{{ __('home.contact_info_title') }}</h4>
                     <div class="contact-info">
-                        <p><i style="color: orangered;" class="fas fa-map-marker-alt"></i> الطائف، المملكة العربية
-                            السعودية</p>
-                        <p><i style="color: orangered;" class="fas fa-phone"></i> +966 50 930 0053</p>
-                        <p><i style="color: orangered;" class="fas fa-envelope"></i> info@saudimt2025.com</p>
+                        <p><i style="color: orangered;" class="fas fa-map-marker-alt"></i>
+                            {{ __('home.location') }}</p>
+               <p style="display: flex; flex-direction: {{ $lang == 'ar' ? 'row-reverse' : 'row' }}; align-items: center; gap: 8px; direction: ltr;">
+    <i class="fas fa-phone" style="color: orangered;"></i>
+    <span>{{ __('home.phone_footer') }}</span>
+</p>
+
+                        <p><i style="color: orangered;" class="fas fa-envelope"></i> {{ __('home.email_footer') }}
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 جمعية السياحة العلاجية. جميع الحقوق محفوظة.</p>
+                <p>{{ __('home.copyright') }}</p>
             </div>
         </div>
     </footer>

@@ -571,5 +571,45 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
     'contact_number_value' => '+966 555 555 555',
     'footer_text' => 'We look forward to serving you and providing the best services in medical tourism',
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     'medical_tourism_association' => 'Medical Tourism Association',
+    'footer_description' => 'A leading organization in developing the medical tourism sector and promoting sustainable development in the Kingdom of Saudi Arabia.',
+    'quick_links' => 'Quick Links',
+    'home' => 'Home',
+    'about_us' => 'About Us',
+    'conference' => 'Conference',
+    'registration' => 'Registration',
+    'contact_us_link' => 'Contact Us',
+    'conference_section' => 'Conference',
+    'speakers' => 'Speakers',
+    'program' => 'Program',
+    'sponsors' => 'Sponsors',
+    'accommodation' => 'Accommodation',
+    'media' => 'Media',
+    'contact_info_title' => 'Contact Information',
+    'location' => 'Taif, Kingdom of Saudi Arabia',
+    'phone_footer' => '+966 50 930 0053',
+    'email_footer' => 'info@saudimt2025.com',
+    'copyright' => '© 2025 Medical Tourism Association. All rights reserved.',
+
 ];
 
