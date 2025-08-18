@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Mail\ParticipationMail;
 use App\Mail\ContactMail;
 use App\Mail\SponserMail;
+use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 
@@ -41,6 +42,13 @@ class MailController extends Controller
                 $request->gender,
                 $request->organization,
                 $request->specialization
+            ));
+
+
+            Mail::to($request->email)->send(new WelcomeMail(
+                  $request->firstName,
+                $request->middleName,
+                $request->lastName,
             ));
 
             Log::info('Participation mail sent successfully', [

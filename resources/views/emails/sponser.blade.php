@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,11 +64,12 @@
         }
 
         @keyframes goldGlow {
-            0% { 
+            0% {
                 box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
                 transform: scale(1);
             }
-            100% { 
+
+            100% {
                 box-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.3);
                 transform: scale(1.05);
             }
@@ -79,7 +81,7 @@
             font-weight: bold;
             position: relative;
             z-index: 1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .email-header p {
@@ -116,8 +118,13 @@
         }
 
         @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(30deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(30deg); }
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(30deg);
+            }
+
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(30deg);
+            }
         }
 
         .vip-alert h2 {
@@ -324,7 +331,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
 
@@ -408,7 +415,7 @@
             font-weight: bold;
             color: #f39c12;
             margin-bottom: 8px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
         .stat-label {
@@ -501,6 +508,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="email-container">
         <div class="email-header">
@@ -537,7 +545,7 @@
                         <div class="sponsor-value">{{ $phone }}</div>
                     </div>
                 </div>
-                
+
                 <div class="sponsor-priority">
                     <div class="priority-text">🚨 أولوية عالية</div>
                     <div class="priority-sub">طلبات الرعاية تتطلب رداً خلال 24 ساعة لضمان عدم فقدان الفرصة</div>
@@ -564,7 +572,7 @@
                         <li>اطلب مقترح رسمي مكتوب</li>
                     </ul>
                 </div>
-                
+
                 <p style="color: #9b59b6; font-size: 1.1rem; margin-bottom: 20px;">
                     اختر الإجراء المناسب للتعامل مع هذا الطلب
                 </p>
@@ -572,7 +580,7 @@
                     <a href="tel:{{ $phone }}" class="action-btn contact-btn">
                         📞 اتصال فوري
                     </a>
-                    <a href="#" class="action-btn negotiate-btn">
+                    {{-- <a href="#" class="action-btn negotiate-btn">
                         💼 بدء المفاوضات
                     </a>
                     <a href="#" class="action-btn approve-btn">
@@ -580,7 +588,7 @@
                     </a>
                     <a href="#" class="action-btn decline-btn">
                         ❌ رفض مؤدب
-                    </a>
+                    </a> --}}
                 </div>
             </div>
 
@@ -612,7 +620,7 @@
                 <h3>نظام إدارة الشراكات والرعاية</h3>
                 <p>تم إرسال هذا الإشعار تلقائياً من نظام طلبات الرعاية</p>
             </div>
-            
+
             <div class="system-info">
                 <h4 style="margin-bottom: 15px; color: #f39c12;">معلومات الطلب</h4>
                 <div>🏢 الشركة: {{ $companyname }}</div>
@@ -631,32 +639,33 @@
         // عرض الوقت الحالي
         function updateDateTime() {
             const now = new Date();
-            const options = { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric', 
-                hour: '2-digit', 
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
                 minute: '2-digit',
                 timeZone: 'Africa/Cairo',
                 locale: 'ar-EG'
             };
-            
-            document.getElementById('currentDateTime').textContent = 
+
+            document.getElementById('currentDateTime').textContent =
                 now.toLocaleDateString('ar-EG', options);
-            
-            document.getElementById('serverTime').textContent = 
+
+            document.getElementById('serverTime').textContent =
                 now.toLocaleString('ar-EG', {
-                    hour: '2-digit', 
-                    minute: '2-digit', 
+                    hour: '2-digit',
+                    minute: '2-digit',
                     second: '2-digit'
                 });
         }
 
         // تحديث الوقت عند تحميل الصفحة
         updateDateTime();
-        
+
         // تحديث الوقت كل دقيقة
         setInterval(updateDateTime, 60000);
     </script>
 </body>
+
 </html>

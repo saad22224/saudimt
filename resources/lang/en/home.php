@@ -4,7 +4,7 @@ return [
 
 
         // Main Banner
-    'headline' => 'World Forum for Medical Tourism 2025',
+    'headline' => 'International Medical Tourism Conference',
     'tagline' => 'Towards a Better Future for Medical Tourism in Saudi Arabia',
     'date' => '6 - 8 September 2025',
     'venue' => 'Intercontinental Hotel – Taif – Saudi Arabia',

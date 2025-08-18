@@ -444,7 +444,7 @@
                 </div>
             </div>
 
-            <div class="action-section">
+            {{-- <div class="action-section">
                 <h3 class="section-title">الإجراءات المتاحة</h3>
                 <p style="color: #27ae60; font-size: 1.1rem; margin-bottom: 20px;">
                     يرجى مراجعة البيانات واتخاذ الإجراء المناسب
@@ -460,9 +460,9 @@
                         👁️ عرض التفاصيل
                     </a>
                 </div>
-            </div>
+            </div> --}}
 
-            <div class="stats-section">
+            {{-- <div class="stats-section">
                 <h3 class="section-title">إحصائيات سريعة</h3>
                 <div class="stats-grid">
                     <div class="stat-item">
@@ -478,10 +478,10 @@
                         <div class="stat-label">إجمالي الشهر</div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
-        <div class="email-footer">
+        {{-- <div class="email-footer">
             <div class="footer-content">
                 <h3>نظام إدارة التسجيلات</h3>
                 <p>تم إرسال هذا الإشعار تلقائياً من النظام</p>
@@ -496,7 +496,7 @@
                     هذا إشعار آلي - لا ترد على هذا الإيميل
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
     <script>

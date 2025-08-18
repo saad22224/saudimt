@@ -476,13 +476,13 @@
                     <a href="tel:{{ $phone }}" class="action-btn priority-btn">
                         📞 اتصال هاتفي
                     </a>
-                    <a href="#" class="action-btn archive-btn">
+                    {{-- <a href="#" class="action-btn archive-btn">
                         📁 أرشفة الرسالة
-                    </a>
+                    </a> --}}
                 </div>
             </div>
 
-            <div class="stats-section">
+            {{-- <div class="stats-section">
                 <h3 class="section-title">إحصائيات الرسائل</h3>
                 <div class="stats-grid">
                     <div class="stat-item">
@@ -502,7 +502,7 @@
                         <div class="stat-label">معدل الرد</div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
         <div class="email-footer">
