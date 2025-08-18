@@ -133,91 +133,75 @@
     </nav>
 
     <!-- Navbar للموبايل -->
-    <nav class="mobile-navbar">
-        <div class="mobile-nav-container">
-            <div class="mobile-logo">
-                <img src="assets/logo.png" alt="Logo">
-            </div>
-            <button class="mobile-toggle" aria-label="فتح القائمة">
-                <i class="fas fa-bars"></i>
-            </button>
+<!-- Navbar للموبايل -->
+<nav class="mobile-navbar">
+    <div class="mobile-nav-container">
+        <div class="mobile-logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+        <button class="mobile-toggle" aria-label="فتح القائمة">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <div class="mobile-menu">
+        <div class="mobile-item">
+            <a href="#" onclick="showPage('home')" class="mobile-link active">{{ __('home.home') }}</a>
         </div>
 
-        <div class="mobile-menu">
-            <div class="mobile-item">
-                <a href="#" onclick="showPage('home')" class="mobile-link active">الرئيسية</a>
+        <div class="mobile-item dropdown">
+            <button class="dropdown-btn">{{ __('home.about') }} <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showPage('about')">{{ __('home.about_association') }}</a>
+                <a href="#" onclick="showPage('taif')">{{ __('home.about_taif') }}</a>
+                <a href="#" onclick="showPage('conference-about')">{{ __('home.about_conference') }}</a>
+                <a href="#" onclick="showPage('committee')">{{ __('home.committee') }}</a>
             </div>
+        </div>
 
-            <div class="mobile-item dropdown">
-                <button class="dropdown-btn">من نحن <i class="fas fa-chevron-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="showPage('about')">عن الجمعية</a>
-                    <a href="#" onclick="showPage('taif')">عن الطائف</a>
-                    <a href="#" onclick="showPage('conference-about')">عن المؤتمر</a>
-                    <a href="#" onclick="showPage('committee')">اللجنة العلمية</a>
-                </div>
+        <div class="mobile-item dropdown">
+            <button class="dropdown-btn">{{ __('home.conference') }} <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showPage('program')">{{ __('home.program') }}</a>
+                <a href="#" onclick="showPage('program2')">{{ __('home.program2') }}</a>
+                <a href="#" onclick="showPage('speakers')">{{ __('home.speakers') }}</a>
+                <a href="#" onclick="showPage('attendees')">{{ __('home.attendees') }}</a>
+                <a href="#" onclick="showPage('registration')">{{ __('home.registration') }}</a>
             </div>
+        </div>
 
-            <div class="mobile-item dropdown">
-                <button class="dropdown-btn">المؤتمر <i class="fas fa-chevron-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="showPage('program')">المؤتمر</a>
-                    <a href="#" onclick="showPage('program2')">برنامج المنتدي</a>
-                    <a href="#" onclick="showPage('speakers')">المتحدثون</a>
-                    <a href="#" onclick="showPage('attendees')">من يجب أن يحضر</a>
-                    <a href="#" onclick="showPage('registration')">سجل الآن</a>
-                </div>
+        <div class="mobile-item dropdown">
+            <button class="dropdown-btn">{{ __('home.partners') }} <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showPage('sponsors')">{{ __('home.sponsors') }}</a>
+                <a href="#" onclick="showPage('sponsorship')">{{ __('home.sponsorship') }}</a>
             </div>
+        </div>
 
-            <div class="mobile-item dropdown">
-                <button class="dropdown-btn">الشركاء والرعاة <i class="fas fa-chevron-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="showPage('sponsors')">الرعاة</a>
-                    <a href="#" onclick="showPage('sponsorship')">احجز رعايتك</a>
-                </div>
+        <div class="mobile-item dropdown">
+            <button class="dropdown-btn">{{ __('home.media') }} <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showPage('media')">{{ __('home.media_coverage') }}</a>
+                <a href="#" onclick="showPage('exhibition')">{{ __('home.exhibition') }}</a>
             </div>
+        </div>
 
-            <div class="mobile-item dropdown">
-                <button class="dropdown-btn">الإعلام <i class="fas fa-chevron-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="showPage('media')">تغطية إعلامية</a>
-                    <a href="#" onclick="showPage('exhibition')">المعرض</a>
-                </div>
+        <div class="mobile-item dropdown">
+            <button class="dropdown-btn">{{ __('home.hospitality') }} <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showPage('accommodation')">{{ __('home.accommodation') }}</a>
+                <a href="#" onclick="showPage('visa')">{{ __('home.visa') }}</a>
+                <a href="#" onclick="showPage('flights')">{{ __('home.flights') }}</a>
             </div>
+        </div>
 
-            <div class="mobile-item dropdown">
-                <button class="dropdown-btn">الضيافة <i class="fas fa-chevron-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="showPage('accommodation')">الإقامة</a>
-                    <a href="#" onclick="showPage('visa')">متطلبات التأشيرة</a>
-                    <a href="#" onclick="showPage('flights')">الرحلات الجوية</a>
-                </div>
-            </div>
+        <div class="mobile-item">
+            <a href="#" onclick="showPage('contact')" class="mobile-link">{{ __('home.contact') }}</a>
+        </div>
 
-            <div class="mobile-item">
-                <a href="#" onclick="showPage('contact')" class="mobile-link">اتصل بنا</a>
-            </div>
-
-              <div style="display: flex; gap: 10px;">
-                @if (session()->has('locale'))
-                    @if (session('locale') == 'ar')
-                        <a href="{{ route('lang', ['locale' => 'en']) }}"
-                            style="display:inline-block; padding:8px 16px; border-radius:8px;
-                      background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
-                      text-decoration:none; transition:all 0.3s ease;
-                      backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-                            EN
-                        </a>
-                    @else
-                        <a href="{{ route('lang', ['locale' => 'ar']) }}"
-                            style="display:inline-block; padding:8px 16px; border-radius:8px;
-                      background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
-                      text-decoration:none; transition:all 0.3s ease;
-                      backdrop-filter:blur(4px); box-shadow:0 4px 12px rgba(0,255,157,0.4);">
-                            العربية
-                        </a>
-                    @endif
-                @else
+        <div style="display: flex; gap: 10px;">
+            @if (session()->has('locale'))
+                @if (session('locale') == 'ar')
                     <a href="{{ route('lang', ['locale' => 'en']) }}"
                         style="display:inline-block; padding:8px 16px; border-radius:8px;
                   background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
@@ -225,10 +209,27 @@
                   backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
                         EN
                     </a>
+                @else
+                    <a href="{{ route('lang', ['locale' => 'ar']) }}"
+                        style="display:inline-block; padding:8px 16px; border-radius:8px;
+                  background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
+                  text-decoration:none; transition:all 0.3s ease;
+                  backdrop-filter:blur(4px); box-shadow:0 4px 12px rgba(0,255,157,0.4);">
+                        العربية
+                    </a>
                 @endif
-            </div>
+            @else
+                <a href="{{ route('lang', ['locale' => 'en']) }}"
+                    style="display:inline-block; padding:8px 16px; border-radius:8px;
+              background:rgba(0, 255, 157, 0.5); color:black; font-weight:600;
+              text-decoration:none; transition:all 0.3s ease;
+              backdrop-filter:blur(4px); box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                    EN
+                </a>
+            @endif
         </div>
-    </nav>
+    </div>
+</nav>
 
 
     <!-- Main Content Container -->
