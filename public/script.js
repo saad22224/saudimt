@@ -11,32 +11,32 @@ const translations = {
     //     media: 'الإعلام',
     //     hospitality: 'الضيافة',
     //     contact: 'اتصل بنا',
-        
+
     //     // About submenu
     //     aboutAssociation: 'عن الجمعية',
     //     aboutTaif: 'عن الطائف',
     //     aboutConference: 'عن المؤتمر',
     //     committee: 'اللجنة العلمية',
-        
+
     //     // Conference submenu
     //     program: 'برنامج المؤتمر',
     //     speakers: 'المتحدثون',
     //     attendees: 'من يجب أن يحضر',
     //     registration: 'سجل الآن',
-        
+
     //     // Sponsors submenu
     //     sponsorsList: 'الرعاة',
     //     sponsorship: 'احجز رعايتك',
-        
+
     //     // Media submenu
     //     mediaCoverage: 'تغطية إعلامية',
     //     exhibition: 'المعرض',
-        
+
     //     // Hospitality submenu
     //     accommodation: 'الإقامة',
     //     visa: 'متطلبات التأشيرة',
     //     flights: 'الرحلات الجوية',
-        
+
     //     // Hero section
     //     // heroTitle: 'المؤتمر السنوي للسياحة العلاجية',
     //     heroSubtitle: 'نحو مستقبل أفضل للسياحة العلاجية في المملكة العربية السعودية',
@@ -45,14 +45,14 @@ const translations = {
     //     participants: 'أكثر من 500 مشارك',
     //     registerNow: 'سجل الآن',
     //     learnMore: 'تعرف على المزيد',
-        
+
     //     // About section
     //     aboutUs: 'من نحن',
     //     vision: 'رؤيتنا',
     //     mission: 'رسالتنا',
     //     values: 'قيمنا',
     //     impact: 'تأثيرنا',
-        
+
     //     // Stats
     //     days: 'أيام',
     //     participant: 'مشارك',
@@ -68,32 +68,32 @@ const translations = {
     //     media: 'Media',
     //     hospitality: 'Hospitality',
     //     contact: 'Contact Us',
-        
+
     //     // About submenu
     //     aboutAssociation: 'About Association',
     //     aboutTaif: 'About Taif',
     //     aboutConference: 'About Conference',
     //     committee: 'Scientific Committee',
-        
+
     //     // Conference submenu
     //     program: 'Conference Program',
     //     speakers: 'Speakers',
     //     attendees: 'Who Should Attend',
     //     registration: 'Register Now',
-        
+
     //     // Sponsors submenu
     //     sponsorsList: 'Sponsors',
     //     sponsorship: 'Book Your Sponsorship',
-        
+
     //     // Media submenu
     //     mediaCoverage: 'Media Coverage',
     //     exhibition: 'Exhibition',
-        
+
     //     // Hospitality submenu
     //     accommodation: 'Accommodation',
     //     visa: 'Visa Requirements',
     //     flights: 'Flights',
-        
+
     //     // Hero section
     //     heroTitle: 'Annual Medical Tourism Conference',
     //     heroSubtitle: 'Towards a Better Future for Medical Tourism in Saudi Arabia',
@@ -102,14 +102,14 @@ const translations = {
     //     participants: 'More than 500 participants',
     //     registerNow: 'Register Now',
     //     learnMore: 'Learn More',
-        
+
     //     // About section
     //     aboutUs: 'About Us',
     //     vision: 'Our Vision',
     //     mission: 'Our Mission',
     //     values: 'Our Values',
     //     impact: 'Our Impact',
-        
+
     //     // Stats
     //     days: 'Days',
     //     participant: 'Participants',
@@ -119,19 +119,19 @@ const translations = {
 };
 
 // Initialize the website
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialize scroll to top button
     createScrollToTopButton();
-    
+
     // Initialize form handlers
     initializeForms();
-    
+
     // Initialize animations
     initializeAnimations();
-    
+
     // Set default language
     switchLanguage(currentLanguage);
-    
+
     // Show home page by default
     showPage('home');
 });
@@ -140,27 +140,27 @@ document.addEventListener('DOMContentLoaded', function() {
 function switchLanguage(lang) {
     currentLanguage = lang;
     const html = document.documentElement;
-    
+
     // Update HTML attributes
     html.setAttribute('lang', lang);
     html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-    
+
     // Update active language button
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');
     });
     document.querySelector(`[onclick="switchLanguage('${lang}')"]`).classList.add('active');
-    
+
     // Update navigation text
     updateNavigationText(lang);
-    
+
     // Update page content
     updatePageContent(lang);
 }
 
 function updateNavigationText(lang) {
     const t = translations[lang];
-    
+
     // Update main navigation
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
@@ -173,18 +173,18 @@ function updateNavigationText(lang) {
 
 function updatePageContent(lang) {
     const t = translations[lang];
-    
+
     // Update hero section
     const heroTitle = document.querySelector('.hero-title');
     const heroSubtitle = document.querySelector('.hero-subtitle');
-    
+
     if (heroTitle && t.heroTitle) {
         heroTitle.textContent = t.heroTitle;
     }
     if (heroSubtitle && t.heroSubtitle) {
         heroSubtitle.textContent = t.heroSubtitle;
     }
-    
+
     // Update buttons
     const buttons = document.querySelectorAll('[data-text-key]');
     buttons.forEach(button => {
@@ -201,18 +201,18 @@ function showPage(pageId) {
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
     });
-    
+
     // Show selected page
     const selectedPage = document.getElementById(pageId);
     if (selectedPage) {
         selectedPage.classList.add('active');
-        
+
         // Update active nav link
         updateActiveNavLink(pageId);
-        
+
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        
+
         // Trigger animations
         triggerPageAnimations(selectedPage);
     }
@@ -223,35 +223,19 @@ function updateActiveNavLink(pageId) {
     document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
     });
-    
-    // Add active class to current page link
-    const pageMap = {
-        // 'home': 'الرئيسية',
-        // 'about': 'من نحن',
-        // 'taif': 'من نحن',
-        // 'conference-about': 'من نحن',
-        // 'committee': 'من نحن',
-        // 'program': 'المؤتمر',
-        // 'speakers': 'المؤتمر',
-        // 'attendees': 'المؤتمر',
-        // 'registration': 'المؤتمر',
-        // 'sponsors': 'الشركاء والرعاة',
-        // 'sponsorship': 'الشركاء والرعاة',
-        // 'media': 'الإعلام',
-        // 'exhibition': 'الإعلام',
-        // 'accommodation': 'الضيافة',
-        // 'visa': 'الضيافة',
-        // 'flights': 'الضيافة',
-        // 'contact': 'اتصل بنا'
-    };
-    
-    const mainSection = pageMap[pageId];
-    if (mainSection) {
-        document.querySelectorAll('.nav-link').forEach(link => {
-            if (link.textContent.includes(mainSection)) {
-                link.classList.add('active');
-            }
-        });
+
+    // دور على اللينك اللي بينادي showPage بنفس الـ pageId
+    const targetLink = document.querySelector(`a[onclick="showPage('${pageId}')"]`);
+    if (targetLink) {
+        // أضف active
+        targetLink.classList.add('active');
+
+        // لو كان اللينك جوه dropdown → فعل برضه الأب (nav-link الرئيسي)
+        const parentDropdown = targetLink.closest('.dropdown');
+        if (parentDropdown) {
+            const mainLink = parentDropdown.querySelector('.nav-link');
+            if (mainLink) mainLink.classList.add('active');
+        }
     }
 }
 
@@ -265,7 +249,7 @@ function initializeAnimations() {
             }
         });
     }, { threshold: 0.1 });
-    
+
     // Observe elements for animation
     document.querySelectorAll('.about-card, .stat-card, .content-card').forEach(el => {
         observer.observe(el);
@@ -275,7 +259,7 @@ function initializeAnimations() {
 function triggerPageAnimations(page) {
     // Add animation classes to page elements
     const animatedElements = page.querySelectorAll('.about-card, .stat-card, .content-card, .expert-card, .speaker-card');
-    
+
     animatedElements.forEach((el, index) => {
         setTimeout(() => {
             el.classList.add('animate-slide-up');
@@ -290,7 +274,7 @@ function triggerPageAnimations(page) {
 //     if (registrationForm) {
 //         registrationForm.addEventListener('submit', handleRegistrationSubmit);
 //     }
-    
+
 //     // Contact form
 //     const contactForms = document.querySelectorAll('.contact-form');
 //     contactForms.forEach(form => {
@@ -300,43 +284,43 @@ function triggerPageAnimations(page) {
 
 function handleRegistrationSubmit(e) {
     e.preventDefault();
-    
+
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    
+
     // Validate required fields
     const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'attendeeType'];
     const missingFields = requiredFields.filter(field => !data[field] || data[field].trim() === '');
-    
+
     if (missingFields.length > 0) {
         showNotification('يرجى ملء جميع الحقول المطلوبة', 'error');
         return;
     }
-    
+
     // Validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email)) {
         showNotification('يرجى إدخال بريد إلكتروني صحيح', 'error');
         return;
     }
-    
+
     // Validate terms acceptance
     if (!data.terms) {
         showNotification('يجب الموافقة على الشروط والأحكام', 'error');
         return;
     }
-    
+
     // Show loading
     const submitBtn = e.target.querySelector('.btn-submit');
     const originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
     submitBtn.disabled = true;
-    
+
     // Simulate form submission
     setTimeout(() => {
         showNotification('تم إرسال طلب التسجيل بنجاح! سنتواصل معكم قريباً.', 'success');
         e.target.reset();
-        
+
         // Reset button
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
@@ -345,30 +329,30 @@ function handleRegistrationSubmit(e) {
 
 function handleContactSubmit(e) {
     e.preventDefault();
-    
+
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    
+
     // Validate required fields
     const requiredFields = ['contactName', 'contactEmail', 'contactMessage'];
     const missingFields = requiredFields.filter(field => !data[field] || data[field].trim() === '');
-    
+
     if (missingFields.length > 0) {
         showNotification('يرجى ملء جميع الحقول المطلوبة', 'error');
         return;
     }
-    
+
     // Show loading
     const submitBtn = e.target.querySelector('.btn-primary');
     const originalText = submitBtn.textContent;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
     submitBtn.disabled = true;
-    
+
     // Simulate form submission
     setTimeout(() => {
         showNotification('تم إرسال رسالتكم بنجاح! سنرد عليكم في أقرب وقت.', 'success');
         e.target.reset();
-        
+
         // Reset button
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
@@ -382,7 +366,7 @@ function showNotification(message, type = 'info') {
     if (existing) {
         existing.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
@@ -395,7 +379,7 @@ function showNotification(message, type = 'info') {
             </button>
         </div>
     `;
-    
+
     // Add styles
     const styles = `
         .notification {
@@ -479,7 +463,7 @@ function showNotification(message, type = 'info') {
             }
         }
     `;
-    
+
     // Add styles to head if not already present
     if (!document.querySelector('#notification-styles')) {
         const styleSheet = document.createElement('style');
@@ -487,10 +471,10 @@ function showNotification(message, type = 'info') {
         styleSheet.textContent = styles;
         document.head.appendChild(styleSheet);
     }
-    
+
     // Add to body
     document.body.appendChild(notification);
-    
+
     // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentElement) {
@@ -506,9 +490,9 @@ function createScrollToTopButton() {
     scrollBtn.className = 'scroll-to-top';
     scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
     scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-    
+
     document.body.appendChild(scrollBtn);
-    
+
     // Show/hide scroll button based on scroll position
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 300) {
@@ -528,7 +512,7 @@ function toggleMobileMenu() {
 // Dropdown functionality for mobile
 function setupMobileDropdowns() {
     const dropdowns = document.querySelectorAll('.dropdown');
-    
+
     dropdowns.forEach(dropdown => {
         dropdown.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
@@ -545,7 +529,7 @@ function initializeSearch() {
     searchInput.type = 'text';
     searchInput.placeholder = 'البحث...';
     searchInput.className = 'search-input';
-    
+
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase();
         searchContent(query);
@@ -554,10 +538,10 @@ function initializeSearch() {
 
 function searchContent(query) {
     if (query.length < 2) return;
-    
+
     const results = [];
     const pages = document.querySelectorAll('.page');
-    
+
     pages.forEach(page => {
         const content = page.textContent.toLowerCase();
         if (content.includes(query)) {
@@ -568,7 +552,7 @@ function searchContent(query) {
             });
         }
     });
-    
+
     displaySearchResults(results);
 }
 
@@ -599,7 +583,7 @@ function debounce(func, wait) {
 
 function throttle(func, limit) {
     let inThrottle;
-    return function() {
+    return function () {
         const args = arguments;
         const context = this;
         if (!inThrottle) {
@@ -615,7 +599,7 @@ function throttle(func, limit) {
 //     // Handle scroll events efficiently
 //     const scrolled = window.pageYOffset;
 //     const navbar = document.querySelector('.navbar');
-    
+
 //     if (scrolled > 100) {
 //         navbar.style.background = 'linear-gradient(135deg, rgba(45, 143, 143, 0.95) 0%, rgba(30, 107, 107, 0.95) 100%)';
 //         navbar.style.backdropFilter = 'blur(20px)';
@@ -637,7 +621,7 @@ window.addEventListener('error', (e) => {
 window.addEventListener('resize', debounce(() => {
     // Handle responsive layout changes
     const width = window.innerWidth;
-    
+
     if (width <= 768) {
         // Mobile optimizations
         setupMobileDropdowns();
@@ -652,11 +636,11 @@ function initializeAccessibility() {
             document.body.classList.add('keyboard-navigation');
         }
     });
-    
+
     document.addEventListener('mousedown', () => {
         document.body.classList.remove('keyboard-navigation');
     });
-    
+
     // Add focus indicators for keyboard users
     const focusableElements = 'a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])';
     document.querySelectorAll(focusableElements).forEach(el => {
@@ -664,7 +648,7 @@ function initializeAccessibility() {
             el.style.outline = '2px solid #2D8F8F';
             el.style.outlineOffset = '2px';
         });
-        
+
         el.addEventListener('blur', () => {
             el.style.outline = 'none';
         });
