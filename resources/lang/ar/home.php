@@ -506,9 +506,9 @@ return [
     'address' => 'العنوان',
     'address_value' => 'المملكة العربية السعودية - الطائف',
     'email_label' => 'البريد الإلكتروني',
-    'email_value' => 'example@email.com',
+    'email_value' => 'admin@saudimt2025.com',
     'contact_number' => 'رقم التواصل',
-    'contact_number_value' => '+966 555 555 555',
+    'contact_number_value' => '+966 50 930 0053',
     'footer_text' => 'نتطلع لخدمتكم وتقديم أفضل الخدمات في مجال السياحة العلاجية',
 
 

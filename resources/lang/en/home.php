@@ -566,9 +566,9 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
     'address' => 'Address',
     'address_value' => 'Kingdom of Saudi Arabia - Taif',
     'email_label' => 'Email',
-    'email_value' => 'example@email.com',
+    'email_value' => 'admin@saudimt2025.com',
     'contact_number' => 'Contact Number',
-    'contact_number_value' => '+966 555 555 555',
+    'contact_number_value' => '+966 50 930 0053',
     'footer_text' => 'We look forward to serving you and providing the best services in medical tourism',
 
 

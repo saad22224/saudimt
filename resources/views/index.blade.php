@@ -4737,7 +4737,7 @@
                             </div>
                             <div class="info-content">
                                 <h3>{{ __('home.contact_number') }}</h3>
-                                <p>{{ __('home.contact_number_value') }}</p>
+                                <p style="direction: ltr;">{{ __('home.contact_number_value') }}</p>
                             </div>
                         </div>
 
