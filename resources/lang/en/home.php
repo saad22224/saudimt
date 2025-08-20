@@ -4,7 +4,7 @@ return [
 
 
         // Main Banner
-    'headline' => 'International Medical Tourism Conference',
+    'headline' => 'The Global Medical Tourism Conference',
     'tagline' => 'Towards a Better Future for Medical Tourism in Saudi Arabia',
     'date' => '6 - 8 September 2025',
     'venue' => 'Intercontinental Hotel – Taif – Saudi Arabia',
@@ -146,7 +146,7 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
      car offers a unique experience to enjoy breathtaking natural views from 
      above.',
        'conference_hero_title' => 'About the Conference',
-    'conference_title' => 'Taif Medical Tourism Conference 2024',
+   "conference_title" => "The World Medical Tourism Conference 2025",
     'conference_desc' => 'The Taif Medical Tourism Conference 2024 is a leading platform that brings together top healthcare providers, tourism experts, decision-makers, investors, and innovators to discuss growing opportunities in medical and wellness tourism in Saudi Arabia. The conference is held in Taif, known for its unique climate, natural beauty, and advanced healthcare infrastructure. The program includes keynote speeches, panel discussions, and networking sessions aimed at strengthening partnerships and supporting the Kingdom\'s position as a leading destination in medical tourism.',
     
     'conference_participant_1_title' => 'Healthcare Providers',
@@ -186,17 +186,17 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
     
     'scientific_committee_feature_3_title' => 'Coming Soon',
     'scientific_committee_feature_3_desc' => 'Stay tuned for the announcement of scientific committee members',
-     'hero_title' => 'Annual Medical Tourism Conference',
+     'hero_title' => 'The World Medical Tourism Conference',
     'hero_subtitle' => 'Join us in this exceptional event to exchange experiences and knowledge in the field of medical tourism',
     
     // Event Details
     'hero_participants' => 'More than 500 participants',
-    'hero_countries' => '8 different countries',
+    'hero_countries' => '5 - 8 different countries',
     'hero_speakers' => '16 distinguished speakers',
     
     // Location & Date
     'hero_location' => 'Taif, Saudi Arabia',
-    'hero_date' => 'July 2025',
+    'hero_date' => 'September 2025',
     
     // Statistics Section
     'stats_experience_number' => '25+',
@@ -566,7 +566,7 @@ Vision 2030 aims to make the Kingdom a leading global destination for medical to
     'address' => 'Address',
     'address_value' => 'Kingdom of Saudi Arabia - Taif',
     'email_label' => 'Email',
-    'email_value' => 'admin@saudimt2025.com',
+    'email_value' => 'info@saudimt2025.com',
     'contact_number' => 'Contact Number',
     'contact_number_value' => '+966 50 930 0053',
     'footer_text' => 'We look forward to serving you and providing the best services in medical tourism',

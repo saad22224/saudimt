@@ -102,7 +102,7 @@
                              
                                
 
-                                <td>{{ $participation->first_name  .  $participation->middle_name  . $participation->last_name }}</td>
+                                <td>{{ $participation->first_name . ' '  .  $participation->middle_name . ' '  . $participation->last_name }}</td>
                                 <td>{{ $participation->email }}</td>
                                 <td>{{ $participation->phone }}</td>
                                 <td>{{ $participation->organization }}</td>
